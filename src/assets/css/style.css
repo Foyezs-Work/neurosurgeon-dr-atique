@@ -11913,6 +11913,12 @@
  /* ==================
      8.1 About Us
  =================== */
+ .our_progress{
+   background-image: url(../images/background/line-bg1.png);
+   background-repeat: no-repeat; 
+   background-position: center; 
+   background-size: 100%;
+ }
  .about-area .pt-img1 {
    bottom: 20%;
    left: 16%; }
