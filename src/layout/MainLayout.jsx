@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '../components/shareable/Header';
 
 /**
  * Page Layout
@@ -13,7 +14,7 @@ const MainLayout = ({ children, title = null }) => {
 
   return (
     <React.Fragment>
-      {/* <Header /> */}
+      <Header />
       {
         children
       }

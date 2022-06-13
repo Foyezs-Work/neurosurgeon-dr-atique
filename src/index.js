@@ -4,6 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// External CSS 
+// import "./assets/vendor/line-awesome/css/line-awesome.min.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "./assets/css/style.css";
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
