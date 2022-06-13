@@ -12056,6 +12056,12 @@
  /* ==================
      8.4 Appointment
  =================== */
+
+.appoinment_section{
+  background-image: url(../images/appoinment/line-bg.png);
+   background-repeat: no-repeat;
+    background-position: 20px 140px;
+}
  .account-wraper1 {
    padding-bottom: 100px; }
    .account-wraper1 .appointment-inner {

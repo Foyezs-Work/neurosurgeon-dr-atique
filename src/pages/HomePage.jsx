@@ -1,5 +1,6 @@
 import React from 'react';
 import AboutMyServices from '../components/aboutMyServices/AboutMyServices';
+import Appoinment from '../components/appoinment/Appoinment';
 import AppoinmentProcess from '../components/appoinmentProcess/AppoinmentProcess';
 import MainBanner from '../components/mainBanner/MainBanner';
 import MainLayout from './../layout/MainLayout';
@@ -10,6 +11,7 @@ const HomePage = () => {
             <MainBanner />
             <AboutMyServices />
             <AppoinmentProcess />
+            <Appoinment />
         </MainLayout>
     );
 };
