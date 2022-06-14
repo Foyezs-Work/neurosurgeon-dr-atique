@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../components/shareable/Footer';
 import Header from '../components/shareable/Header';
 
 /**
@@ -18,8 +19,8 @@ const MainLayout = ({ children, title = null }) => {
       {
         children
       }
-      {/* <ScrollToTop smooth />
-      <Footer /> */}
+      {/* <ScrollToTop smooth /> */}
+      <Footer />
     </React.Fragment>
   );
 };
