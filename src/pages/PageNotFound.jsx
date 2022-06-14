@@ -3,6 +3,7 @@ import shap1 from "../assets/images/shap/wave-blue.png"
 import shap2 from "../assets/images/shap/circle-dots.png"
 import shap3 from "../assets/images/shap/plus-blue.png"
 import { Link } from 'react-router-dom';
+
 const PageNotFound = () => {
     return (
         <div class="banner-wraper">

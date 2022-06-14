@@ -24,7 +24,7 @@ const Header = () => {
                     <div className="container-fluid clearfix">
                         {/* <!-- website logo --> */}
                         <div className="menu-logo logo-dark">
-                            <a href="index.html"><img src="https://meditro.themetrades.com/html/demo/images/logo.png" alt="" /></a>
+                            <Link to="/"><img src="https://meditro.themetrades.com/html/demo/images/logo.png" alt="" /></Link>
                         </div>
                         {/* <!-- nav toggle button --> */}
                         <button
@@ -82,19 +82,19 @@ const Header = () => {
                                     <ul className="sub-menu">
                                         <li className="add-menu-left">
                                             <ul>
-                                                <li><a href="services.html"><span>Service</span> </a></li>
-                                                <li><a href="service-detail.html"><span>Service Detail</span></a></li>
+                                                <li><Link to="/services"><span>Service</span> </Link></li>
+                                                <li><Link to="/service-detail"><span>Service Detail</span></Link></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
                                 <li><Link to="/">Blog <i className="fas fa-plus"></i></Link>
                                     <ul className="sub-menu left">
-                                        <li><a href="blog-grid.html"><span>Blogs</span></a></li>
-                                        <li><a href="blog-details.html"><span>Blog Details</span></a></li>
+                                        <li><Link to="/blog-grid"><span>Blogs</span></Link></li>
+                                        <li><Link to="/blog-details"><span>Blog Details</span></Link></li>
                                     </ul>
                                 </li>
-                                <li><a href="contact-us.html">Contact Us</a></li>
+                                <li><Link to="/contact-us">Contact Us</Link></li>
                             </ul>
 
                             <div className="menu-close" onClick={() => setToggleMenu(!toggleMenu)}>
