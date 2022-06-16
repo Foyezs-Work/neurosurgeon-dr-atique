@@ -18,13 +18,16 @@ const Header = () => {
     window.addEventListener("scroll", scrollMenu);
 
     return (
-        <header className="header header-transparent rs-nav" style={{ height: 0 }}>
+        <header className="header header-bg-transparent scrolling-nav" style={{ height: 0 }}>
             <div className={isFixed === true ? "sticky-header navbar-expand-lg is-fixed" : "sticky-header navbar-expand-lg"}>
                 <div className="menu-bar clearfix">
                     <div className="container-fluid clearfix">
                         {/* <!-- website logo --> */}
                         <div className="menu-logo logo-dark">
-                            <Link to="/"><img src="https://meditro.themetrades.com/html/demo/images/logo.png" alt="" /></Link>
+                            <Link to="/" style={{fontSize: "28px", fontWeight: "800", color: "#1f2278", textTransform: "uppercase"}}>
+                                Dr. Atique
+                                {/* <img src="https://meditro.themetrades.com/html/demo/images/logo.png" alt="" /> */}
+                            </Link>
                         </div>
                         {/* <!-- nav toggle button --> */}
                         <button
@@ -44,24 +47,24 @@ const Header = () => {
                                     className="las la-search"></i></button></li>
                                 <li className="num-bx"><a href="tel:(+01)999888777"><i className="fas fa-phone-alt"></i> (+01) 999
                                     888 777</a></li>
-                                <li className="btn-area"><a href="contact-us.html" className="btn btn-primary shadow">CONTACT US <i
+                                <li className="btn-area"><a href="contact-us" className="btn btn-primary shadow">CONTACT ME <i
                                     className="btn-icon-bx fas fa-chevron-right"></i></a></li>
                             </ul>
                         </div>
                         {/* <!-- Search Box ==== --> */}
                         <div className="nav-search-bar">
                             <form action="#">
-                                <input name="search" value="" type="text" className="form-control" placeholder="Type to search" />
+                                <input name="search" value="" defaultValue="Search" type="text" className="form-control" placeholder="Type to search" />
                                 <span><i className="ti-search"></i></span>
                             </form>
                             <span id="searchRemove"><i className="ti-close"></i></span>
                         </div>
                         <div className={toggleMenu === true ? "menu-links navbar-collapse justify-content-end collapse show" : "menu-links navbar-collapse justify-content-end collapse"} id="menuDropdown">
                             <div className="menu-logo">
-                                <a href="index.html"><img src="images/logo-white.png" alt="" /></a>
+                                <a href="index"><img src="images/logo-white.png" alt="" /></a>
                             </div>
                             <ul className="nav navbar-nav">
-                                <li className="active"><a href="index.html">Home</a></li>
+                                <li className="active"><a href="index">Home</a></li>
                                 <li>
                                     <Link to="/">Pages <i className="fas fa-plus"></i></Link>
                                     <ul className="sub-menu">
@@ -94,11 +97,11 @@ const Header = () => {
                                         <li><Link to="/blog-details"><span>Blog Details</span></Link></li>
                                     </ul>
                                 </li>
-                                <li><Link to="/contact-us">Contact Us</Link></li>
+                                {/* <li><Link to="/contact-me">Contact Me</Link></li> */}
                             </ul>
 
                             <div className="menu-close" onClick={() => setToggleMenu(!toggleMenu)}>
-                                <i className="ti-close"></i>
+                                <i className="fa fa-times"></i>
                             </div>
                         </div>
                         {/* <!-- Navigation Menu END ==== --> */}

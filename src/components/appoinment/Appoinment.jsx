@@ -29,7 +29,7 @@ const Appoinment = () => {
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
                                                 <option value="3">Three</option>
-                                            </select><button type="button" tabindex="-1" className="btn dropdown-toggle btn-light" data-bs-toggle="dropdown" role="combobox" aria-owns="bs-select-1" aria-haspopup="listbox" aria-expanded="false" title="Selecty Department"><div className="filter-option"><div className="filter-option-inner"><div className="filter-option-inner-inner">Selecty Department</div></div> </div></button><div className="dropdown-menu "><div className="inner show" role="listbox" id="bs-select-1" tabindex="-1"><ul className="dropdown-menu inner show" role="presentation"></ul></div></div></div>
+                                            </select><button type="button" tabIndex="-1" className="btn dropdown-toggle btn-light" data-bs-toggle="dropdown" role="combobox" aria-owns="bs-select-1" aria-haspopup="listbox" aria-expanded="false" title="Selecty Department"><div className="filter-option"><div className="filter-option-inner"><div className="filter-option-inner-inner">Selecty Department</div></div> </div></button><div className="dropdown-menu "><div className="inner show" role="listbox" id="bs-select-1" tabIndex="-1"><ul className="dropdown-menu inner show" role="presentation"></ul></div></div></div>
                                         </div>
                                         <div className="form-group">
                                             <div className="dropdown bootstrap-select form-select"><select className="form-select">
@@ -37,7 +37,7 @@ const Appoinment = () => {
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
                                                 <option value="3">Three</option>
-                                            </select><button type="button" tabindex="-1" className="btn dropdown-toggle btn-light" data-bs-toggle="dropdown" role="combobox" aria-owns="bs-select-2" aria-haspopup="listbox" aria-expanded="false" title="Select Doctor"><div className="filter-option"><div className="filter-option-inner"><div className="filter-option-inner-inner">Select Doctor</div></div> </div></button><div className="dropdown-menu "><div className="inner show" role="listbox" id="bs-select-2" tabindex="-1"><ul className="dropdown-menu inner show" role="presentation"></ul></div></div></div>
+                                            </select><button type="button" tabIndex="-1" className="btn dropdown-toggle btn-light" data-bs-toggle="dropdown" role="combobox" aria-owns="bs-select-2" aria-haspopup="listbox" aria-expanded="false" title="Select Doctor"><div className="filter-option"><div className="filter-option-inner"><div className="filter-option-inner-inner">Select Doctor</div></div> </div></button><div className="dropdown-menu "><div className="inner show" role="listbox" id="bs-select-2" tabIndex="-1"><ul className="dropdown-menu inner show" role="presentation"></ul></div></div></div>
                                         </div>
                                         <div className="form-group">
                                             <input type="text" className="form-control" placeholder="Your Name" />

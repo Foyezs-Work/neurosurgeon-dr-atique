@@ -15,7 +15,7 @@ const Footer = () => {
                             <div className="col-xl-3 col-lg-3 col-md-6">
                                 <div className="widget widget_info">
                                     <div className="footer-logo">
-                                        <a href="index.html"><img src="images/logo.png" alt="" /></a>
+                                        <a href="index"><img src="images/logo.png" alt="" /></a>
                                     </div>
                                     <div className="ft-contact">
                                         <p>Lorem ipsum is dolor sit amet, csectetur adipiscing elit, dolore smod tempor incididunt ut labore et.</p>
