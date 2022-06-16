@@ -65,7 +65,7 @@ const Header = () => {
                             </div>
                             <ul className="nav navbar-nav">
                                 <li className="active"><a href="index">Home</a></li>
-                                <li>
+                                {/* <li>
                                     <Link to="/">Pages <i className="fas fa-plus"></i></Link>
                                     <ul className="sub-menu">
                                         <li className="add-menu-left">
@@ -79,7 +79,7 @@ const Header = () => {
                                             </ul>
                                         </li>
                                     </ul>
-                                </li>
+                                </li> */}
                                 <li>
                                     <Link to="/">Services <i className="fas fa-plus"></i></Link>
                                     <ul className="sub-menu">
@@ -93,8 +93,14 @@ const Header = () => {
                                 </li>
                                 <li><Link to="/">Blog <i className="fas fa-plus"></i></Link>
                                     <ul className="sub-menu left">
-                                        <li><Link to="/blog-grid"><span>Blogs</span></Link></li>
+                                        <li><Link to="/blog-grid"><span>Health Tips</span></Link></li>
                                         <li><Link to="/blog-details"><span>Blog Details</span></Link></li>
+                                    </ul>
+                                </li>
+                                <li><Link to="/">Gallery <i className="fas fa-plus"></i></Link>
+                                    <ul className="sub-menu left">
+                                        <li><Link to="/photos-gallery"><span>Photos Gallery</span></Link></li>
+                                        <li><Link to="/videos-gallery"><span>Videos Gallery</span></Link></li>
                                     </ul>
                                 </li>
                                 {/* <li><Link to="/contact-me">Contact Me</Link></li> */}
