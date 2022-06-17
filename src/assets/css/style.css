@@ -15620,6 +15620,13 @@ label.error {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+.photo_gallery_container{
+  position: relative;
+  top: 30%; 
+  right: 30%;
+  transform: translate(-50%, -50%);
+}
 @media only screen and (max-width: 1680px) {
   .main-banner {
     height: 800px;
@@ -18478,7 +18485,7 @@ blockquote p {
 
 .header {
   position: relative;
-  z-index: 9999;
+  z-index: 999;
 }
 .header .menu-bar {
   background: #fff;

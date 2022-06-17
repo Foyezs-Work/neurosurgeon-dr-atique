@@ -15,7 +15,7 @@ const AboutMyServices = () => {
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-6 mb-30">
-                        <div className="about-thumb-area px-5">
+                        <div className="about-thumb-area">
                             <ul>
                                 <li><img className="about-thumb1" src={doc1} alt="" /></li>
                                 <li><img className="about-thumb2" src={doc2} alt="" /></li>

@@ -1,0 +1,26 @@
+.styles_wrapper__1kG3C {
+  background: transparent !important;
+}
+.styles_gridItem__nPXhF figcaption {
+  background: #f17732 !important;
+}
+.styles_gridItem__nPXhF figure > div > img {
+  opacity: 1 !important;
+  transition: 0.5s ease-in;
+}
+.styles_gridItem__nPXhF figure > div > img:hover {
+  opacity: 0.5 !important;
+}
+
+.styles_wrapper__1kG3C {
+  height: auto !important;
+}
+
+.styles_gridItem__nPXhF {
+  max-width: 100% !important;
+}
+
+.__react_modal_image__modal_container {
+  overflow-y: scroll !important;
+  top: -20px !important;
+}

@@ -8,12 +8,18 @@ import reportWebVitals from './reportWebVitals';
 // import "./assets/vendor/line-awesome/css/line-awesome.min.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./assets/css/style.css";
+import "./assets/css/custom.css";
 
+
+import { Provider } from 'react-redux'
+import store from './_redux/Store'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 

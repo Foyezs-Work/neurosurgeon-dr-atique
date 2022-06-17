@@ -1,30 +1,33 @@
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { handleNavbarPosition } from '../../_globalRedux/Action/GlobalAction';
 
 const Header = () => {
 
+    const dispatch = useDispatch();
     const [toggleMenu, setToggleMenu] = useState(false);
 
-    const [isFixed, setIsFixed] = useState(false);
-
+    const { isToggle } = useSelector((state) => state.GlobalReducer)
+   
     const scrollMenu = () => {
         if (window.scrollY >= 90) {
-            setIsFixed(true)
+            dispatch(handleNavbarPosition(true))
         } else {
-            setIsFixed(false)
+            dispatch(handleNavbarPosition(false))
         }
     }
 
     window.addEventListener("scroll", scrollMenu);
 
     return (
-        <header className="header header-bg-transparent scrolling-nav" style={{ height: 0 }}>
-            <div className={isFixed === true ? "sticky-header navbar-expand-lg is-fixed" : "sticky-header navbar-expand-lg"}>
+        <header className={isToggle === true ? "header scrolling-nav" : "header header-bg-transparent scrolling-nav"}>
+            <div className={isToggle === true ? "sticky-header navbar-expand-lg is-fixed" : "sticky-header navbar-expand-lg"}>
                 <div className="menu-bar clearfix">
                     <div className="container-fluid clearfix">
                         {/* <!-- website logo --> */}
                         <div className="menu-logo logo-dark">
-                            <Link to="/" style={{fontSize: "28px", fontWeight: "800", color: "#1f2278", textTransform: "uppercase"}}>
+                            <Link to="/" style={{ fontSize: "28px", fontWeight: "800", color: "#1f2278", textTransform: "uppercase" }}>
                                 Dr. Atique
                                 {/* <img src="https://meditro.themetrades.com/html/demo/images/logo.png" alt="" /> */}
                             </Link>
