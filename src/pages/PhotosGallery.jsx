@@ -101,18 +101,13 @@ const PhotosGallery = () => {
             >
                 <div className="container inner-content">
                     <div className="row align-items-center">
-                        <div className="col-lg-12 col-md-12 col-sm-12">
-                            <h6 className="title-ext text-primary">I Provide All Health Care Solution</h6>
+                        <div className="col-lg-12 col-md-12 col-sm-12 py-5">
+                            <h2 className="title text-center">Photos Gallery</h2>
                             <DztImageGalleryComponent images={data} />
-                            {/* <h1>Protect Your Health And Take Care To Of Your Health</h1>
-                            <a href="about-us" className="btn btn-secondary btn-lg shadow">Read More</a> */}
+                           
                         </div>
                     </div>
                 </div>
-                {/* <div className="container inner-content">
-                    <h2>Photos Gallery</h2>
-                    <DztImageGalleryComponent images={data} />
-                </div> */}
 
                 <img className="pt-img3 animate3" src={circleBlue} alt="" />
                 <img className="pt-img1 animate1" src={trangleOrange} alt="" />

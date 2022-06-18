@@ -32,3 +32,10 @@
 .__react_modal_image__caption {
   margin-left: 18% !important;
 }
+
+.modal-backdrop {
+  background-color: #2b2d68 !important;
+}
+.modal-backdrop.show {
+  opacity: 0.9 !important;
+}
