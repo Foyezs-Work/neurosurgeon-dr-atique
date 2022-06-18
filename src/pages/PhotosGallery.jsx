@@ -6,8 +6,13 @@ import { useDispatch } from 'react-redux';
 import { handleNavbarPosition } from '../_globalRedux/Action/GlobalAction';
 
 import DztImageGalleryComponent from "reactjs-image-gallery";
-import circleBlue from "./../assets/images/shap/chicle-blue-2.png"
 
+import trangleOrange from "./../assets/images/shap/trangle-orange.png"
+import squareBlue from "./../assets/images/shap/square-blue.png"
+import circleBlue from "./../assets/images/shap/chicle-blue-2.png"
+import plusOrange from "./../assets/images/shap/plus-orange.png"
+import waveOrange from "./../assets/images/shap/wave-orange.png"
+import doctorImage from "./../assets/images/main-banner/doctor.png"
 
 const PhotosGallery = () => {
 
@@ -110,6 +115,11 @@ const PhotosGallery = () => {
                 </div> */}
 
                 <img className="pt-img3 animate3" src={circleBlue} alt="" />
+                <img className="pt-img1 animate1" src={trangleOrange} alt="" />
+                <img className="pt-img2 animate2" src={squareBlue} alt="" />
+                <img className="pt-img3 animate3" src={circleBlue} alt="" />
+                {/* <img className="pt-img4 animate4" src={plusOrange} alt="" /> */}
+                <img className="pt-img5 animate-wave" src={waveOrange} alt="" />
             </div>
         </MainLayout>
     );

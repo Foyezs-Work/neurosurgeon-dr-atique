@@ -74,6 +74,7 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow-y: scroll !important;
 }
 
 hr {
@@ -15621,9 +15622,9 @@ label.error {
   transform: translate(-50%, -50%);
 }
 
-.photo_gallery_container{
+.photo_gallery_container {
   position: relative;
-  top: 30%; 
+  top: 30%;
   right: 30%;
   transform: translate(-50%, -50%);
 }
@@ -19138,7 +19139,9 @@ blockquote p {
   position: fixed;
   top: 0;
   left: 0;
-  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1); */
+  box-shadow: 0 0 50px 0 rgb(86 90 207 / 45%);
+  border-bottom: 1px solid #565acf;
 }
 
 .is-fixed .logo-change .logo1 {
