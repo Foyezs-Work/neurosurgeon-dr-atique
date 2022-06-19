@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { handleNavbarPosition } from '../../_globalRedux/Action/GlobalAction';
-
+import logo from "./../../assets/images/logo.png"
 const Header = () => {
 
     const dispatch = useDispatch();
@@ -28,8 +28,8 @@ const Header = () => {
                         {/* <!-- website logo --> */}
                         <div className="menu-logo logo-dark">
                             <Link to="/" style={{ fontSize: "28px", fontWeight: "800", color: "#1f2278", textTransform: "uppercase" }}>
-                                Dr. Atique
-                                {/* <img src="https://meditro.themetrades.com/html/demo/images/logo.png" alt="" /> */}
+                                {/* Dr. Atique */}
+                                <img src={logo} alt="" />
                             </Link>
                         </div>
                         {/* <!-- nav toggle button --> */}

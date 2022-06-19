@@ -37,7 +37,7 @@ const BlogPage = () => {
                                         <div class="blog-card mb-30">
                                             <div class="post-media">
                                                 <a href="blog-details.html">
-                                                    <img src={blog.img} alt={blog.title} />
+                                                    <img src={blog.img} alt={blog.title} style={{height: "220px"}} />
                                                 </a>
                                             </div>
                                             <div class="post-info">
