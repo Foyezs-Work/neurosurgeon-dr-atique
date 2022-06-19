@@ -56,9 +56,32 @@ const BlogPage = () => {
                                     </div>
                                 ))
                             }
-
-
                         </div>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="pagination-bx text-center mb-30 clearfix">
+                                    <ul class="pagination">
+                                        <li class="previous">
+                                            <a href="/">Prev</a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="/">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="/">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="/">3</a>
+                                        </li>
+                                        <li class="next">
+                                            <a href="/">Next</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
