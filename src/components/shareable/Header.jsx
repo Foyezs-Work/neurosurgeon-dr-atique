@@ -96,7 +96,7 @@ const Header = () => {
                                 </li>
                                 <li><Link to="/">Blog <i className="fas fa-plus"></i></Link>
                                     <ul className="sub-menu left">
-                                        <li><Link to="/blog-grid"><span>Health Tips</span></Link></li>
+                                        <li><Link to="/blog"><span>Health Tips</span></Link></li>
                                         <li><Link to="/blog-details"><span>Blog Details</span></Link></li>
                                     </ul>
                                 </li>

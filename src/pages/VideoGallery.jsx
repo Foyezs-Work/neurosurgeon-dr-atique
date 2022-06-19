@@ -3,7 +3,6 @@ import { Player } from 'video-react';
 
 import MainLayout from '../layout/MainLayout';
 import mainBanner from "./../assets/images/main-banner/bg1.jpg"
-import Modal from 'react-bootstrap/Modal';
 import trangleOrange from "./../assets/images/shap/trangle-orange.png"
 import squareBlue from "./../assets/images/shap/square-blue.png"
 import circleBlue from "./../assets/images/shap/chicle-blue-2.png"
@@ -13,12 +12,11 @@ import { videoData } from '../assets/data/videoData';
 import ReactPlayer from 'react-player'
 
 const VideoGallery = () => {
+
     const [show, setShow] = useState(false);
     const [video, setVideo] = useState("")
-
     const handleClose = () => setShow(false);
 
-    console.log('video :>> ', video);
     const handleShow = (id) => {
         const findVideo = videoData.find((item) => item.id === id);
         setVideo(findVideo)
@@ -46,11 +44,6 @@ const VideoGallery = () => {
                         }
 
                     </div>
-
-                    <button onClick={() => handleShow()}>Open Model</button>
-
-
-
                 </div>
 
                 <img className="pt-img3 animate3" src={circleBlue} alt="" />
@@ -64,36 +57,19 @@ const VideoGallery = () => {
                 show={show}
                 handleClose={handleClose}
             >
-                <h2>Image Gallery</h2>
+                <h5 className='title text-center'> {video.title} </h5>
                 <div class="video-container">
-                    {/* <video src={video.videeLink} controls></video> */}
-                    {/* <iframe
-                        frameborder="0"
-                        allow="autoplay; encrypted-media"
-                        allowfullscreen
-                        title="video"
-                        src={video.videoLink}
-                    /> {" "} */}
                     {
                         video && (
-                            // <img src={video.thumbnail} alt="" />
-                            // <ReactPlayer url={video.videoLink} />
+
                             <ReactPlayer
                                 url={video.videoLink}
                                 controls
                                 width="100%"
                                 playIcon
                                 fallback="Loading..."
-                                //    light={video.thumbnail} 
                                 playing={true}
                             />
-                            // <Player
-                            //     playsInline
-                            //     poster={video.thumbnail}
-                            //     src={video.videoLink}
-                            //     // src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
-                            // />
-
                         )
                     }
 

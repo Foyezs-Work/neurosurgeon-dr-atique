@@ -39,3 +39,20 @@
 .modal-backdrop.show {
   opacity: 0.9 !important;
 }
+
+.model-close-btn {
+  background: rgb(86 90 207);
+  color: #ffff;
+  font-weight: 800;
+  font-size: 1.6rem;
+  transition: 0.5s ease;
+  line-height: 1.2;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid rgb(86 90 207);
+  outline: none;
+  position: absolute;
+  right: -20px;
+  top: -20px;
+}

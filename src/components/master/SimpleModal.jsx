@@ -19,6 +19,9 @@ const SimpleModal = ({ size, show, handleClose, children }) => {
             centered
         >
             <Modal.Body>
+                <button className="model-close-btn" onClick={() => handleClose()}>
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
                 {
                     children
                 }
