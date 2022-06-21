@@ -1,12 +1,12 @@
 import React from 'react';
-import doc1 from "../../assets/images/about/pic-1.jpg"
-import doc2 from "../../assets/images/about/pic-2.jpg"
-import doc3 from "../../assets/images/about/pic-3.jpg"
 import waveOrange from "../../assets/images/shap/wave-orange.png"
 import circleSmall from "../../assets/images/shap/circle-small-blue.png"
 import lineCircle from "../../assets/images/shap/line-circle-blue.png"
 import squareDots from "../../assets/images/shap/square-dots-orange.png"
 import squareBlue from "../../assets/images/shap/square-blue.png"
+import inHospital1 from "../../assets/images/in-hospital/in-hospital (2).jpg"
+import inHospital2 from "../../assets/images/in-hospital/in-hospital (1).jpeg"
+import inHospital3 from "../../assets/images/in-hospital/in-hospital (3).jpg"
 
 const AboutMyServices = () => {
 
@@ -17,16 +17,16 @@ const AboutMyServices = () => {
                     <div className="col-lg-6 mb-30">
                         <div className="about-thumb-area">
                             <ul>
-                                <li><img className="about-thumb1" src={doc1} alt="" /></li>
-                                <li><img className="about-thumb2" src={doc2} alt="" /></li>
-                                <li><img className="about-thumb3" src={doc3} alt="" /></li>
+                                <li><img className="about-thumb1" src={inHospital1} alt="" /></li>
+                                <li><img className="about-thumb2" src={inHospital2} alt="" /></li>
+                                <li><img className="about-thumb3" src={inHospital3} alt="" /></li>
                                 <li><div className="exp-bx">8<span>Year Experience</span></div></li>
                             </ul>
                         </div>
                     </div>
                     <div className="col-lg-6 mb-30">
                         <div className="heading-bx">
-                            <h6 className="title-ext text-secondary">About Us</h6>
+                            <h6 className="title-ext text-secondary">About Me</h6>
                             <h2 className="title">The Great Place Of Medical Hospital Center</h2>
                             <p>We provide the special tips and advice’s of heath care treatment and high level of best technology involve in the our hospital.</p>
                         </div>

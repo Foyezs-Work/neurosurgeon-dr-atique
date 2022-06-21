@@ -57,7 +57,7 @@ const Footer = () => {
                             </div>
                             <div className="col-xl-3 col-lg-3 col-md-6">
                                 <div className="widget widget_form">
-                                    <h3 className="footer-title">Subcribe</h3>
+                                    <h3 className="footer-title">Location</h3>
                                     <form className="subscribe-form subscription-form mb-30" action="script/mailchamp.php" method="post">
                                         <div className="ajax-message"></div>
                                         <div className="input-group">
