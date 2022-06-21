@@ -4,6 +4,12 @@ import shap1 from "../../assets/images/shap/wave-blue.png";
 import shap2 from "../../assets/images/shap/circle-dots.png";
 import shap3 from "../../assets/images/shap/plus-blue.png";
 
+import facebook from "../../assets/images/social/facebook.png"
+import twitter from "../../assets/images/social/twitter.png"
+import instagram from "../../assets/images/social/instagram.png"
+import linkedIn from "../../assets/images/social/linkedin.png"
+import logo from "./../../assets/images/logo.png"
+
 const Footer = () => {
 
     return (
@@ -15,20 +21,40 @@ const Footer = () => {
                             <div className="col-xl-3 col-lg-3 col-md-6">
                                 <div className="widget widget_info">
                                     <div className="footer-logo">
-                                        <a href="index"><img src="images/logo.png" alt="" /></a>
+                                        <a href="index"><img src={logo} alt="" /></a>
                                     </div>
                                     <div className="ft-contact">
-                                        <p>Lorem ipsum is dolor sit amet, csectetur adipiscing elit, dolore smod tempor incididunt ut labore et.</p>
+
+
                                         <div className="contact-bx">
                                             <div className="icon"><i className="fas fa-phone-alt"></i></div>
                                             <div className="contact-number">
-                                                <span>Contact Us</span>
+                                                <span>Contact Me By Calling</span>
                                                 <h4 className="number">+880 191 544 9083</h4>
                                             </div>
                                         </div>
+
+                                        <div className="footer-social-link mx-3 mt-5">
+                                            <ul>
+                                                <li><a target="_blank" rel="noreferrer" href="https://www.facebook.com/">
+                                                    <img src={facebook} alt="" />
+                                                </a></li>
+                                                <li><a target="_blank" rel="noreferrer" href="https://twitter.com/">
+                                                    <img src={twitter} alt="" />
+                                                </a></li>
+                                                <li><a target="_blank" rel="noreferrer" href="https://www.instagram.com/">
+                                                    <img src={instagram} alt="" />
+                                                </a></li>
+                                                <li><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/">
+                                                    <img src={linkedIn} alt="" />
+                                                </a></li>
+                                            </ul>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
+
                             <div className="col-xl-3 col-lg-3 col-6">
                                 <div className="widget footer_widget ml-50">
                                     <h3 className="footer-title">Quick Links</h3>
@@ -58,21 +84,10 @@ const Footer = () => {
                             <div className="col-xl-3 col-lg-3 col-md-6">
                                 <div className="widget widget_form">
                                     <h3 className="footer-title">Location</h3>
-                                    <form className="subscribe-form subscription-form mb-30" action="script/mailchamp.php" method="post">
-                                        <div className="ajax-message"></div>
-                                        <div className="input-group">
-                                            <input name="email" required="required" className="form-control" placeholder="Email Address" type="email" />
-                                        </div>
-                                        <button name="submit" value="Submit" type="submit" className="btn btn-secondary shadow w-100">Subscribe Now</button>
-                                    </form>
-                                    <div className="footer-social-link">
-                                        <ul>
-                                            <li><a target="_blank" rel="noreferrer" href="https://www.facebook.com/"><img src="images/social/facebook.png" alt="" /></a></li>
-                                            <li><a target="_blank" rel="noreferrer" href="https://twitter.com/"><img src="images/social/twitter.png" alt="" /></a></li>
-                                            <li><a target="_blank" rel="noreferrer" href="https://www.instagram.com/"><img src="images/social/instagram.png" alt="" /></a></li>
-                                            <li><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/"><img src="images/social/linkedin.png" alt="" /></a></li>
-                                        </ul>
+                                    <div>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.2749853445735!2d90.40749491449282!3d23.737571495184277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8f4de15d5eb%3A0x35df10409c6ffeef!2sIslami%20Bank%20Central%20Hospital%2C%20Kakrail!5e0!3m2!1sen!2sbd!4v1655841357410!5m2!1sen!2sbd" className='border shadow' title="Neurosurgeon dr. atique" width="100%" height="230" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
