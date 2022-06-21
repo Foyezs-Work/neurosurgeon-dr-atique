@@ -23,7 +23,7 @@ const Footer = () => {
                                             <div className="icon"><i className="fas fa-phone-alt"></i></div>
                                             <div className="contact-number">
                                                 <span>Contact Us</span>
-                                                <h4 className="number">+01 123 456 7890</h4>
+                                                <h4 className="number">+880 191 544 9083</h4>
                                             </div>
                                         </div>
                                     </div>

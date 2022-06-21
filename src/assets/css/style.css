@@ -18711,7 +18711,7 @@ blockquote p {
   line-height: 1;
 }
 .menu-links .nav > li > a i {
-  font-size: 10px;
+  font-size: 1rem;
   margin-left: 5px;
   margin-top: -3px;
   vertical-align: middle;
@@ -18745,7 +18745,7 @@ blockquote p {
 .menu-links .nav > li .sub-menu {
   background-color: #ffffff;
   display: block;
-  left: 0;
+  right: 0;
   list-style: none;
   opacity: 0;
   padding: 5px 0;
@@ -18951,7 +18951,7 @@ blockquote p {
   color: #f17732;
 }
 .menu-links .nav > li:hover a i {
-  transform: rotate(45deg);
+  /* transform: rotate(45deg); */
   color: #f17732;
 }
 @media only screen and (max-width: 991px) {

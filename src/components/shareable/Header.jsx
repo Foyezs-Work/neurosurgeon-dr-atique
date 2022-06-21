@@ -9,7 +9,7 @@ const Header = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
 
     const { isToggle } = useSelector((state) => state.GlobalReducer)
-   
+
     const scrollMenu = () => {
         if (window.scrollY >= 90) {
             dispatch(handleNavbarPosition(true))
@@ -28,7 +28,6 @@ const Header = () => {
                         {/* <!-- website logo --> */}
                         <div className="menu-logo logo-dark">
                             <Link to="/" style={{ fontSize: "28px", fontWeight: "800", color: "#1f2278", textTransform: "uppercase" }}>
-                                {/* Dr. Atique */}
                                 <img src={logo} alt="" />
                             </Link>
                         </div>
@@ -44,7 +43,7 @@ const Header = () => {
                             <span></span>
                         </button>
                         {/* <!-- extra nav --> */}
-                        <div className="secondary-menu">
+                        {/* <div className="secondary-menu">
                             <ul>
                                 <li className="search-btn"><button id="quikSearchBtn" type="button" className="btn-link"><i
                                     className="las la-search"></i></button></li>
@@ -53,15 +52,15 @@ const Header = () => {
                                 <li className="btn-area"><a href="contact-us" className="btn btn-primary shadow">CONTACT ME <i
                                     className="btn-icon-bx fas fa-chevron-right"></i></a></li>
                             </ul>
-                        </div>
+                        </div> */}
                         {/* <!-- Search Box ==== --> */}
-                        <div className="nav-search-bar">
+                        {/* <div className="nav-search-bar">
                             <form action="#">
                                 <input name="search" value="" defaultValue="Search" type="text" className="form-control" placeholder="Type to search" />
                                 <span><i className="ti-search"></i></span>
                             </form>
                             <span id="searchRemove"><i className="ti-close"></i></span>
-                        </div>
+                        </div> */}
                         <div className={toggleMenu === true ? "menu-links navbar-collapse justify-content-end collapse show" : "menu-links navbar-collapse justify-content-end collapse"} id="menuDropdown">
                             <div className="menu-logo">
                                 <a href="index"><img src="images/logo-white.png" alt="" /></a>
@@ -84,7 +83,7 @@ const Header = () => {
                                     </ul>
                                 </li> */}
                                 <li>
-                                    <Link to="/">Services <i className="fas fa-plus"></i></Link>
+                                    <Link to="/">Services <i class="fa-solid fa-angle-down"></i> </Link>
                                     <ul className="sub-menu">
                                         <li className="add-menu-left">
                                             <ul>
@@ -94,19 +93,28 @@ const Header = () => {
                                         </li>
                                     </ul>
                                 </li>
-                                <li><Link to="/">Blog <i className="fas fa-plus"></i></Link>
+                                <li><Link to="/">Blog <i class="fa-solid fa-angle-down"></i> </Link>
                                     <ul className="sub-menu left">
                                         <li><Link to="/blog"><span>Health Tips</span></Link></li>
                                         <li><Link to="/blog-details"><span>Blog Details</span></Link></li>
                                     </ul>
                                 </li>
-                                <li><Link to="/">Gallery <i className="fas fa-plus"></i></Link>
+                                <li><Link to="/">Gallery <i class="fa-solid fa-angle-down"></i></Link>
                                     <ul className="sub-menu left">
                                         <li><Link to="/photos-gallery"><span>Photos Gallery</span></Link></li>
                                         <li><Link to="/videos-gallery"><span>Videos Gallery</span></Link></li>
                                     </ul>
                                 </li>
-                                {/* <li><Link to="/contact-me">Contact Me</Link></li> */}
+                                <li><Link to="/">Contact Me <i class="fa-solid fa-angle-down"></i></Link>
+                                    <ul className="sub-menu left">
+                                        <li className="num-bx contact_info">
+                                            <a href="tel:(+880)1915449083" style={{ fontSize: "12px" }}> <span><i class="fa-solid fa-phone"></i> </span> (+880) 191 544 9083 </a>
+                                        </li>
+                                        <li className="num-bx contact_info">
+                                            <a href="mailto:kazidmc@gmail.com" style={{ fontSize: "12px" }}> <span><i class="fa-solid fa-envelope-circle-check"></i></span> kazidmc@gmail.com </a>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
 
                             <div className="menu-close" onClick={() => setToggleMenu(!toggleMenu)}>

@@ -58,3 +58,15 @@
   right: -20px;
   top: -20px;
 }
+
+.contact_info span {
+  background: #f17732;
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+.contact_info span i {
+  color: rgb(255, 255, 255) !important;
+}
