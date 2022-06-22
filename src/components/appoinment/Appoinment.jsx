@@ -9,7 +9,13 @@ import trangleOrange from "../../assets/images/shap/trangle-orange.png"
 import waveOrange from "../../assets/images/shap/wave-orange.png"
 import waveBlue from "../../assets/images/shap/wave-blue.png"
 import circleOrange from "../../assets/images/shap/circle-orange.png"
+import { Carousel } from 'react-responsive-carousel';
 
+
+import inHospital1 from "../../assets/images/in-hospital/in-hospital (2).jpg"
+import inHospital2 from "../../assets/images/in-hospital/in-hospital (1).jpeg"
+import inHospital3 from "../../assets/images/in-hospital/in-hospital (3).jpg"
+import { Link } from 'react-router-dom';
 
 const Appoinment = () => {
 
@@ -52,18 +58,58 @@ const Appoinment = () => {
                                     </form>
                                 </div>
                             </div>
+
                             <div className="col-xl-7 col-lg-6 col-md-6">
                                 <div className="appointment-thumb">
-                                    <img src="images/appointment/mobile.png" alt="" />
+                                    <h6 className="title-ext text-primary text-center mb-3">Let's Me Know</h6>
+                                    <div className="row">
+                                        <div className="col-sm-4">
+                                            <img className="img1 img-fluid img-thumbnail" src={inHospital1} alt="" />
+                                        </div>
+                                        <div className="col-sm-4">
+                                            <img className="img1 img-fluid img-thumbnail" src={inHospital2} alt="" />
+                                        </div>
+                                        <div className="col-sm-4">
+                                            <img className="img1 img-fluid img-thumbnail" src={inHospital3} alt="" />
+                                        </div>
+                                        <div className="col-sm-4">
+                                            <img className="img1 img-fluid img-thumbnail" src={inHospital1} alt="" />
+                                        </div>
+                                        <div className="col-sm-4">
+                                            <img className="img1 img-fluid img-thumbnail" src={inHospital2} alt="" />
+                                        </div>
+                                        <div className="col-sm-4">
+                                            <img className="img1 img-fluid img-thumbnail" src={inHospital3} alt="" />
+                                        </div>
+                                    </div>
+                                    <div className="text-end mt-3">
+                                        <Link to="/photos-gallery" class="btn btn-primary shadow p-2">Read More <i class="fa-solid fa-angles-right"></i> </Link>
+                                    </div>
+                                    {/* <Carousel>
+                                        <div>
+                                            <img className="img1 img-fluid" src={women} alt="" />
+                                            <p className="legend">Legend 1</p>
+                                        </div>
+                                        <div>
+                                            <img className="img1 img-fluid" src={women} alt="" />
+                                            <p className="legend">Legend 1</p>
+                                        </div>
+                                        <div>
+                                            <img className="img1 img-fluid" src={women} alt="" />
+                                            <p className="legend">Legend 1</p>
+                                        </div>
+                                    </Carousel> */}
+                                    {/* <img src="images/appointment/mobile.png" alt="" />
                                     <div className="images-group">
                                         <img className="img1" src={women} alt="" />
                                         <img className="img2" src={map} alt="" />
                                         <img className="img3" src={setting} alt="" />
                                         <img className="img4" src={check} alt="" />
                                         <img className="img5" src={chat} alt="" />
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
+
                         </div>
                     </div>
                     <img className="pt-img1 animate1" src={trangleOrange} alt="" />

@@ -76,3 +76,7 @@
   font-weight: 700;
   color: #1f2278;
 }
+
+.title-ext.text-primary {
+  background-image: url(../images/shap/ext-blue.png);
+}

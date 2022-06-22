@@ -42,46 +42,14 @@ const Header = () => {
                             <span></span>
                             <span></span>
                         </button>
-                        {/* <!-- extra nav --> */}
-                        {/* <div className="secondary-menu">
-                            <ul>
-                                <li className="search-btn"><button id="quikSearchBtn" type="button" className="btn-link"><i
-                                    className="las la-search"></i></button></li>
-                                <li className="num-bx"><a href="tel:(+01)999888777"><i className="fas fa-phone-alt"></i> (+01) 999
-                                    888 777</a></li>
-                                <li className="btn-area"><a href="contact-us" className="btn btn-primary shadow">CONTACT ME <i
-                                    className="btn-icon-bx fas fa-chevron-right"></i></a></li>
-                            </ul>
-                        </div> */}
-                        {/* <!-- Search Box ==== --> */}
-                        {/* <div className="nav-search-bar">
-                            <form action="#">
-                                <input name="search" value="" defaultValue="Search" type="text" className="form-control" placeholder="Type to search" />
-                                <span><i className="ti-search"></i></span>
-                            </form>
-                            <span id="searchRemove"><i className="ti-close"></i></span>
-                        </div> */}
+
                         <div className={toggleMenu === true ? "menu-links navbar-collapse justify-content-end collapse show" : "menu-links navbar-collapse justify-content-end collapse"} id="menuDropdown">
                             <div className="menu-logo">
                                 <a href="index"><img src="images/logo-white.png" alt="" /></a>
                             </div>
                             <ul className="nav navbar-nav">
                                 <li className="active"><a href="index">Home</a></li>
-                                {/* <li>
-                                    <Link to="/">Pages <i className="fas fa-plus"></i></Link>
-                                    <ul className="sub-menu">
-                                        <li className="add-menu-left">
-                                            <ul>
-                                                <li><Link to="/"><span>About Us</span></Link></li>
-                                                <li><Link to="/"><span>Our Team</span></Link></li>
-                                                <li><Link to="/"><span>FAQ's</span></Link></li>
-                                                <li><Link to="/"><span>Booking</span></Link></li>
-                                                <li><Link to="/"><span>Error 404</span></Link></li>
-                                                <li><Link to="/"><span>Login / Register</span></Link></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li> */}
+
                                 <li>
                                     <Link to="/">Services <i class="fa-solid fa-angle-down"></i> </Link>
                                     <ul className="sub-menu">
@@ -105,7 +73,13 @@ const Header = () => {
                                         <li><Link to="/videos-gallery"><span>Videos Gallery</span></Link></li>
                                     </ul>
                                 </li>
-                                <li><Link to="/">Contact Me <i class="fa-solid fa-angle-down"></i></Link>
+                                <li className="num-bx contact_info">
+                                    <a href="tel:(+880)1915449083"> <span><i class="fa-solid fa-phone"></i> </span> (+880) 191 544 9083 </a>
+                                </li>
+                                <li className="num-bx contact_info">
+                                    <a href="mailto:kazidmc@gmail.com"> <span><i class="fa-solid fa-envelope-circle-check"></i></span> kazidmc@gmail.com </a>
+                                </li>
+                                {/* <li><Link to="/">Contact Me <i class="fa-solid fa-angle-down"></i></Link>
                                     <ul className="sub-menu left">
                                         <li className="num-bx contact_info">
                                             <a href="tel:(+880)1915449083" style={{ fontSize: "12px" }}> <span><i class="fa-solid fa-phone"></i> </span> (+880) 191 544 9083 </a>
@@ -114,7 +88,7 @@ const Header = () => {
                                             <a href="mailto:kazidmc@gmail.com" style={{ fontSize: "12px" }}> <span><i class="fa-solid fa-envelope-circle-check"></i></span> kazidmc@gmail.com </a>
                                         </li>
                                     </ul>
-                                </li>
+                                </li> */}
                             </ul>
 
                             <div className="menu-close" onClick={() => setToggleMenu(!toggleMenu)}>

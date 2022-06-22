@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 // External CSS 
 import "video-react/dist/video-react.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 
 import "./assets/css/style.css";
 import "./assets/css/custom.css";
