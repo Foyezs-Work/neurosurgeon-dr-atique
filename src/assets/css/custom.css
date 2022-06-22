@@ -80,3 +80,17 @@
 .title-ext.text-primary {
   background-image: url(../images/shap/ext-blue.png);
 }
+
+.home_video_gallery h6 {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 14px;
+}
+.home_video_gallery {
+  transition: 0.5s ease all;
+  cursor: pointer;
+}
+.home_video_gallery:hover {
+  opacity: 0.7;
+  transform: translateY(-10px);
+}
