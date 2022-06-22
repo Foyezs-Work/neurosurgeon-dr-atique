@@ -20112,14 +20112,25 @@ footer .ft-contact .contact-bx {
   align-items: center;
 }
 footer .ft-contact .contact-bx .icon i {
-  font-size: 24px;
+  font-size: 18px;
   color: #fff;
   margin-right: 15px;
   background-color: #f17732;
   border-radius: 30px 30px 0px 30px;
-  width: 58px;
-  height: 58px;
-  line-height: 58px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+footer .ft-contact .contact-bx.email .icon i {
+  font-size: 18px;
+  color: #fff;
+  margin-right: 15px;
+  background-color: #f17732;
+  border-radius: 30px 0px 30px 30px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
 }
 footer .ft-contact .contact-bx .contact-number .number {
@@ -20306,7 +20317,7 @@ footer .subscribe-form .form-control {
   position: relative;
 }
 
-.video_thumbnail .play_btn{
+.video_thumbnail .play_btn {
   background: var(--bs-primary);
   height: 50px;
   width: 50px;
@@ -20337,7 +20348,7 @@ footer .subscribe-form .form-control {
 .video_thumbnail:hover img {
   opacity: 0.3;
 }
-.video_thumbnail:hover .play_btn{
+.video_thumbnail:hover .play_btn {
   opacity: 1;
 }
 

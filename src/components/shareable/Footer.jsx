@@ -28,10 +28,15 @@ const Footer = () => {
 
 
                                         <div className="contact-bx">
-                                            <div className="icon"><i className="fas fa-phone-alt"></i></div>
+                                            <div className="icon"><i class="fa-solid fa-phone"></i></div>
                                             <div className="contact-number">
-                                                <span>Contact Me By Calling</span>
-                                                <h4 className="number">+880 191 544 9083</h4>
+                                                <h4 className="number">  <a href="tel:(+880)1915449083">+880 191 544 9083</a></h4>
+                                            </div>
+                                        </div>
+                                        <div className="contact-bx email mt-2">
+                                            <div className="icon"><i class="fa-solid fa-paper-plane"></i></div>
+                                            <div className="contact-number">
+                                                <h4 className="number"><a href="mailto:kazidmc@gmail.com">  kazidmc@gmail.com </a></h4>
                                             </div>
                                         </div>
 

@@ -16,6 +16,12 @@ const VideoSection = () => {
     return (
         <section className="section-sp1 about-area">
             <div className="container">
+
+                <div className="heading-bx text-center">
+                    <h6 className="title-ext text-secondary">Video Gallery</h6>
+                    <h2 className="title">Some My Works</h2>
+                </div>
+
                 <div className="row align-items-center">
                     <div className="col-lg-6 mb-30">
 
@@ -23,9 +29,7 @@ const VideoSection = () => {
 
                     </div>
                     <div className="col-lg-6 mb-30">
-                        <div className="heading-bx">
-                            <h6 className="title-ext text-secondary">Video Gallery</h6>
-                        </div>
+                      
                         {/* video gallery */}
                         <div className="row justify-content-center">
                             {
@@ -44,7 +48,7 @@ const VideoSection = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+                0            </div>
             <img className="pt-img1 animate-wave" src={waveOrange} alt="" />
             <img className="pt-img2 animate2" src={circleSmall} alt="" />
             <img className="pt-img3 animate-rotate" src={lineCircle} alt="" />
