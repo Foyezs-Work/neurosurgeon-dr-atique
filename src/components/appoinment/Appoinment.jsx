@@ -27,8 +27,24 @@ const Appoinment = () => {
                         <div className="row align-items-center">
                             <div className="col-xl-5 col-lg-6 col-md-6">
                                 <div className="appointment-form form-wraper">
-                                    <h3 className="title">Book Appointment</h3>
-                                    <form action="#">
+                                    <h3 className="title">Book A Visit</h3>
+
+                                    <div className="appoinment_content">
+                                        <h6> To Book a Visit, please call chamber </h6>
+                                        <div className="text-start appoinment_content_inner mt-5">
+                                            <p>
+                                                <i class="fa-solid fa-phone"></i> Call :
+                                                <span>
+                                                    <a href="tel:(+880)1915449083">  01915449083 </a>
+                                                </span>
+                                            </p>
+                                            <p className='location'>
+                                                <i class="fa-solid fa-location-pin-lock"></i> Chamber Address :
+                                                <span> 30 Anjuman-e-Mofidul Islam Road, Kakrail VIP Road, Dhaka-1000, Bangladesh.</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    {/* <form action="#">
                                         <div className="form-group">
                                             <div className="dropdown bootstrap-select form-select"><select className="form-select">
                                                 <option selected="">Selecty Department</option>
@@ -55,7 +71,7 @@ const Appoinment = () => {
                                             <input type="date" className="form-control" />
                                         </div>
                                         <button type="submit" className="btn btn-secondary btn-lg">Appointment Now</button>
-                                    </form>
+                                    </form> */}
                                 </div>
                             </div>
 
@@ -83,7 +99,7 @@ const Appoinment = () => {
                                         </div>
                                     </div>
                                     <div className="text-end mt-3">
-                                        <Link to="/photos-gallery" class="btn btn-primary shadow p-2">Read More <i class="fa-solid fa-angles-right"></i> </Link>
+                                        <Link to="/photos-gallery" class="btn btn-primary shadow p-2"> More <i class="fa-solid fa-angles-right"></i> </Link>
                                     </div>
                                     {/* <Carousel>
                                         <div>

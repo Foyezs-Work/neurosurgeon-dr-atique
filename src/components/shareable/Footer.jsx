@@ -22,7 +22,7 @@ const Footer = () => {
                             <div className="col-xl-3 col-lg-3 col-md-6">
                                 <div className="widget widget_info">
                                     <div className="footer-logo">
-                                        <a href="index"><img src={logo} alt="" /></a>
+                                        <Link to="/"><img src={logo} alt="Brand Logo" style={{ width: "200px" }} /></Link>
                                     </div>
                                     <div className="ft-contact">
 
@@ -105,8 +105,8 @@ const Footer = () => {
                     <div className="footer-bottom">
                         <div className="row">
                             <div className="col-12 text-center">
-                                <p className="copyright-text">Copyright © {new Date().getFullYear()} || Design &amp; Developed by
-                                    <a href="https://solutiongrid.com/" rel="noreferrer" target="_blank" className="text-secondary"> Solution Grid</a></p>
+                                <p className="copyright-text">Copyright © {new Date().getFullYear()} || IT Partner :
+                                    <a href="https://abaacorp.com/" rel="noreferrer" target="_blank" className="text-secondary"> Abaacorp</a></p>
                             </div>
                         </div>
                     </div>

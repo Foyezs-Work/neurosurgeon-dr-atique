@@ -14,7 +14,7 @@ const VideoSection = () => {
 
     const [playVideo, setPlayVideo] = useState('https://www.youtube.com/watch?v=ysz5S6PUM-U')
     return (
-        <section className="section-sp1 about-area">
+        <section className="about-area">
             <div className="container">
 
                 <div className="heading-bx text-center">
@@ -44,7 +44,7 @@ const VideoSection = () => {
                             }
                         </div>
                         <div className="text-end mt-3">
-                            <Link class="btn btn-primary shadow p-2" to="/videos-gallery">Read More <i class="fa-solid fa-angles-right"></i> </Link>
+                            <Link class="btn btn-primary shadow p-2" to="/videos-gallery"> More <i class="fa-solid fa-angles-right"></i> </Link>
                         </div>
                     </div>
                 </div>

@@ -11,7 +11,7 @@ import inHospital3 from "../../assets/images/in-hospital/in-hospital (3).jpg"
 const AboutMyServices = () => {
 
     return (
-        <section className="section-sp1 about-area">
+        <section className="pt-3 about-area">
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-6 mb-30">
