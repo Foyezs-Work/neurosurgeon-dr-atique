@@ -101,28 +101,7 @@ const Appoinment = () => {
                                     <div className="text-end mt-3">
                                         <Link to="/photos-gallery" class="btn btn-primary shadow p-2"> More <i class="fa-solid fa-angles-right"></i> </Link>
                                     </div>
-                                    {/* <Carousel>
-                                        <div>
-                                            <img className="img1 img-fluid" src={women} alt="" />
-                                            <p className="legend">Legend 1</p>
-                                        </div>
-                                        <div>
-                                            <img className="img1 img-fluid" src={women} alt="" />
-                                            <p className="legend">Legend 1</p>
-                                        </div>
-                                        <div>
-                                            <img className="img1 img-fluid" src={women} alt="" />
-                                            <p className="legend">Legend 1</p>
-                                        </div>
-                                    </Carousel> */}
-                                    {/* <img src="images/appointment/mobile.png" alt="" />
-                                    <div className="images-group">
-                                        <img className="img1" src={women} alt="" />
-                                        <img className="img2" src={map} alt="" />
-                                        <img className="img3" src={setting} alt="" />
-                                        <img className="img4" src={check} alt="" />
-                                        <img className="img5" src={chat} alt="" />
-                                    </div> */}
+                                 
                                 </div>
                             </div>
 
