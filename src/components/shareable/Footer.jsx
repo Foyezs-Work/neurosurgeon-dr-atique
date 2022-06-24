@@ -76,19 +76,14 @@ const Footer = () => {
                             </div>
                             <div className="col-xl-3 col-lg-3 col-6">
                                 <div className="widget footer_widget">
-                                    <h3 className="footer-title">Treatments & Surgery</h3>
+                                    <h3 className="footer-title">Our Service</h3>
                                     <ul>
-                                        <li><Link to="/service-detail"><span>Brain Tumour Operation</span></Link></li>
-                                        <li><Link to="/service-detail"><span>Endoscopic Brain Surgery (pituitory, etv and others)</span></Link></li>
-                                        <li><Link to="/service-detail"><span>Scalbase Neuro Surgery</span></Link></li>
-                                        <li><Link to="/service-detail"><span>Vascular Neuro Surgery</span></Link></li>
-                                        <li><Link to="/service-detail"><span>Pediatric Neuro Surgery</span></Link></li>
-                                        <li><Link to="/service-detail"><span>Spinal Surgery</span></Link></li>
-                                        <li><Link to="/service-detail"><span>Traumatic Brain & Spine Surgery</span></Link></li>
-                                        <li><Link to="/service-detail"><span>Epilepsy Surgery</span></Link></li>
-                                        <li><Link to="/service-detail"><span>Spainal Tumour</span></Link></li>
-                                        <li><Link to="/service-detail"><span> Microdiscectomy</span></Link></li>
-                                        <li><Link to="/service-detail"><span> Stroke Surgery (Urgent Surgery of stroke patients)</span></Link></li>
+                                        <li><Link to="/service-detail"><span>Dental Care</span></Link></li>
+                                        <li><Link to="/service-detail"><span>Cardiac Clinic</span></Link></li>
+                                        <li><Link to="/service-detail"><span>Massege Therapy</span></Link></li>
+                                        <li><Link to="/service-detail"><span>Cardiology</span></Link></li>
+                                        <li><Link to="/service-detail"><span>Precise Diagnosis</span></Link></li>
+                                        <li><Link to="/service-detail"><span>Abmbulance Services</span></Link></li>
                                     </ul>
                                 </div>
                             </div>

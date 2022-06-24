@@ -51,12 +51,21 @@ const Header = () => {
                                 <li className="active"><a href="index">Home</a></li>
 
                                 <li>
-                                    <Link to="/">Services <i class="fa-solid fa-angle-down"></i> </Link>
+                                    <Link to="/">Treatments & Surgery <i class="fa-solid fa-angle-down"></i> </Link>
                                     <ul className="sub-menu">
                                         <li className="add-menu-left">
                                             <ul>
-                                                <li><Link to="/services"><span>Service</span> </Link></li>
-                                                <li><Link to="/service-detail"><span>Service Detail</span></Link></li>
+                                                <li><Link to="/service-detail"><span>Brain Tumour Operation</span></Link></li>
+                                                <li><Link to="/service-detail"><span>Endoscopic Brain Surgery (pituitory, etv and others)</span></Link></li>
+                                                <li><Link to="/service-detail"><span>Scalbase Neuro Surgery</span></Link></li>
+                                                <li><Link to="/service-detail"><span>Vascular Neuro Surgery</span></Link></li>
+                                                <li><Link to="/service-detail"><span>Pediatric Neuro Surgery</span></Link></li>
+                                                <li><Link to="/service-detail"><span>Spinal Surgery</span></Link></li>
+                                                <li><Link to="/service-detail"><span>Traumatic Brain & Spine Surgery</span></Link></li>
+                                                <li><Link to="/service-detail"><span>Epilepsy Surgery</span></Link></li>
+                                                <li><Link to="/service-detail"><span>Spainal Tumour</span></Link></li>
+                                                <li><Link to="/service-detail"><span> Microdiscectomy</span></Link></li>
+                                                <li><Link to="/service-detail"><span> Stroke Surgery (Urgent Surgery of stroke patients)</span></Link></li>
                                             </ul>
                                         </li>
                                     </ul>
