@@ -23,19 +23,20 @@ const DashboardLayout = ({ children, title = null }) => {
         dispatch(handleToggleDashSidebar())
     }, [dispatch]);
 
-    console.log("isToggle", isToggle)
-
     return (
         <React.Fragment>
             <div className="dash_layout">
-                <div className="dash_sidebar">
+                <div className={isToggle ? "dash_sidebar navbar_toggle" : "dash_sidebar IsNot_navbar_toggle"}>
                     <div className="sidebar_inner">
+                        <p className='toggle_btn' onClick={() => dispatch(handleToggleDashSidebar(!isToggle))}><i class={isToggle ? `fa-solid fa-chevron-left` : `fa-solid fa-chevron-right`}></i></p>
                         <Sidebar />
                     </div>
                 </div>
-                <div className="dash_container">
-                    <div className="sidbar_navTop">
-                        <NavTop />
+                <div className={isToggle ? "dash_container dash_content_toggle" : "dash_container isNot_dash_content_toggle"}>
+                    <div className="navbar_top">
+                        <div className="navbar_top_inner">
+                            <NavTop />
+                        </div>
                     </div>
                     <div className="dash_content_inner">
                         {

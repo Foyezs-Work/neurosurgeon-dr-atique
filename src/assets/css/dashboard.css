@@ -1,5 +1,5 @@
 :root {
-  --color-primary: #1f2278;
+  --color-primary: hwb(238 12% 53%);
   --color-info: #0091c3;
   --color-warning: #f17732;
   --color-white: #ffffff;
@@ -8,8 +8,8 @@
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 500;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #444;
-  --bs-body-bg: #ffffff;
+  --bs-body-color: #ffff;
+  --bs-body-bg: #f5f5fc;
 }
 
 body {
@@ -25,3 +25,80 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   overflow-y: scroll !important;
 }
+
+/******************************************************************
+                        Dahshboard Layout CSS
+*******************************************************************/
+.dash_layout {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.dash_sidebar {
+  height: 100vh;
+  background-color: var(--color-white);
+  border-right: 1px solid var(--color-info);
+  box-shadow: -18px 19px 20px 16px rgb(0 160 215 / 56%);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.5s ease;
+  z-index: 9999;
+}
+.dash_sidebar.navbar_toggle {
+  width: 300px;
+}
+
+.dash_sidebar.IsNot_navbar_toggle {
+  width: 80px;
+}
+
+.dash_sidebar .sidebar_inner {
+  position: relative !important;
+}
+.dash_sidebar .sidebar_inner .toggle_btn {
+  height: 30px;
+  width: 30px;
+  border: 1px solid var(--color-info);
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  right: -15px;
+  top: 15px;
+  z-index: 9999;
+  background-color: var(--color-white);
+  -webkit-box-shadow: 3px 0px 12px -3px rgba(0, 145, 195, 1);
+  -moz-box-shadow: 3px 0px 12px -3px rgba(0, 145, 195, 1);
+  box-shadow: 3px 0px 12px -3px rgba(0, 145, 195, 1);
+}
+.dash_container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.dash_container.dash_content_toggle {
+  left: 300px;
+}
+.dash_container.isNot_dash_content_toggle {
+  left: 80px;
+}
+
+.dash_container .navbar_top {
+  position: relative;
+  left: 300px;
+}
+.dash_container .navbar_top .navbar_top_inner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--bs-body-bg);
+  box-shadow: 0 0 50px 0 rgb(0 160 215 / 35%);
+  border-bottom: 1px solid #00a0d7;
+}
+
+/******************************************************************
+                        Dahshboard Layout CSS Close
+*******************************************************************/
