@@ -1,3 +1,4 @@
+import Dashboard from "../adminPanel/pages/Dashboard";
 import BlogPage from "../pages/BlogPage";
 import HomePage from "../pages/HomePage";
 import LoginPage from "../pages/LoginPage";
@@ -13,6 +14,7 @@ const routes = [
   { path: "/videos-gallery", name: "Videos Gallery", element: VideoGallery },
   { path: "/blog", name: "Blog Page", element: BlogPage },
   { path: "/author-login", name: "Login Page", element: LoginPage },
+  { path: "/dashboard", name: "Login Page", element: Dashboard },
   { path: "*", name: "404", element: PageNotFound },
  
 ];
