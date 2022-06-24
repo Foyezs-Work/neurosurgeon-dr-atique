@@ -86,14 +86,14 @@ body {
 }
 
 .dash_container .navbar_top {
-  position: relative;
-  left: 300px;
+  /* position: relative; */
+  /* left: 300px; */
 }
 .dash_container .navbar_top .navbar_top_inner {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
+  padding: 10px;
   background-color: var(--bs-body-bg);
   box-shadow: 0 0 50px 0 rgb(0 160 215 / 35%);
   border-bottom: 1px solid #00a0d7;
