@@ -31,14 +31,14 @@ const Sidebar = () => {
                     </li>
                     <li>
                         {
-                            isToggle ? <NavLink to="/photo-gallery-list"> <i class="fa-solid fa-video"></i> Videos Gallery List  </NavLink> :
-                                <NavLink to="/photo-gallery-list" title="Photo Gallery List">  <i class="fa-solid fa-video"></i></NavLink>
+                            isToggle ? <NavLink to="/video-gallery-list"> <i class="fa-solid fa-video"></i> Videos Gallery List  </NavLink> :
+                                <NavLink to="/video-gallery-list" title="Videos Gallery List">  <i class="fa-solid fa-video"></i></NavLink>
                         }
                     </li>
                     <li>
                         {
-                            isToggle ? <NavLink to="/photo-gallery-list"> <i class="fa-solid fa-blog"></i> Blogs List  </NavLink> :
-                                <NavLink to="/photo-gallery-list" title="Photo Gallery List">  <i class="fa-solid fa-blog"></i></NavLink>
+                            isToggle ? <NavLink to="/blog-list"> <i class="fa-solid fa-blog"></i> Blogs List  </NavLink> :
+                                <NavLink to="/blog-list" title="Blog List">  <i class="fa-solid fa-blog"></i></NavLink>
                         }
                     </li>
                 </ul>
