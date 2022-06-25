@@ -122,6 +122,35 @@ body {
   width: 180px;
 }
 
+.sidebar_menu {
+  padding: 30px;
+}
+.sidebar_menu ul li{
+  margin-top: 20px;
+}
+.sidebar_menu ul li a{
+  transition: 0.5s ease;
+}
+.sidebar_menu ul li a:hover{
+  color: #f17732;
+}
+.sidebar_menu ul li a:hover i{
+  background: #f17732;
+}
+.sidebar_menu ul li i{
+  height: 30px;
+  width: 30px;
+  background-color: #0091c3;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffff;
+  margin-right: 15px;
+  font-size: 1rem;
+  transition: 0.5s ease-in;
+}
+
 /******************************************************************
                         Dahshboard Layout CSS Close
 *******************************************************************/
