@@ -77,9 +77,11 @@ body {
   position: relative;
   height: 100vh;
   overflow: hidden;
+  width: 100%;
 }
 .dash_container.dash_content_toggle {
   left: 300px;
+  width: 85%;
 }
 .dash_container.isNot_dash_content_toggle {
   left: 80px;
@@ -93,6 +95,7 @@ body {
   background-color: var(--bs-body-bg);
   box-shadow: 0 0 50px 0 rgb(0 160 215 / 35%);
   border-bottom: 1px solid #00a0d7;
+  z-index: 999;
 }
 .dash_container .dash_footer {
   position: fixed;
@@ -104,10 +107,10 @@ body {
 }
 
 .dash_content_inner {
-  padding-top: 70px;
-  padding-bottom: 50px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   padding-left: 30px;
-  padding-right: 20px;
+  padding-right: 120px;
   height: 100%;
   overflow: auto;
 }
@@ -153,4 +156,30 @@ body {
 
 /******************************************************************
                         Dahshboard Layout CSS Close
+*******************************************************************/
+
+/******************************************************************
+                        Dahshboard Content CSS Start
+*******************************************************************/
+.dashboard_card_content{
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 3px 0px 12px -3px rgb(197 197 197 / 88%);
+  width: 100%;
+  padding: 20px;
+}
+
+.dashboard_card_header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #00a0d7;
+  padding-bottom: 15px;
+}
+.dashboard_card_header h6{
+  font-size: 1rem;
+  color: #3c3a3a;
+}
+/******************************************************************
+                        Dahshboard Content CSS Close
 *******************************************************************/
