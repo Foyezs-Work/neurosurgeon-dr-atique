@@ -16,6 +16,11 @@ const PhotoGalleryList = () => {
             selector: row => row.year,
             sortable: true
         },
+        {
+            name: 'Action',
+            selector: row => row.year,
+            // sortable: true
+        },
     ];
 
     const data = [
@@ -86,7 +91,7 @@ const PhotoGalleryList = () => {
             <div className="dashboard_card_content">
                 <div className="dashboard_card_header">
                     <h6>Photo Gallery List</h6>
-                    <Link to="/photos-gallery" class="btn btn-sm btn-primary shadow p-2"> Add New <i class="ms-2 fa-solid fa-arrow-right-long"></i> </Link>
+                    <Link to="/add-photos" class="btn btn-sm btn-primary shadow p-2"> Add New <i class="ms-2 fa-solid fa-arrow-right-long"></i> </Link>
 
                 </div>
                 <div className="border border-rounded mt-3">

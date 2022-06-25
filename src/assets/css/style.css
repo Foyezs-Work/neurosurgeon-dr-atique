@@ -13113,13 +13113,14 @@ section {
 
 .form-control {
   border-radius: 6px;
-  border: 1px solid transparent;
+  /* border: 1px solid transparent; */
   padding: 15px 25px;
   font-size: 14px;
   font-weight: 400;
   color: #444;
   transition: all 0.3s ease-in-out;
   background: #ffffff;
+  margin-top: 10px;
 }
 .form-control .select {
   padding: 12px 0;
