@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 // External CSS 
 import "video-react/dist/video-react.css";
@@ -15,7 +17,9 @@ import "./assets/css/style.css";
 
 
 import { Provider } from 'react-redux'
-import store from './_redux/Store'
+import store from './_redux/Store';
+
+toast.configure();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
