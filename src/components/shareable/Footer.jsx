@@ -105,8 +105,8 @@ const Footer = () => {
                     <div className="footer-bottom">
                         <div className="row">
                             <div className="col-12 text-center">
-                                <p className="copyright-text">Copyright © {new Date().getFullYear()} || IT Partner :
-                                    <a href="https://abaacorp.com/" rel="noreferrer" target="_blank" className="text-secondary"> Abaacorp</a></p>
+                                <p className="copyright-text">Copyright © {new Date().getFullYear()} || All rights reserved.  <span className="font-bold" style={{fontWeight: 700}}>IT Partner -
+                                    <a href="https://abaacorp.com/" rel="noreferrer" target="_blank" className="text-secondary"> Abaacorp.com</a></span></p>
                             </div>
                         </div>
                     </div>
