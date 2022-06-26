@@ -22,12 +22,12 @@ const PhotoGalleryReducer = (state = initialState, action) => {
                 ...state,
                 photoInput
             };
-        // case Types.HANDLE_SUBMIT_GUIDELINE_DATA:
-        //     return {
-        //         ...state,
-        //         isSubmitting  : action.payload.isLoading,
-        //         guidelineInput: initialState.guidelineInput
-        //     };
+        case Types.HANDLE_SUBMIT_PHOTO_GALLERY_DATA:
+            return {
+                ...state,
+                isSubmitting: action.payload.isLoading,
+                photoInput: initialState.photoInput
+            };
         case Types.GET_PHOTO_GALLERY_LIST:
             return {
                 ...state,

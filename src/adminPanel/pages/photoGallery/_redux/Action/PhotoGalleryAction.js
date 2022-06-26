@@ -14,7 +14,7 @@ let baseURL = process.env.REACT_APP_API_URL;
  */
 export const handleChangePhotoInput = (name, value, e = null) => (dispatch) => {
     let data = {
-        name : name,
+        name: name,
         value: value,
     }
     dispatch({ type: Types.HANDLE_CHANGE_PHOTO_GALLERY_INPUT, payload: data });
@@ -32,9 +32,8 @@ export const handleChangePhotoInput = (name, value, e = null) => (dispatch) => {
 };
 
 export const deletePreviewImage = (name) => (dispatch) => {
-
     let data = {
-        name : name,
+        name: name,
         value: null,
     }
     dispatch({ type: Types.HANDLE_CHANGE_PHOTO_GALLERY_INPUT, payload: data });
@@ -48,44 +47,44 @@ export const deletePreviewImage = (name) => (dispatch) => {
 
 /**
 * Add New Guideline
-* @param {object} guidelineInput ex: Wallet Input Fields
-* @returns handleStoreGuideline
+* @param {object} photoInput ex: Wallet Input Fields
+* @returns handleStorePhotoGallery
 */
-// export const handleStoreGuideline = (guidelineInput, navigate) => (dispatch) => {
-//     const response = {
-//         isLoading  : true,
-//         status     : false,
-//     }
-//     if (guidelineInput.title === "") {
-//         showToast("error", "Guideline title can't be blank!")
-//         return false;
-//     }
+export const handleStorePhotoGallery = (photoInput, navigate) => (dispatch) => {
+    const response = {
+        isLoading: true,
+        status: false,
+    }
+    if (photoInput.title === "") {
+        showToast("error", "Photo title can't be blank!")
+        return false;
+    }
 
-//     if (guidelineInput.description === "") {
-//         showToast("error", "Description can't be blank!");
-//         return false;
-//     }
-//     if (guidelineInput.imagePreview === "" || guidelineInput.imagePreview === null) {
-//         showToast("error", "Image Can't be blank!");
-//         return false;
-//     }
+    if (photoInput.photoPreview === "" || photoInput.photoPreview === null) {
+        showToast("error", "Image Can't be blank!");
+        return false;
+    }
 
-//     dispatch({ type: Types.HANDLE_SUBMIT_GUIDELINE_DATA, payload: response });
+    dispatch({ type: Types.HANDLE_SUBMIT_PHOTO_GALLERY_DATA, payload: response });
 
-//     Axios.post(`${baseURL}/guideline/create`, guidelineInput)
-//         .then((res) => {
-//             response.isLoading = false;
-//             showToast("success", res.data.message);
-//             dispatch({ type: Types.HANDLE_SUBMIT_GUIDELINE_DATA, payload: response });
-//             navigate("/guideline-list");
+    const addedPhoto = {
+        title: photoInput.title,
+        photo: photoInput.photoPreview
+    }
+    Axios.post(`${baseURL}/photos/`, addedPhoto)
+        .then((res) => {
+            response.isLoading = false;
+            showToast("success", res.data.message);
+            dispatch({ type: Types.HANDLE_SUBMIT_PHOTO_GALLERY_DATA, payload: response });
+            navigate("/photo-gallery-list");
 
-//         }).catch((err) => {
-//             response.isLoading = false;
-//             let responseLog = err.response;
-//             showToast("error", responseLog.data.message);
-//             dispatch({ type: Types.HANDLE_SUBMIT_GUIDELINE_DATA, payload: response });
-//         })
-// }
+        }).catch((err) => {
+            response.isLoading = false;
+            let responseLog = err.response;
+            showToast("error", responseLog.data.message);
+            dispatch({ type: Types.HANDLE_SUBMIT_PHOTO_GALLERY_DATA, payload: response });
+        })
+}
 
 /**
  * Get All Guideline List

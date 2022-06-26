@@ -1,16 +1,25 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import DashboardLayout from './../../../../layout/DashboardLayout';
-import { deletePreviewImage, handleChangePhotoInput } from './../Action/PhotoGalleryAction';
+import { deletePreviewImage, handleChangePhotoInput, handleStorePhotoGallery } from './../Action/PhotoGalleryAction';
 import no_img from "../../../../../assets/images/no_img.jpg"
+import { Spinner } from 'react-bootstrap';
 
 const AddPhotos = () => {
+
+    let navigate = useNavigate();
     const dispatch = useDispatch();
     const photoInput = useSelector(state => state.PhotoGalleryReducer.photoInput)
+    const isSubmitting = useSelector(state => state.PhotoGalleryReducer.isSubmitting)
 
     const handleChangeTextInput = (name, value, e = null) => {
         dispatch(handleChangePhotoInput(name, value, e));
+    };
+
+    const onSubmit = (e) => {
+        dispatch(handleStorePhotoGallery(photoInput, navigate))
+        e.preventDefault();
     };
 
     console.log('photoInput :>> ', photoInput);
@@ -25,7 +34,7 @@ const AddPhotos = () => {
                 </div>
                 <div className=" border-rounded mt-3">
                     <form
-                        // onSubmit={handleSubmit(onSubmit)}
+                        onSubmit={(e) => onSubmit(e)}
                         method="post"
                         autoComplete="off"
                         encType="multipart/form-data"
@@ -55,7 +64,7 @@ const AddPhotos = () => {
                                     <div className="imgPreview">
                                         <div className="removePreview">
                                             <i className="fa fa-times pointer text-danger" title="Remove"
-                                            onClick={() => dispatch(deletePreviewImage('photo'))}
+                                                onClick={() => dispatch(deletePreviewImage('photo'))}
                                             ></i>
                                         </div>
                                         <img src={photoInput.photoPreview} className="img img-thumbnail" alt="" style={{ width: "150px", marginTop: "30px" }} />
@@ -64,8 +73,23 @@ const AddPhotos = () => {
                             }
                         </div>
                         <div className="text-end mt-3">
-                            <button class="btn btn-sm btn-secondary shadow p-2 me-2"> Clear </button>
-                            <button class="btn btn-sm btn-primary shadow p-2"> Submit </button>
+                            {
+                                isSubmitting && (
+                                    <button type='submit' className='btn btn-sm btn-primary shadow p-2' disabled={true}>
+                                        <Spinner
+                                            animation="border"
+                                            variant="custom-loading"
+                                            size="sm"
+                                        />
+                                        <span className="ms-2">Submitting...</span>
+                                    </button>
+                                )
+                            }
+                            {
+                                !isSubmitting && (
+                                    <button type='submit' className='btn btn-sm btn-primary shadow p-2'>Submit</button>
+                                )
+                            }
                         </div>
                     </form>
 
