@@ -94,7 +94,7 @@ const PhotoGalleryList = () => {
                                         </td>
                                         <td>
                                             <div className="d-flex justify-content-center align-items-center">
-                                                <SimpleTooltip title={`View - ${item.title}`}>
+                                                {/* <SimpleTooltip title={`View - ${item.title}`}>
                                                     <button className="btn btn-info btn-sm py-2 px-3 mx-2">
                                                         <i className="fa fa-eye"></i>
                                                     </button>
@@ -105,12 +105,12 @@ const PhotoGalleryList = () => {
                                                     >
                                                         <i className="fas fa-edit"></i>
                                                     </button>
-                                                </SimpleTooltip>
+                                                </SimpleTooltip> */}
                                                 <SimpleTooltip title={`Delete - ${item.title}`}>
-                                                    <button className="btn btn-danger btn-sm py-2 px-3"
+                                                    <button className="btn btn-danger text-white btn-sm py-2 px-3"
                                                         onClick={() => deletePost(item)}
-                                                    >
-                                                        <i className="fas fa-trash"></i>
+                                                    > Delete
+                                                        <i className="fas fa-trash ms-2"></i>
                                                     </button>
                                                 </SimpleTooltip>
                                             </div>
