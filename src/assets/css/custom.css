@@ -138,3 +138,28 @@
 .fTxtMi {
   opacity: 1 !important;
 }
+
+/************************
+      Responsive CSS
+*************************/
+@media only screen and (max-width: 600px) {
+  .dr_department {
+    position: absolute;
+    left: 4%;
+    /* right: 46%; */
+    bottom: 58%;
+    line-height: 1.5;
+  }
+  .dr_more_department {
+    margin-top: 3rem;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 996px) {
+  .dr_department {
+    position: absolute;
+    right: 7%;
+    bottom: 57%;
+    line-height: 1.5;
+  }
+}

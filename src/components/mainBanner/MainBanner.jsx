@@ -16,14 +16,16 @@ const MainBanner = () => {
             <div className="container inner-content">
                 <div className="row align-items-center">
                     <div className="col-lg-7 col-md-6 col-sm-7 position-relative">
-                        <img src={govtLogo} alt="Govt Logo" style={{height: "50px",}} />
+                        <img src={govtLogo} alt="Govt Logo" style={{ height: "50px", }} />
                         {/* <h6 className="title-ext text-primary">Hello, I'm</h6> */}
                         <h1>Dr. K. M. Atiqul Islam</h1>
                         <h5 className='dr_department'>Brain & Spine Surgeon</h5>
-                        <h5>MBBS (DMC), BCS (Health)</h5>
-                        <h5>MS (Neurosurgery)</h5>
-                        <h4 className=''>Dept of Neurosurgery</h4>
-                        <h5>National Institute of Neuroscience & Hospital Agargaon, Dhaka</h5>
+                        <div className='dr_more_department'>
+                            <h5>MBBS (DMC), BCS (Health)</h5>
+                            <h5>MS (Neurosurgery)</h5>
+                            <h4 className=''>Dept of Neurosurgery</h4>
+                            <h5>National Institute of Neuroscience & Hospital Agargaon, Dhaka</h5>
+                        </div>
                         {/* <a href="about-us" className="btn btn-secondary btn-lg shadow">Know More</a> */}
                     </div>
                     <div className="col-lg-5 col-md-6 col-sm-5">
