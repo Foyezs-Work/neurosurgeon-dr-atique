@@ -7,6 +7,7 @@ import SimpleTooltip from '../../../components/_utilities/SimpleTooltip';
 import DashboardLayout from '../../layout/DashboardLayout';
 import { deletePhoto, getPhotoGalleryList } from './_redux/Action/PhotoGalleryAction';
 import { confirmAlert } from 'react-confirm-alert';
+import LoadingSpinner from '../../../components/_utilities/LoadingSpinner';
 
 const PhotoGalleryList = () => {
 
@@ -114,6 +115,11 @@ const PhotoGalleryList = () => {
                             }
                         </tbody>
                     </table>
+                    {
+                        isLoading && <div className="row justify-content-center m-5">
+                            <LoadingSpinner title="Loading Photo Gallery List..." />
+                        </div>
+                    }
                     <div className="text-center">
                         {
                             postsData.length > 0 &&
