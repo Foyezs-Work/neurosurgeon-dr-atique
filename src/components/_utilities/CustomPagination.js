@@ -16,7 +16,7 @@ const CustomPagination = ({ itemsPerPage = 5, datalist }) => {
         console.log(`Loading items from ${itemOffset} to ${endOffset}`);
         setCurrentItems(datalist.slice(itemOffset, endOffset));
         setPageCount(Math.ceil(datalist.length / itemsPerPage));
-    }, [itemOffset, itemsPerPage]);
+    }, [itemOffset, itemsPerPage, datalist]);
 
     // Invoke when user click to request another page.
     const handlePageClick = (event) => {

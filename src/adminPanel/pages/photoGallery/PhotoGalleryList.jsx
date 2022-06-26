@@ -1,32 +1,37 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Pagination } from 'react-bootstrap';
 import DataTable from 'react-data-table-component';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import CustomPagination from '../../../components/_utilities/CustomPagination';
+import PaginationComponent from '../../../components/_utilities/PaginationComponent';
+import SimpleTooltip from '../../../components/_utilities/SimpleTooltip';
 import DashboardLayout from '../../layout/DashboardLayout';
 import { getPhotoGalleryList } from './_redux/Action/PhotoGalleryAction';
 
 const PhotoGalleryList = () => {
-    const ExpandedComponent = ({ data }) => <pre>{JSON.stringify(data, null, 2)}</pre>;
-    const columns = [
-        {
-            name: 'Title',
-            selector: row => row.title,
-            sortable: true
-        },
-        {
-            name: 'Photo',
-            selector: row => row.year,
-            sortable: true
-        },
-        {
-            name: 'Action',
-            selector: row => row.year,
-            // sortable: true
-        },
-    ];
+    // const ExpandedComponent = ({ data }) => <pre>{JSON.stringify(data, null, 2)}</pre>;
+    // const columns = [
+    //     {
+    //         name: 'Title',
+    //         selector: row => row.title,
+    //         sortable: true
+    //     },
+    //     {
+    //         name: 'Photo',
+    //         selector: row => row.year,
+    //         sortable: true
+    //     },
+    //     {
+    //         name: 'Action',
+    //         selector: row => row.year,
+    //         // sortable: true
+    //     },
+    // ];
 
+    const [totalItems, setTotalItems] = useState(0);
+    const [currentPage, setCurrentPage] = useState(1);
+    const ITEMS_PER_PAGE = 5;
 
     const dispatch = useDispatch();
     const { photoList, isLoading, isDeleting } = useSelector((state) => state.PhotoGalleryReducer);
@@ -35,7 +40,18 @@ const PhotoGalleryList = () => {
         dispatch(getPhotoGalleryList())
     }, [dispatch])
 
-    console.log('photoList :>> ', photoList);
+
+    const postsData = useMemo(() => {
+        let computedPosts = photoList;
+
+        setTotalItems(computedPosts.length);
+
+        //Current Page slice
+        return computedPosts.slice(
+            (currentPage - 1) * ITEMS_PER_PAGE,
+            (currentPage - 1) * ITEMS_PER_PAGE + ITEMS_PER_PAGE
+        );
+    }, [photoList, currentPage]);
 
     let active = 2;
     let items = [];
@@ -55,8 +71,8 @@ const PhotoGalleryList = () => {
                     <Link to="/add-photos" class="btn btn-sm btn-primary shadow p-2"> Add New <i class="ms-2 fa-solid fa-arrow-right-long"></i> </Link>
 
                 </div>
-                <div className="border table-border border-rounded mt-3">
-                    <table class="table text-center">
+                <div className="table-responsive mt-3">
+                    <table class="table table table-bordered border-rounded text-center">
                         <thead>
                             <tr>
                                 <th scope="col">SL</th>
@@ -67,44 +83,58 @@ const PhotoGalleryList = () => {
                         </thead>
                         <tbody>
                             {
-                                photoList && photoList.length > 0 && photoList.map((item, index) => (
-                                    // <DataTable
-                                    //     columns={columns}
-                                    //     data={photoList}
-                                    //     // selectableRows
-                                    //     pagination
-                                    // // expandableRows
-                                    // // expandableRowsComponent={ExpandedComponent}
-                                    // />
-                                    <tr key={item._id}>
-                                        <td>{index + 1}</td>
+                                photoList && postsData.length > 0 && postsData.map((item, index) => (
+
+                                    <tr key={item._id} className="text-center">
+                                        <td>{((currentPage * ITEMS_PER_PAGE) + index + 1) - postsData.length}</td>
                                         <td>{item.title}</td>
                                         <td>
                                             <img src={item.photo} alt={item.title} style={{ width: "50px" }} />
                                         </td>
                                         <td>
-                                            <button>Get</button>
-                                            <button>Delete</button>
+                                            <div className="d-flex justify-content-center align-items-center">
+                                                <SimpleTooltip title={`View - ${item.title}`}>
+                                                    <button className="btn btn-info btn-sm py-2 px-3 mx-2">
+                                                        <i className="fa fa-eye"></i>
+                                                    </button>
+                                                </SimpleTooltip>
+                                                <SimpleTooltip title={`Edit - ${item.title}`}>
+                                                    <button className="btn btn-primary btn-sm me-2 py-2 px-3" 
+                                                    // onClick={() => handleUpdateModalShow(item)}
+                                                    >
+                                                        <i className="fas fa-edit"></i>
+                                                    </button>
+                                                </SimpleTooltip>
+                                                <SimpleTooltip title={`Delete - ${item.title}`}>
+                                                    <button className="btn btn-danger btn-sm py-2 px-3"
+                                                        // onClick={() => deletePost(item)}
+                                                    >
+                                                        <i className="fas fa-trash"></i>
+                                                    </button>
+                                                </SimpleTooltip>
+                                            </div>
                                         </td>
                                     </tr>
                                 ))
                             }
                         </tbody>
                     </table>
-
+                    <div className="text-center">
+                        {
+                            postsData.length > 0 &&
+                            <PaginationComponent
+                                total={totalItems}
+                                itemsPerPage={ITEMS_PER_PAGE}
+                                currentPage={currentPage}
+                                onPageChange={page => setCurrentPage(page)}
+                            />
+                        }
+                    </div>
 
                 </div>
 
-                <Pagination size="sm">{items}</Pagination>
 
-                {
-                    photoList && photoList.length > 0 && (
-                        <CustomPagination
-                            itemsPerPage={20}
-                            datalist={photoList}
-                        />
-                    )
-                }
+
             </div>
         </DashboardLayout>
     );
