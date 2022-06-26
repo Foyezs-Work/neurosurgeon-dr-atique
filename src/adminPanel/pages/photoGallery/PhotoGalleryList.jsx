@@ -87,7 +87,8 @@ const PhotoGalleryList = () => {
                                 photoList && postsData.length > 0 && postsData.map((item, index) => (
 
                                     <tr key={item._id} className="text-center">
-                                        <td>{((currentPage * ITEMS_PER_PAGE) + index + 1) - postsData.length}</td>
+                                        {/* <td>{((currentPage * ITEMS_PER_PAGE) + index + 1) - postsData.length}</td> */}
+                                        <td>{(currentPage * ITEMS_PER_PAGE) - 5 + index + 1}</td>
                                         <td>{item.title}</td>
                                         <td>
                                             <img src={item.photo} alt={item.title} style={{ width: "50px" }} />
