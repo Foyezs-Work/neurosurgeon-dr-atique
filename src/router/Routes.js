@@ -1,8 +1,6 @@
 import BlogList from "../adminPanel/pages/BlogList";
 import Dashboard from "../adminPanel/pages/Dashboard";
-// import PhotoGalleryList from "../adminPanel/pages/photoGallery/PhotoGalleryList";
 import VideoGalleryList from "../adminPanel/pages/VideoGalleryList";
-import AddPhotos from "../adminPanel/pages/AddPhotos";
 import BlogPage from "../pages/BlogPage";
 import HomePage from "../pages/HomePage";
 import LoginPage from "../pages/LoginPage";
@@ -10,6 +8,7 @@ import PageNotFound from "../pages/PageNotFound";
 import PhotosGallery from "../pages/PhotosGallery";
 import VideoGallery from "../pages/VideoGallery";
 import PhotoGalleryList from "../adminPanel/pages/photoGallery/PhotoGalleryList";
+import AddPhotos from "../adminPanel/pages/photoGallery/_redux/reducer/AddPhotos";
 
 
 const routes = [

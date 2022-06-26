@@ -12,40 +12,38 @@ let baseURL = process.env.REACT_APP_API_URL;
  * @param {string} e ex: Input file type
  * @returns formData
  */
-// export const handleChangeGuidelineInput = (name, value, e = null) => (dispatch) => {
-//     let data = {
-//         name : name,
-//         value: value,
-//     }
-//     dispatch({ type: Types.HANDLE_CHANGE_GUIDELINE_INPUT, payload: data });
+export const handleChangePhotoInput = (name, value, e = null) => (dispatch) => {
+    let data = {
+        name : name,
+        value: value,
+    }
+    dispatch({ type: Types.HANDLE_CHANGE_PHOTO_GALLERY_INPUT, payload: data });
 
-//     if (name === 'guidelineImg') {
-//         let reader = new FileReader();
-//         const file = e.target.files[0];
-//         reader.onloadend = () => {
-//             if (name === "guidelineImg") {
-//                 data.name = 'imagePreview';
-//             }
-//             data.value = reader.result;
-//             dispatch({ type: Types.HANDLE_CHANGE_GUIDELINE_INPUT, payload: data });
-//         }
-//         reader.readAsDataURL(file)
-//     }
-// };
+    if (name === 'photo') {
+        let reader = new FileReader();
+        const file = e.target.files[0];
+        reader.onloadend = () => {
+            data.name = 'photoPreview';
+            data.value = reader.result;
+            dispatch({ type: Types.HANDLE_CHANGE_PHOTO_GALLERY_INPUT, payload: data });
+        }
+        reader.readAsDataURL(file)
+    }
+};
 
-// export const deletePreviewImage = (name) => (dispatch) => {
+export const deletePreviewImage = (name) => (dispatch) => {
 
-//     let data = {
-//         name : name,
-//         value: null,
-//     }
-//     dispatch({ type: Types.HANDLE_CHANGE_GUIDELINE_INPUT, payload: data });
+    let data = {
+        name : name,
+        value: null,
+    }
+    dispatch({ type: Types.HANDLE_CHANGE_PHOTO_GALLERY_INPUT, payload: data });
 
-//     if (name === "guidelineImg") {
-//         data.name = 'imagePreview';
-//     }
-//     dispatch({ type: Types.HANDLE_CHANGE_GUIDELINE_INPUT, payload: data });
-// };
+    if (name === "photo") {
+        data.name = 'photoPreview';
+    }
+    dispatch({ type: Types.HANDLE_CHANGE_PHOTO_GALLERY_INPUT, payload: data });
+};
 
 
 /**

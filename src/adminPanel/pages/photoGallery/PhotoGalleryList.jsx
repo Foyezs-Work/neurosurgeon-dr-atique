@@ -68,6 +68,11 @@ const PhotoGalleryList = () => {
 
                 </div>
                 <div className="table-responsive mt-3">
+                    {
+                        isDeleting && <div className="row justify-content-center m-5">
+                            <LoadingSpinner title="Deleting Photo From Gallery List..." />
+                        </div>
+                    }
                     <table class="table table table-bordered border-rounded text-center">
                         <thead>
                             <tr>
@@ -120,6 +125,7 @@ const PhotoGalleryList = () => {
                             <LoadingSpinner title="Loading Photo Gallery List..." />
                         </div>
                     }
+
                     <div className="text-center">
                         {
                             postsData.length > 0 &&

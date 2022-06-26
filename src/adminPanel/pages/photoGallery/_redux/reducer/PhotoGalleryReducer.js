@@ -15,13 +15,13 @@ const initialState = {
 
 const PhotoGalleryReducer = (state = initialState, action) => {
     switch (action.type) {
-        // case Types.HANDLE_CHANGE_GUIDELINE_INPUT:
-        //     const guidelineInput = { ...state.guidelineInput };
-        //     guidelineInput[action.payload.name] = action.payload.value;
-        //     return {
-        //         ...state,
-        //         guidelineInput
-        //     };
+        case Types.HANDLE_CHANGE_PHOTO_GALLERY_INPUT:
+            const photoInput = { ...state.photoInput };
+            photoInput[action.payload.name] = action.payload.value;
+            return {
+                ...state,
+                photoInput
+            };
         // case Types.HANDLE_SUBMIT_GUIDELINE_DATA:
         //     return {
         //         ...state,
@@ -47,11 +47,11 @@ const PhotoGalleryReducer = (state = initialState, action) => {
         //         isSubmitting  : action.payload.isLoading,
         //         guidelineInput: initialState.guidelineInput
         //     };
-        // case Types.DELETE_GUIDELINE:
-        //     return {
-        //         ...state,
-        //         isDeleting: action.payload.isDeleting,
-        //     };
+        case Types.DELETE_PHOTO:
+            return {
+                ...state,
+                isDeleting: action.payload.isDeleting,
+            };
         default:
             return {
                 ...state,
