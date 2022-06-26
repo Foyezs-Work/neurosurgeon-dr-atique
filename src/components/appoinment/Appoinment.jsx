@@ -9,7 +9,6 @@ import trangleOrange from "../../assets/images/shap/trangle-orange.png"
 import waveOrange from "../../assets/images/shap/wave-orange.png"
 import waveBlue from "../../assets/images/shap/wave-blue.png"
 import circleOrange from "../../assets/images/shap/circle-orange.png"
-import { Carousel } from 'react-responsive-carousel';
 
 
 import inHospital1 from "../../assets/images/in-hospital/in-hospital (2).jpg"

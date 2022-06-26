@@ -1,37 +1,19 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Pagination } from 'react-bootstrap';
-import DataTable from 'react-data-table-component';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import CustomPagination from '../../../components/_utilities/CustomPagination';
 import PaginationComponent from '../../../components/_utilities/PaginationComponent';
 import SimpleTooltip from '../../../components/_utilities/SimpleTooltip';
 import DashboardLayout from '../../layout/DashboardLayout';
-import { getPhotoGalleryList } from './_redux/Action/PhotoGalleryAction';
+import { deletePhoto, getPhotoGalleryList } from './_redux/Action/PhotoGalleryAction';
+import { confirmAlert } from 'react-confirm-alert';
 
 const PhotoGalleryList = () => {
-    // const ExpandedComponent = ({ data }) => <pre>{JSON.stringify(data, null, 2)}</pre>;
-    // const columns = [
-    //     {
-    //         name: 'Title',
-    //         selector: row => row.title,
-    //         sortable: true
-    //     },
-    //     {
-    //         name: 'Photo',
-    //         selector: row => row.year,
-    //         sortable: true
-    //     },
-    //     {
-    //         name: 'Action',
-    //         selector: row => row.year,
-    //         // sortable: true
-    //     },
-    // ];
 
     const [totalItems, setTotalItems] = useState(0);
     const [currentPage, setCurrentPage] = useState(1);
     const ITEMS_PER_PAGE = 5;
+    let active = 2;
 
     const dispatch = useDispatch();
     const { photoList, isLoading, isDeleting } = useSelector((state) => state.PhotoGalleryReducer);
@@ -53,15 +35,28 @@ const PhotoGalleryList = () => {
         );
     }, [photoList, currentPage]);
 
-    let active = 2;
-    let items = [];
-    for (let number = 1; number <= 5; number++) {
-        items.push(
-            <Pagination.Item key={number} active={number === active}>
-                {number}
-            </Pagination.Item>,
-        );
+
+
+    // delete photos from list 
+    const confirmDelete = (id) => {
+        console.log('id :>> ', id);
+        dispatch(deletePhoto(id));
     }
+    const deletePost = (data) => {
+        confirmAlert({
+            title: "Confirm To Delete",
+            message: `Are you sure to delete ${data.title}?`,
+            buttons: [
+                {
+                    label: "Yes",
+                    onClick: () => confirmDelete(data._id),
+                },
+                {
+                    label: "No"
+                }
+            ]
+        });
+    };
 
     return (
         <DashboardLayout>
@@ -99,7 +94,7 @@ const PhotoGalleryList = () => {
                                                     </button>
                                                 </SimpleTooltip>
                                                 <SimpleTooltip title={`Edit - ${item.title}`}>
-                                                    <button className="btn btn-primary btn-sm me-2 py-2 px-3" 
+                                                    <button className="btn btn-primary btn-sm me-2 py-2 px-3"
                                                     // onClick={() => handleUpdateModalShow(item)}
                                                     >
                                                         <i className="fas fa-edit"></i>
@@ -107,7 +102,7 @@ const PhotoGalleryList = () => {
                                                 </SimpleTooltip>
                                                 <SimpleTooltip title={`Delete - ${item.title}`}>
                                                     <button className="btn btn-danger btn-sm py-2 px-3"
-                                                        // onClick={() => deletePost(item)}
+                                                        onClick={() => deletePost(item)}
                                                     >
                                                         <i className="fas fa-trash"></i>
                                                     </button>
@@ -136,7 +131,7 @@ const PhotoGalleryList = () => {
 
 
             </div>
-        </DashboardLayout>
+        </DashboardLayout >
     );
 };
 

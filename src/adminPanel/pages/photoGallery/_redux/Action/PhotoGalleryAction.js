@@ -95,23 +95,23 @@ let baseURL = process.env.REACT_APP_API_URL;
  */
 export const getPhotoGalleryList = () => (dispatch) => {
     const responseData = {
-        isLoading      : true,
-        status         : false,
-        message        : "",
-        data           : [],
+        isLoading: true,
+        status: false,
+        message: "",
+        data: [],
     }
     dispatch({ type: Types.GET_PHOTO_GALLERY_LIST, payload: responseData });
 
     Axios.get(`${baseURL}/photos/photos-list`)
         .then((res) => {
             if (res.status === 201) {
-                responseData.message   = res.data.message;
-                responseData.data      = res.data.getPhotosList;
+                responseData.message = res.data.message;
+                responseData.data = res.data.getPhotosList;
                 responseData.isLoading = false;
-                responseData.status    = true;
+                responseData.status = true;
             }
             dispatch({ type: Types.GET_PHOTO_GALLERY_LIST, payload: responseData });
-            showToast("success", res.data.message)
+            // showToast("success", res.data.message)
 
         }).catch((err) => {
             responseData.isLoading = false;
@@ -198,34 +198,32 @@ export const getPhotoGalleryList = () => (dispatch) => {
 
 
 /**
- * Delete Single Guideline Data
- * @param {string} id Ex: Guideline ID
-* @param {function} handleClose Ex: Mode Close Function
+ * Delete Single photos Data
+ * @param {string} id Ex: photo ID || it's must be unique
  * @returns responseData
  */
-// export const deleteGuideline = (id, handleClose) => (dispatch) => {
-//     const responseData = {
-//         isDeleting     : true,
-//         status         : false,
-//         message        : ""
-//     }
-//     dispatch({ type: Types.DELETE_GUIDELINE, payload: responseData });
-//     Axios.delete(`${baseURL}/guideline/delete/${id}`)
-//         .then((res) => {
-//             if (res.status === 201) {
-//                 responseData.message    = res.data.message;
-//                 responseData.isDeleting = false;
-//                 responseData.status     = true;
-//                 showToast("success", res.data.message);
-//                 dispatch(getGuidelineList())
-//                 handleClose();
-//             }
+export const deletePhoto = (id) => (dispatch) => {
+    const responseData = {
+        isDeleting: true,
+        status: false,
+        message: ""
+    }
+    dispatch({ type: Types.DELETE_PHOTO, payload: responseData });
+    Axios.delete(`${baseURL}/photos/delete-photo/${id}`)
+        .then((res) => {
+            if (res.status === 201) {
+                responseData.message = res.data.message;
+                responseData.isDeleting = false;
+                responseData.status = true;
+                showToast("success", res.data.message);
+                dispatch(getPhotoGalleryList())
+            }
 
-//             dispatch({ type: Types.DELETE_GUIDELINE, payload: responseData });
-//         }).catch((err) => {
-//             responseData.isDeleting = false;
-//             responseData.status     = false;
-//             showToast("warning", "Something went wrong!")
-//             dispatch({ type: Types.DELETE_GUIDELINE, payload: responseData });
-//         })
-// }
+            dispatch({ type: Types.DELETE_PHOTO, payload: responseData });
+        }).catch((err) => {
+            responseData.isDeleting = false;
+            responseData.status = false;
+            showToast("warning", "Something went wrong!")
+            dispatch({ type: Types.DELETE_PHOTO, payload: responseData });
+        })
+}

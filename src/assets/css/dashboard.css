@@ -128,19 +128,19 @@ body {
 .sidebar_menu {
   padding: 30px;
 }
-.sidebar_menu ul li{
+.sidebar_menu ul li {
   margin-top: 20px;
 }
-.sidebar_menu ul li a{
+.sidebar_menu ul li a {
   transition: 0.5s ease;
 }
-.sidebar_menu ul li a:hover{
+.sidebar_menu ul li a:hover {
   color: #f17732;
 }
-.sidebar_menu ul li a:hover i{
+.sidebar_menu ul li a:hover i {
   background: #f17732;
 }
-.sidebar_menu ul li i{
+.sidebar_menu ul li i {
   height: 30px;
   width: 30px;
   background-color: #0091c3;
@@ -161,7 +161,7 @@ body {
 /******************************************************************
                         Dahshboard Content CSS Start
 *******************************************************************/
-.dashboard_card_content{
+.dashboard_card_content {
   background-color: #ffffff;
   border-radius: 5px;
   box-shadow: 3px 0px 12px -3px rgb(197 197 197 / 88%);
@@ -169,17 +169,32 @@ body {
   padding: 20px;
 }
 
-.dashboard_card_header{
+.dashboard_card_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #00a0d7;
   padding-bottom: 15px;
 }
-.dashboard_card_header h6{
+.dashboard_card_header h6 {
   font-size: 1rem;
   color: #3c3a3a;
 }
+
+.react-confirm-alert-body {
+  border: 1px solid #0091c3;
+}
+.react-confirm-alert-body > h1 {
+  font-size: 1.4rem;
+}
+
+.react-confirm-alert-button-group > button:first-child {
+  background: #0091c3;
+}
+.react-confirm-alert-button-group > button:last-child {
+  background: #f17732;
+}
+
 /******************************************************************
                         Dahshboard Content CSS Close
 *******************************************************************/

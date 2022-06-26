@@ -7,10 +7,10 @@ import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 // External CSS 
+import 'react-confirm-alert/src/react-confirm-alert.css';
+
 import "video-react/dist/video-react.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
-
 import "./assets/css/dashboard.css";
 import "./assets/css/custom.css";
 import "./assets/css/style.css";
