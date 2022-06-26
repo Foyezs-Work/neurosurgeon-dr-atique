@@ -20,6 +20,8 @@ const Header = () => {
 
     window.addEventListener("scroll", scrollMenu);
 
+    const [toggleSubmenu, setToggelSubmenu] = useState(false)
+
     return (
         <header className={isToggle === true ? "header scrolling-nav" : "header header-bg-transparent scrolling-nav"}>
             <div className={isToggle === true ? "sticky-header navbar-expand-lg is-fixed" : "sticky-header navbar-expand-lg"}>
@@ -28,7 +30,7 @@ const Header = () => {
                         {/* <!-- website logo --> */}
                         <div className="menu-logo logo-dark">
                             <Link to="/" style={{ fontSize: "28px", fontWeight: "800", color: "#1f2278", textTransform: "uppercase" }}>
-                                <img src={logo} alt="" />
+                                <img src={logo} alt="Dr. Atiqul Islam" />
                             </Link>
                         </div>
                         {/* <!-- nav toggle button --> */}
@@ -45,13 +47,13 @@ const Header = () => {
 
                         <div className={toggleMenu === true ? "menu-links navbar-collapse justify-content-end collapse show" : "menu-links navbar-collapse justify-content-end collapse"} id="menuDropdown">
                             <div className="menu-logo">
-                                <a href="index"><img src="images/logo-white.png" alt="" /></a>
+                                <a href="index"><img src={logo} alt="Dr. Atiqul Islam" /></a>
                             </div>
                             <ul className="nav navbar-nav">
                                 <li className="active"><a href="index">Home</a></li>
 
-                                <li>
-                                    <Link to="/">Treatments & Surgery <i class="fa-solid fa-angle-down"></i> </Link>
+                                <li className={toggleSubmenu ? "open" : ""}>
+                                    <Link to="/">Treatments & Surgery <i class="fa-solid fa-angle-down" onClick={() => setToggelSubmenu(!toggleSubmenu)}></i> </Link>
                                     <ul className="sub-menu">
                                         <li className="add-menu-left">
                                             <ul>
@@ -70,7 +72,7 @@ const Header = () => {
                                         </li>
                                     </ul>
                                 </li>
-                                <li><Link to="/">Blog <i class="fa-solid fa-angle-down"></i> </Link>
+                                <li className={toggleSubmenu ? "open" : ""}><Link to="/" >Blog <i class="fa-solid fa-angle-down" onClick={() => setToggelSubmenu(!toggleSubmenu)}></i> </Link>
                                     <ul className="sub-menu left">
                                         <li><Link to="/blog"><span>Health Tips</span></Link></li>
                                         <li><Link to="/blog-details"><span>Blog Details</span></Link></li>
