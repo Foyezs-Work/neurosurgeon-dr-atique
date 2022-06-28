@@ -5,7 +5,8 @@ import squareBlue from "./../../assets/images/shap/square-blue.png"
 import circleBlue from "./../../assets/images/shap/chicle-blue-2.png"
 import plusOrange from "./../../assets/images/shap/plus-orange.png"
 import waveOrange from "./../../assets/images/shap/wave-orange.png"
-import doctorImage from "./../../assets/images/main-banner/doctor.png"
+import doctorImage from "./../../assets/images/main-banner/dr_atique.jpeg"
+// import doctorImage from "./../../assets/images/main-banner/doctor.png"
 import govtLogo from "./../../assets/images/govt_logo.png"
 
 const MainBanner = () => {
@@ -19,7 +20,7 @@ const MainBanner = () => {
                         <img src={govtLogo} alt="Govt Logo" style={{ height: "50px", }} />
                         {/* <h6 className="title-ext text-primary">Hello, I'm</h6> */}
                         <h1>Dr. K. M. Atiqul Islam</h1>
-                        <h5 className='dr_department'>Brain & Spine Surgeon</h5>
+                        <h5 className='dr_department'>Brain & Spine Surgeon</h5> <br />
                         <div className='dr_more_department'>
                             <h5>MBBS (DMC), BCS (Health)</h5>
                             <h5>MS (Neurosurgery)</h5>
@@ -30,7 +31,7 @@ const MainBanner = () => {
                     </div>
                     <div className="col-lg-5 col-md-6 col-sm-5">
                         <div className="banner-img">
-                            <img src={doctorImage} alt="" />
+                            <img src={doctorImage} alt="" style={{ height: "390px", marginLeft: "20px" }} />
                         </div>
                     </div>
                 </div>

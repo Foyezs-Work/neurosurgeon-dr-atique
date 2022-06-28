@@ -8,39 +8,39 @@ const AppoinmentProcess = () => {
     return (
         <section className="section-area section-sp5 work-area our_progress">
             <div className="container-sm">
-                <div className="heading-bx text-center">
-                    <h6 className="title-ext text-secondary">Working Process</h6>
-                    <h2 className="title">How we works?</h2>
+                <div className="heading-bx text-center mt-5">
+                    <h2 className="title">What a patient needs to do</h2>
+                    <h6 className="title-ext text-secondary">রোগীর কি করণীয়</h6>
                 </div>
                 <div className="row justify-content-center">
                     <div className="col-lg-4 col-sm-6 mb-30">
                         <div className="work-bx">
-                            <div className="work-num-bx">01</div>
+                            <div className="work-num-bx"> Step - 1</div>
                             <div className="work-content">
-                                <h5 className="title text-secondary mb-10">Make Appointmnet</h5>
-                                <p>It is a long established fact that a reader will be distracted by the readable content of.</p>
+                                <h5 className="title text-secondary mb-10">Make Appointment</h5>
+                                <p>কল করে এ্যাপইন্টমেন্ট করুন</p>
                             </div>
-                            <a href="booking" className="btn btn-primary light">View More <i className="btn-icon-bx fas fa-chevron-right"></i></a>
+                            {/* <a href="booking" className="btn btn-primary light">View More <i className="btn-icon-bx fas fa-chevron-right"></i></a> */}
                         </div>
                     </div>
                     <div className="col-lg-4 col-sm-6 mb-30">
                         <div className="work-bx active">
-                            <div className="work-num-bx">02</div>
+                            <div className="work-num-bx"> Step - 2</div>
                             <div className="work-content">
-                                <h5 className="title text-secondary mb-10">Take Treatment</h5>
-                                <p>It is a long established fact that a reader will be distracted by the readable content of.</p>
+                                <h5 className="title text-secondary mb-10">See the doctor</h5>
+                                <p>ডক্টরের সাথে সাক্ষাৎ করুন</p>
                             </div>
-                            <a href="services" className="btn btn-primary light">View More <i className="btn-icon-bx fas fa-chevron-right"></i></a>
+                            {/* <a href="services" className="btn btn-primary light">View More <i className="btn-icon-bx fas fa-chevron-right"></i></a> */}
                         </div>
                     </div>
                     <div className="col-lg-4 col-sm-6 mb-30">
                         <div className="work-bx">
-                            <div className="work-num-bx">03</div>
+                            <div className="work-num-bx"> Step - 3</div>
                             <div className="work-content">
-                                <h5 className="title text-secondary mb-10">Registration</h5>
-                                <p>It is a long established fact that a reader will be distracted by the readable content of.</p>
+                                <h5 className="title text-secondary mb-10"> Take Treatment</h5>
+                                <p>ডক্টরের পরামর্শ অনুযায়ী চিকিৎসা নিন</p>
                             </div>
-                            <a href="contact-us" className="btn btn-primary light">View More <i className="btn-icon-bx fas fa-chevron-right"></i></a>
+                            {/* <a href="contact-us" className="btn btn-primary light">View More <i className="btn-icon-bx fas fa-chevron-right"></i></a> */}
                         </div>
                     </div>
                 </div>

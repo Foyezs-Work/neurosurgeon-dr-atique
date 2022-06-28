@@ -14,6 +14,7 @@ function App() {
         {routes.map((route, index) => (
           <Route
             key={index}
+            exact={true}
             path={route.path}
             name={route.name}
             element={<route.element />}

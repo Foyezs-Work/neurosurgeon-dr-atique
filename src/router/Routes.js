@@ -11,6 +11,7 @@ import PhotoGalleryList from "../adminPanel/pages/photoGallery/PhotoGalleryList"
 import AddPhotos from "../adminPanel/pages/photoGallery/_redux/reducer/AddPhotos";
 
 
+
 const routes = [
   { path: "/", name: "Home", element: HomePage },
   { path: "/home", name: "home", element: HomePage },

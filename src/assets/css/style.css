@@ -15692,7 +15692,7 @@ label.error {
   -ms-transition: all 0.5s;
   transition: all 0.5s;
   z-index: 9;
-  font-size: 80px;
+  font-size: 55px;
   font-weight: 900;
   margin-bottom: 30px;
   line-height: 80px;
@@ -15837,16 +15837,16 @@ label.error {
   padding: 60px 0px 30px;
   text-align: center;
   line-height: 75px;
-  font-size: 120px;
+  font-size: 60px;
   font-weight: 800;
   position: relative;
   display: block;
   color: #00a0d7;
   z-index: 2;
-  width: 220px;
+  width: 290px;
 }
 .about-thumb-area .exp-bx span {
-  display: block;
+  display: inline-block;
   font-size: 18px;
   color: #1f2278;
 }

@@ -9,6 +9,7 @@ import trangleOrange from "../../assets/images/shap/trangle-orange.png"
 import waveOrange from "../../assets/images/shap/wave-orange.png"
 import waveBlue from "../../assets/images/shap/wave-blue.png"
 import circleOrange from "../../assets/images/shap/circle-orange.png"
+import chamberAddress from "../../assets/images/appoinment/ChamberAddress.jpeg"
 
 
 import inHospital1 from "../../assets/images/in-hospital/in-hospital (2).jpg"
@@ -30,17 +31,24 @@ const Appoinment = () => {
 
                                     <div className="appoinment_content">
                                         <h6> To Book a Visit, please call chamber </h6>
+                                        <h6 style={{ fontSize: "16px" }}> (ডক্টর দেখাতে চেম্বারের নাম্বারে কল করুন) </h6>
                                         <div className="text-start appoinment_content_inner mt-5">
                                             <p>
-                                                <i class="fa-solid fa-phone"></i> Call :
+                                                <i class="fa-solid fa-phone"></i> <span style={{ fontSize: "22px" }}>
+                                                    01961449755
+                                                </span>
                                                 <span>
-                                                    <a href="tel:(+880)1915449083">  01915449083 </a>
+
+                                                    {/* <a href="tel:(+880)1915449083">  01915449083 </a> */}
+                                                    {/* <a href="tel:(+880)1915449083">  01915449083 </a> */}
                                                 </span>
                                             </p>
-                                            <p className='location'>
-                                                <i class="fa-solid fa-location-pin-lock"></i> Chamber Address :
-                                                <span> 30 Anjuman-e-Mofidul Islam Road, Kakrail VIP Road, Dhaka-1000, Bangladesh.</span>
+                                            <p className='location' style={{ fontSize: "1.2rem" }}>
+                                                <i class="fa-solid fa-location-pin-lock"></i> Chamber Address : <br />
+                                                <span style={{ marginLeft: "3rem" }}> 30 Anjuman-e-Mofidul Islam Road, </span> <br />
+                                                <span style={{ marginLeft: "3rem" }}> Kakrail VIP Road, Dhaka-1000  </span>
                                             </p>
+                                            <img className="img1 img-fluid img-thumbnail" src={chamberAddress} alt="" />
                                         </div>
                                     </div>
                                     {/* <form action="#">
@@ -76,8 +84,26 @@ const Appoinment = () => {
 
                             <div className="col-xl-7 col-lg-6 col-md-6">
                                 <div className="appointment-thumb">
-                                    <h6 className="title-ext text-primary text-center mb-3">Let's Me Know</h6>
+                                    <h6 className="title-ext text-primary text-center mb-3" style={{ fontSize: "2rem" }}>Photo Gallery</h6>
                                     <div className="row">
+                                        <div className="col-sm-4">
+                                            <img className="img1 img-fluid img-thumbnail" src={inHospital1} alt="" />
+                                        </div>
+                                        <div className="col-sm-4">
+                                            <img className="img1 img-fluid img-thumbnail" src={inHospital2} alt="" />
+                                        </div>
+                                        <div className="col-sm-4">
+                                            <img className="img1 img-fluid img-thumbnail" src={inHospital3} alt="" />
+                                        </div>
+                                        <div className="col-sm-4">
+                                            <img className="img1 img-fluid img-thumbnail" src={inHospital1} alt="" />
+                                        </div>
+                                        <div className="col-sm-4">
+                                            <img className="img1 img-fluid img-thumbnail" src={inHospital2} alt="" />
+                                        </div>
+                                        <div className="col-sm-4">
+                                            <img className="img1 img-fluid img-thumbnail" src={inHospital3} alt="" />
+                                        </div>
                                         <div className="col-sm-4">
                                             <img className="img1 img-fluid img-thumbnail" src={inHospital1} alt="" />
                                         </div>
@@ -100,7 +126,7 @@ const Appoinment = () => {
                                     <div className="text-end mt-3">
                                         <Link to="/photos-gallery" class="btn btn-primary shadow p-2"> More <i class="fa-solid fa-angles-right"></i> </Link>
                                     </div>
-                                 
+
                                 </div>
                             </div>
 

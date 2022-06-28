@@ -72,34 +72,23 @@ const Header = () => {
                                         </li>
                                     </ul>
                                 </li>
-                                <li className={toggleSubmenu ? "open" : ""}><Link to="/" >Blog <i class="fa-solid fa-angle-down" onClick={() => setToggelSubmenu(!toggleSubmenu)}></i> </Link>
-                                    <ul className="sub-menu left">
-                                        <li><Link to="/blog"><span>Health Tips</span></Link></li>
-                                        <li><Link to="/blog-details"><span>Blog Details</span></Link></li>
-                                    </ul>
-                                </li>
                                 <li><Link to="/">Gallery <i class="fa-solid fa-angle-down"></i></Link>
                                     <ul className="sub-menu left">
                                         <li><Link to="/photos-gallery"><span>Photos Gallery</span></Link></li>
                                         <li><Link to="/videos-gallery"><span>Videos Gallery</span></Link></li>
                                     </ul>
                                 </li>
+
+                                <li><Link to="/blog"><span>Blog</span></Link></li>
+
+
                                 <li className="num-bx contact_info">
-                                    <a href="tel:(+880)1915449083"> <span><i class="fa-solid fa-phone"></i> </span> (+880) 191 544 9083 </a>
+                                    <a href="tel:(+880)1961449755"> <span><i class="fa-solid fa-phone"></i> </span> 01961449755 </a>
                                 </li>
                                 <li className="num-bx contact_info">
-                                    <a href="mailto:kazidmc@gmail.com"> <span><i class="fa-solid fa-envelope-circle-check"></i></span> kazidmc@gmail.com </a>
+                                    <a href="/#"> <span><i class="fa-solid fa-envelope-circle-check"></i></span> kazidmc@gmail.com </a>
                                 </li>
-                                {/* <li><Link to="/">Contact Me <i class="fa-solid fa-angle-down"></i></Link>
-                                    <ul className="sub-menu left">
-                                        <li className="num-bx contact_info">
-                                            <a href="tel:(+880)1915449083" style={{ fontSize: "12px" }}> <span><i class="fa-solid fa-phone"></i> </span> (+880) 191 544 9083 </a>
-                                        </li>
-                                        <li className="num-bx contact_info">
-                                            <a href="mailto:kazidmc@gmail.com" style={{ fontSize: "12px" }}> <span><i class="fa-solid fa-envelope-circle-check"></i></span> kazidmc@gmail.com </a>
-                                        </li>
-                                    </ul>
-                                </li> */}
+
                             </ul>
 
                             <div className="menu-close" onClick={() => setToggleMenu(!toggleMenu)}>
