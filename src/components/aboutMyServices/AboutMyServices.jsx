@@ -20,7 +20,8 @@ const AboutMyServices = () => {
                                 <li><img className="about-thumb1" src={inHospital1} alt="" /></li>
                                 <li><img className="about-thumb2" src={inHospital2} alt="" /></li>
                                 <li><img className="about-thumb3" src={inHospital3} alt="" /></li>
-                                <li><div className="exp-bx"> <span style={{fontSize: "40px", textAlign:"left"}}>Over </span> <br /> 1000 <span>successful Operations & counting</span></div></li>
+                                <li><div className="exp-bx"> <span className="over">Over </span> <br /> 1000 <span className="successfull">successful Operations <br /> & counting</span></div></li>
+                                {/* <li><div className="exp-bx"> <span style={{fontSize: "40px", textAlign:"left"}}>Over </span> <br /> 1000 <span>successful Operations & counting</span></div></li> */}
                                 {/* <li><div className="exp-bx">8<span>Year Experience</span></div></li> */}
                             </ul>
                         </div>

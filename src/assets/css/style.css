@@ -15834,10 +15834,10 @@ label.error {
 .about-thumb-area .exp-bx {
   background-color: #e6e7ff;
   border-radius: 60px 60px 0px 60px;
-  padding: 60px 0px 30px;
+  padding: 25px 0px 10px;
   text-align: center;
-  line-height: 75px;
-  font-size: 60px;
+  line-height: 60px;
+  font-size: 4.5rem;
   font-weight: 800;
   position: relative;
   display: block;
@@ -15849,6 +15849,16 @@ label.error {
   display: inline-block;
   font-size: 18px;
   color: #1f2278;
+}
+
+.about-thumb-area .exp-bx span.over{
+  font-size: 3rem;
+  text-align: left;
+  margin-left: -3rem;
+}
+.about-thumb-area .exp-bx span.successfull{
+  font-size: 1rem;
+  line-height: 1.5;
 }
 .about-thumb-area .exp-bx:after {
   content: "";
