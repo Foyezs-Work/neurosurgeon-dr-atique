@@ -5,11 +5,11 @@ import squareBlue from "./../../assets/images/shap/square-blue.png"
 import circleBlue from "./../../assets/images/shap/chicle-blue-2.png"
 import plusOrange from "./../../assets/images/shap/plus-orange.png"
 import waveOrange from "./../../assets/images/shap/wave-orange.png"
-import doctorImage from "./../../assets/images/main-banner/dr_atique.jpeg"
-// import doctorImage from "./../../assets/images/main-banner/doctor.png"
+import doctorImage from "./../../assets/images/dr/doctor.png"
 import govtLogo from "./../../assets/images/govt_logo.png"
 
 const MainBanner = () => {
+    
     return (
         <div className="main-banner"
             style={{ backgroundImage: `url(${mainBanner})` }}

@@ -19951,6 +19951,10 @@ footer .widget .footer-title:after {
   background-image: url(../images/shap/footer-line.png);
   background-repeat: no-repeat;
 }
+
+.footer-social-link .facebook i{
+  fill: green;
+}
 @media only screen and (max-width: 767px) {
   footer .widget .footer-title {
     padding-bottom: 15px;

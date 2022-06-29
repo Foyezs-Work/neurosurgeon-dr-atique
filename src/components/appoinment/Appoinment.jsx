@@ -15,6 +15,12 @@ import chamberAddress from "../../assets/images/appoinment/ChamberAddress.jpeg"
 import inHospital1 from "../../assets/images/in-hospital/in-hospital (2).jpg"
 import inHospital2 from "../../assets/images/in-hospital/in-hospital (1).jpeg"
 import inHospital3 from "../../assets/images/in-hospital/in-hospital (3).jpg"
+import inHospital4 from "../../assets/images/gallery/Headshot.jpeg"
+import inHospital5 from "../../assets/images/gallery/Political leader of gopalgong also get relieved from tumor by the surgery of Dr.Atique.jpg"
+import inHospital6 from "../../assets/images/gallery/Seminar 1.jpg"
+import inHospital7 from "../../assets/images/gallery/Seminar 2.jpg"
+import inHospital8 from "../../assets/images/gallery/Seminar 3.jpg"
+
 import { Link } from 'react-router-dom';
 
 const Appoinment = () => {
@@ -51,34 +57,7 @@ const Appoinment = () => {
                                             <img className="img1 img-fluid img-thumbnail" src={chamberAddress} alt="" />
                                         </div>
                                     </div>
-                                    {/* <form action="#">
-                                        <div className="form-group">
-                                            <div className="dropdown bootstrap-select form-select"><select className="form-select">
-                                                <option selected="">Selecty Department</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                            </select><button type="button" tabIndex="-1" className="btn dropdown-toggle btn-light" data-bs-toggle="dropdown" role="combobox" aria-owns="bs-select-1" aria-haspopup="listbox" aria-expanded="false" title="Selecty Department"><div className="filter-option"><div className="filter-option-inner"><div className="filter-option-inner-inner">Selecty Department</div></div> </div></button><div className="dropdown-menu "><div className="inner show" role="listbox" id="bs-select-1" tabIndex="-1"><ul className="dropdown-menu inner show" role="presentation"></ul></div></div></div>
-                                        </div>
-                                        <div className="form-group">
-                                            <div className="dropdown bootstrap-select form-select"><select className="form-select">
-                                                <option selected="">Select Doctor</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                            </select><button type="button" tabIndex="-1" className="btn dropdown-toggle btn-light" data-bs-toggle="dropdown" role="combobox" aria-owns="bs-select-2" aria-haspopup="listbox" aria-expanded="false" title="Select Doctor"><div className="filter-option"><div className="filter-option-inner"><div className="filter-option-inner-inner">Select Doctor</div></div> </div></button><div className="dropdown-menu "><div className="inner show" role="listbox" id="bs-select-2" tabIndex="-1"><ul className="dropdown-menu inner show" role="presentation"></ul></div></div></div>
-                                        </div>
-                                        <div className="form-group">
-                                            <input type="text" className="form-control" placeholder="Your Name" />
-                                        </div>
-                                        <div className="form-group">
-                                            <input type="number" className="form-control" placeholder="Phone Numbers" />
-                                        </div>
-                                        <div className="form-group">
-                                            <input type="date" className="form-control" />
-                                        </div>
-                                        <button type="submit" className="btn btn-secondary btn-lg">Appointment Now</button>
-                                    </form> */}
+                                  
                                 </div>
                             </div>
 
@@ -90,7 +69,22 @@ const Appoinment = () => {
                                             <img className="img1 img-fluid img-thumbnail" src={inHospital1} alt="" />
                                         </div>
                                         <div className="col-sm-4">
+                                            <img className="img1 img-fluid img-thumbnail" src={inHospital4} alt="" />
+                                        </div>
+                                        <div className="col-sm-4">
+                                            <img className="img1 img-fluid img-thumbnail" src={inHospital6} alt="" />
+                                        </div>
+                                        <div className="col-sm-4">
+                                            <img className="img1 img-fluid img-thumbnail" src={inHospital5} alt="" />
+                                        </div>
+                                        <div className="col-sm-4">
+                                            <img className="img1 img-fluid img-thumbnail" src={inHospital7} alt="" />
+                                        </div>
+                                        <div className="col-sm-4">
                                             <img className="img1 img-fluid img-thumbnail" src={inHospital2} alt="" />
+                                        </div>
+                                        <div className="col-sm-4">
+                                            <img className="img1 img-fluid img-thumbnail" src={inHospital4} alt="" />
                                         </div>
                                         <div className="col-sm-4">
                                             <img className="img1 img-fluid img-thumbnail" src={inHospital3} alt="" />
@@ -98,30 +92,15 @@ const Appoinment = () => {
                                         <div className="col-sm-4">
                                             <img className="img1 img-fluid img-thumbnail" src={inHospital1} alt="" />
                                         </div>
-                                        <div className="col-sm-4">
-                                            <img className="img1 img-fluid img-thumbnail" src={inHospital2} alt="" />
-                                        </div>
-                                        <div className="col-sm-4">
-                                            <img className="img1 img-fluid img-thumbnail" src={inHospital3} alt="" />
-                                        </div>
-                                        <div className="col-sm-4">
-                                            <img className="img1 img-fluid img-thumbnail" src={inHospital1} alt="" />
+                                        {/* <div className="col-sm-4">
+                                            <img className="img1 img-fluid img-thumbnail" src={inHospital8} alt="" />
                                         </div>
                                         <div className="col-sm-4">
                                             <img className="img1 img-fluid img-thumbnail" src={inHospital2} alt="" />
                                         </div>
                                         <div className="col-sm-4">
                                             <img className="img1 img-fluid img-thumbnail" src={inHospital3} alt="" />
-                                        </div>
-                                        <div className="col-sm-4">
-                                            <img className="img1 img-fluid img-thumbnail" src={inHospital1} alt="" />
-                                        </div>
-                                        <div className="col-sm-4">
-                                            <img className="img1 img-fluid img-thumbnail" src={inHospital2} alt="" />
-                                        </div>
-                                        <div className="col-sm-4">
-                                            <img className="img1 img-fluid img-thumbnail" src={inHospital3} alt="" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                     <div className="text-end mt-3">
                                         <Link to="/photos-gallery" class="btn btn-primary shadow p-2"> More <i class="fa-solid fa-angles-right"></i> </Link>

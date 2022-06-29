@@ -57,17 +57,17 @@ const Header = () => {
                                     <ul className="sub-menu">
                                         <li className="add-menu-left">
                                             <ul>
-                                                <li><Link to="/service-detail"><span>Brain Tumour Operation</span></Link></li>
-                                                <li><Link to="/service-detail"><span>Endoscopic Brain Surgery (pituitory, etv and others)</span></Link></li>
-                                                <li><Link to="/service-detail"><span>Scalbase Neuro Surgery</span></Link></li>
-                                                <li><Link to="/service-detail"><span>Vascular Neuro Surgery</span></Link></li>
-                                                <li><Link to="/service-detail"><span>Pediatric Neuro Surgery</span></Link></li>
-                                                <li><Link to="/service-detail"><span>Spinal Surgery</span></Link></li>
-                                                <li><Link to="/service-detail"><span>Traumatic Brain & Spine Surgery</span></Link></li>
-                                                <li><Link to="/service-detail"><span>Epilepsy Surgery</span></Link></li>
-                                                <li><Link to="/service-detail"><span>Spainal Tumour</span></Link></li>
-                                                <li><Link to="/service-detail"><span> Microdiscectomy</span></Link></li>
-                                                <li><Link to="/service-detail"><span> Stroke Surgery (Urgent Surgery of stroke patients)</span></Link></li>
+                                                <li><Link to="#"><span>Brain Tumour Operation</span></Link></li>
+                                                <li><Link to="#"><span>Endoscopic Brain Surgery (pituitory, etv and others)</span></Link></li>
+                                                <li><Link to="#"><span>Scalbase Neuro Surgery</span></Link></li>
+                                                <li><Link to="#"><span>Vascular Neuro Surgery</span></Link></li>
+                                                <li><Link to="#"><span>Pediatric Neuro Surgery</span></Link></li>
+                                                <li><Link to="#"><span>Spinal Surgery</span></Link></li>
+                                                <li><Link to="#"><span>Traumatic Brain & Spine Surgery</span></Link></li>
+                                                <li><Link to="#"><span>Epilepsy Surgery</span></Link></li>
+                                                <li><Link to="#"><span>Spainal Tumour</span></Link></li>
+                                                <li><Link to="#"><span> Microdiscectomy</span></Link></li>
+                                                <li><Link to="#"><span> Stroke Surgery (Urgent Surgery of stroke patients)</span></Link></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -83,7 +83,7 @@ const Header = () => {
 
 
                                 <li className="num-bx contact_info">
-                                    <a href="tel:(+880)1961449755"> <span><i class="fa-solid fa-phone"></i> </span> 01961449755 </a>
+                                    <a href="/#"> <span><i class="fa-solid fa-phone"></i> </span> 01961449755 </a>
                                 </li>
                                 <li className="num-bx contact_info">
                                     <a href="/#"> <span><i class="fa-solid fa-envelope-circle-check"></i></span> kazidmc@gmail.com </a>

@@ -4,7 +4,8 @@ import shap1 from "../../assets/images/shap/wave-blue.png";
 import shap2 from "../../assets/images/shap/circle-dots.png";
 import shap3 from "../../assets/images/shap/plus-blue.png";
 import facebook from "../../assets/images/social/facebook.png"
-import visitingCard from "../../assets/images/appoinment/visitingCard.JPEG"
+import youtube from "../../assets/images/social/youtube.png"
+import visitingCard from "../../assets/images/appoinment/visitingCard.png"
 import logo from "./../../assets/images/logo.png"
 import medicalInfo from "../../assets/images/banner/footer_img.jpg"
 
@@ -59,7 +60,7 @@ const Footer = () => {
                             </div>
                             <div className="col-xl-3 col-lg-3 col-md-6">
                                 <div className="widget widget_form ms-3">
-                                  
+
                                     <h3 className="footer-title">Site Map</h3>
                                     <ul>
                                         <li><Link to="/about"><span>About Dr. Atique</span></Link></li>
@@ -80,11 +81,13 @@ const Footer = () => {
                 <div className="container">
                     <div className="footer-social-link mx-3 mt-5 text-center mb-2">
                         <ul>
-                            <li><a target="_blank" rel="noreferrer" href="https://www.facebook.com/Neurosurgeondratique-100861652690269">
-                                <img src={facebook} alt="" />
-                            </a></li>
+                            <li>
+                                <a target="_blank" rel="noreferrer" href="https://www.facebook.com/Neurosurgeondratique-100861652690269">
+                                    <img src={facebook} alt="" />
+                                </a></li>
                             <li><a target="_blank" rel="noreferrer" href="https://www.youtube.com/channel/UCTt7e2oBOpwI56ANOwQlKag">
-                                youtube
+                                <img src={youtube} alt="" />
+
                             </a></li>
 
                         </ul>
