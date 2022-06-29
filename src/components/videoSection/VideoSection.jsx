@@ -7,12 +7,14 @@ import squareBlue from "../../assets/images/shap/square-blue.png"
 import ReactPlayer from 'react-player'
 import { videoData } from './../../assets/data/videoData';
 import { Link } from 'react-router-dom';
+import { testimonialVideo } from '../../assets/data/testomonialVideo';
 
 const playIcon = "P"
 
 const VideoSection = () => {
 
     const [playVideo, setPlayVideo] = useState('https://www.youtube.com/watch?v=ysz5S6PUM-U')
+    const [PlayTestimonial, setPlayTestimonial] = useState('https://www.youtube.com/shorts/yjNZlgH3Sjs')
     return (
         <React.Fragment>
             <section className="about-area">
@@ -26,7 +28,7 @@ const VideoSection = () => {
                     <div className="row align-items-center">
                         <div className="col-lg-6 mb-30">
 
-                            <ReactPlayer url={playVideo} playIcon={playIcon} playing={true} width="90%" />
+                            <ReactPlayer url={playVideo} playIcon={playIcon} playing={false} width="90%" />
 
                         </div>
                         <div className="col-lg-6 mb-30">
@@ -68,7 +70,7 @@ const VideoSection = () => {
                     <div className="row align-items-center">
                         <div className="col-lg-6 mb-30">
 
-                            <ReactPlayer url={playVideo} playIcon={playIcon} playing={true} width="90%" />
+                            <ReactPlayer url={PlayTestimonial} playIcon={playIcon} playing={false} width="90%" />
 
                         </div>
                         <div className="col-lg-6 mb-30">
@@ -76,9 +78,9 @@ const VideoSection = () => {
                             {/* video gallery */}
                             <div className="row justify-content-center">
                                 {
-                                    videoData.length > 0 && videoData.map((video, index) => (
+                                    testimonialVideo.length > 0 && testimonialVideo.map((video, index) => (
                                         <div className="col-sm-4 col-6">
-                                            <div className="home_video_gallery img-thumbnail mt-2" onClick={() => setPlayVideo(video.videoLink)}>
+                                            <div className="home_video_gallery img-thumbnail mt-2" onClick={() => setPlayTestimonial(video.videoLink)}>
                                                 <img src={video.thumbnail} alt={video.title} className="img-fluid" />
                                                 <h6>{video.title}</h6>
                                             </div>

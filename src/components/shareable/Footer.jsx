@@ -4,7 +4,7 @@ import shap1 from "../../assets/images/shap/wave-blue.png";
 import shap2 from "../../assets/images/shap/circle-dots.png";
 import shap3 from "../../assets/images/shap/plus-blue.png";
 import facebook from "../../assets/images/social/facebook.png"
-import youtube from "../../assets/images/social/youtube.png"
+import youtube from "../../assets/images/social/1384060.png"
 import visitingCard from "../../assets/images/appoinment/visitingCard.png"
 import logo from "./../../assets/images/logo.png"
 import medicalInfo from "../../assets/images/banner/footer_img.jpg"
@@ -49,7 +49,7 @@ const Footer = () => {
 
                             <div className="col-xl-3 col-lg-3 col-6">
                                 <div className="widget footer_widget ml-50">
-                                    <img src={medicalInfo} className="img-thumbnail" alt="" style={{ height: "400" }} />
+                                    <img src={medicalInfo} className="" alt="" style={{ height: "400px" }} />
 
                                 </div>
                             </div>
