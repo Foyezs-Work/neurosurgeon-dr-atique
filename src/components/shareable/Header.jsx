@@ -74,8 +74,8 @@ const Header = () => {
                                 </li>
                                 <li><Link to="/">Gallery <i class="fa-solid fa-angle-down"></i></Link>
                                     <ul className="sub-menu left">
-                                        <li><Link to="/photos-gallery"><span>Photos Gallery</span></Link></li>
-                                        <li><Link to="/videos-gallery"><span>Videos Gallery</span></Link></li>
+                                        <li><Link to="/photos-gallery"><span>Photo Gallery</span></Link></li>
+                                        <li><Link to="/videos-gallery"><span>Video Gallery</span></Link></li>
                                     </ul>
                                 </li>
 
