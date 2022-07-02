@@ -19955,7 +19955,7 @@ footer .widget .footer-title:after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
+  right: 0;
   width: 85px;
   height: 7px;
   background-image: url(../images/shap/footer-line.png);
