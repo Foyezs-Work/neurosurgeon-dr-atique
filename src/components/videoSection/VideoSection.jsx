@@ -13,7 +13,7 @@ const playIcon = "P"
 
 const VideoSection = () => {
 
-    const [playVideo, setPlayVideo] = useState('https://www.youtube.com/watch?v=ysz5S6PUM-U')
+    const [playVideo, setPlayVideo] = useState('https://youtu.be/S2d-Mvwg8eE')
     const [PlayTestimonial, setPlayTestimonial] = useState('https://www.youtube.com/shorts/yjNZlgH3Sjs')
     return (
         <React.Fragment>
