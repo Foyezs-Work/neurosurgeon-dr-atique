@@ -146,6 +146,16 @@
   opacity: 1 !important;
 }
 
+.bangla-title {
+  font-size: 22px;
+}
+.location,
+.appointment-telephone {
+  font-size: 19px;
+}
+.location span {
+  margin-left: 3rem;
+}
 /************************
       Responsive CSS
 *************************/
@@ -166,13 +176,26 @@
   .feature-bx1 .icon-content .ttr-title {
     font-size: 1.2rem !important;
   }
+  .bangla-title {
+    font-size: 14px;
+  }
+  .location,
+  .appointment-telephone {
+    font-size: 16px;
+  }
 }
 
-/* @media only screen and (min-width: 600px) and (max-width: 800px) {
+@media only screen and (min-width: 600px) and (max-width: 820px) {
   .dr_department {
-    position: absolute;
+    font-size: 20px !important;
     right: 7%;
-    bottom: 57%;
+    top: 24%;
     line-height: 1.5;
   }
-} */
+  .dr-name-title {
+    font-size: 2rem;
+  }
+  .dr-details {
+    font-size: 1.2rem !important;
+  }
+}

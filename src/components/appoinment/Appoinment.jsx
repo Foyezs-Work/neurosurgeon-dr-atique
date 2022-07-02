@@ -27,16 +27,16 @@ const Appoinment = () => {
                 <div className="appointment-inner section-sp2 appoinment_section">
                     <div className="container">
                         <div className="row align-items-center">
-                            <div className="col-xl-5 col-lg-6 col-md-6">
+                            <div className="col-xl-5 col-lg-6 col-md-12">
                                 <div className="appointment-form form-wraper">
                                     <h3 className="title">Book A Visit</h3>
 
                                     <div className="appoinment_content">
                                         <h6> To Book a Visit, please call chamber </h6>
-                                        <h6 style={{ fontSize: "16px" }}> (ডক্টর দেখাতে চেম্বারের নাম্বারে কল করুন) </h6>
+                                        <h6 className='bangla-title'> (ডক্টর দেখাতে চেম্বারের নাম্বারে কল করুন) </h6>
                                         <div className="text-start appoinment_content_inner mt-5">
-                                            <p>
-                                                <i class="fa-solid fa-phone"></i> <span style={{ fontSize: "22px" }}>
+                                            <p className='appointment-telephone'>
+                                                <i class="fa-solid fa-phone"></i> <span>
                                                     01961449755
                                                 </span>
                                                 <span>
@@ -45,10 +45,10 @@ const Appoinment = () => {
                                                     {/* <a href="tel:(+880)1915449083">  01915449083 </a> */}
                                                 </span>
                                             </p>
-                                            <p className='location' style={{ fontSize: "1.2rem" }}>
+                                            <p className='location'>
                                                 <i class="fa-solid fa-location-pin-lock"></i> Chamber Address : <br />
-                                                <span style={{ marginLeft: "3rem" }}> 30 Anjuman-e-Mofidul Islam Road, </span> <br />
-                                                <span style={{ marginLeft: "3rem" }}> Kakrail VIP Road, Dhaka-1000  </span>
+                                                <span > 30 Anjuman-e-Mofidul Islam Road, </span> <br />
+                                                <span> Kakrail VIP Road, Dhaka-1000  </span>
                                             </p>
                                             <img className="img1 img-fluid img-thumbnail" src={chamberAddress} alt="" />
                                         </div>
@@ -57,36 +57,36 @@ const Appoinment = () => {
                                 </div>
                             </div>
 
-                            <div className="col-xl-7 col-lg-6 col-md-6">
+                            <div className="col-xl-7 col-lg-6 col-md-12">
                                 <div className="appointment-thumb">
                                     <h6 className="title-ext text-primary text-center mb-3" style={{ fontSize: "2rem" }}>Photo Gallery</h6>
                                     <div className="row">
-                                        <div className="col-md-4 col-sm-4 mt-1">
+                                        <div className="col-md-4 col-sm-6 mt-1">
                                             <img className="img1 img-fluid img-thumbnail" src={galler1} alt="" style={{ height: "220px", width: "100%" }} />
                                         </div>
-                                        <div className="col-md-4 col-sm-4 mt-1">
+                                        <div className="col-md-4 col-sm-6 mt-1">
                                             <img className="img1 img-fluid img-thumbnail" src={galler2} alt="" style={{ height: "220px", width: "100%" }} />
                                         </div>
-                                        <div className="col-md-4 col-sm-4 mt-1">
+                                        <div className="col-md-4 col-sm-6 mt-1">
                                             <img className="img1 img-fluid img-thumbnail" src={galler3} alt="" style={{ height: "220px", width: "100%" }} />
                                         </div>
-                                        <div className="col-md-4 col-sm-4 mt-1">
+                                        <div className="col-md-4 col-sm-6 mt-1">
                                             <img className="img1 img-fluid img-thumbnail" src={galler4} alt="" style={{ height: "220px", width: "100%" }} />
                                         </div>
-                                        <div className="col-md-4 col-sm-4 mt-1">
+                                        <div className="col-md-4 col-sm-6 mt-1">
                                             <img className="img1 img-fluid img-thumbnail" src={galler5} alt="" style={{ height: "220px", width: "100%" }} />
                                         </div>
-                                        <div className="col-md-4 col-sm-4 mt-1">
+                                        <div className="col-md-4 col-sm-6 mt-1">
                                             <img className="img1 img-fluid img-thumbnail" src={galler6} alt="" style={{ height: "220px", width: "100%" }} />
                                         </div>
 
-                                        <div className="col-md-4 col-sm-4 mt-1">
+                                        <div className="col-md-4 col-sm-6 mt-1">
                                             <img className="img1 img-fluid img-thumbnail" src={galler7} alt="" style={{ height: "220px", width: "100%" }} />
                                         </div>
-                                        <div className="col-md-4 col-sm-4 mt-1">
+                                        <div className="col-md-4 col-sm-6 mt-1">
                                             <img className="img1 img-fluid img-thumbnail" src={galler8} alt="" style={{ height: "220px", width: "100%" }} />
                                         </div>
-                                        <div className="col-md-4 col-sm-4 mt-1">
+                                        <div className="col-md-4 col-sm-6 mt-1">
                                             <img className="img1 img-fluid img-thumbnail" src={galler9} alt="" style={{ height: "220px", width: "100%" }} />
                                         </div>
                                     </div>

@@ -64,7 +64,7 @@ const VideoSection = () => {
                     <div className="heading-bx text-center">
                         {/* <h6 className="title-ext text-secondary">Video Gallery</h6> */}
                         <h2 className="title">Patients after Operation</h2>
-                        <h4 className="title">(অপারেশনের পর রোগীদের অবস্থা)</h4>
+                        <h4 className="bangla-title">(অপারেশনের পর রোগীদের অবস্থা)</h4>
                     </div>
 
                     <div className="row align-items-center">
