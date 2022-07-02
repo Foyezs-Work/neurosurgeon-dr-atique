@@ -21,6 +21,7 @@ const Header = () => {
     window.addEventListener("scroll", scrollMenu);
 
     const [toggleSubmenu, setToggelSubmenu] = useState(false)
+    const [toggelGallery, setToggelGallery] = useState(false)
 
     return (
         <header className={isToggle === true ? "header scrolling-nav" : "header header-bg-transparent scrolling-nav"}>
@@ -72,7 +73,8 @@ const Header = () => {
                                         </li>
                                     </ul>
                                 </li>
-                                <li><Link to="/">Gallery <i class="fa-solid fa-angle-down"></i></Link>
+                                <li className={toggelGallery === true ? "open" : ""}>
+                                    <Link to="/">Gallery <i class="fa-solid fa-angle-down" onClick={() => setToggelGallery(!toggelGallery)}></i></Link>
                                     <ul className="sub-menu left">
                                         <li><Link to="/photos-gallery"><span>Photo Gallery</span></Link></li>
                                         <li><Link to="/videos-gallery"><span>Video Gallery</span></Link></li>
