@@ -5,7 +5,7 @@ import shap2 from "../../assets/images/shap/circle-dots.png";
 import shap3 from "../../assets/images/shap/plus-blue.png";
 import facebook from "../../assets/images/social/facebook.png"
 import youtube from "../../assets/images/social/1384060.png"
-import visitingCard from "../../assets/images/appoinment/visitingCard.png"
+import visitingCard from "../../assets/images/appoinment-info/Business-Card2.png"
 import logo from "./../../assets/images/logo.png"
 import medicalInfo from "../../assets/images/banner/footer_img.jpg"
 

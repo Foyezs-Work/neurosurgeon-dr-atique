@@ -1,25 +1,21 @@
 import React from 'react';
-import women from "../../assets/images/appoinment/women.png"
-import map from "../../assets/images/appoinment/map-pin.png"
-import setting from "../../assets/images/appoinment/setting.png"
-import check from "../../assets/images/appoinment/check.png"
-import chat from "../../assets/images/appoinment/chat.png"
 
 import trangleOrange from "../../assets/images/shap/trangle-orange.png"
 import waveOrange from "../../assets/images/shap/wave-orange.png"
 import waveBlue from "../../assets/images/shap/wave-blue.png"
 import circleOrange from "../../assets/images/shap/circle-orange.png"
-import chamberAddress from "../../assets/images/appoinment/ChamberAddress.jpeg"
+import chamberAddress from "../../assets/images/appoinment-info/Business-Card.png"
 
 
-import inHospital1 from "../../assets/images/in-hospital/in-hospital (2).jpg"
-import inHospital2 from "../../assets/images/in-hospital/in-hospital (1).jpeg"
-import inHospital3 from "../../assets/images/in-hospital/in-hospital (3).jpg"
-import inHospital4 from "../../assets/images/gallery/Headshot.jpeg"
-import inHospital5 from "../../assets/images/gallery/Political leader of gopalgong also get relieved from tumor by the surgery of Dr.Atique.jpg"
-import inHospital6 from "../../assets/images/gallery/Seminar 1.jpg"
-import inHospital7 from "../../assets/images/gallery/Seminar 2.jpg"
-import inHospital8 from "../../assets/images/gallery/Seminar 3.jpg"
+import galler1 from "../../assets/images/gallery/3.jpeg"
+import galler2 from "../../assets/images/gallery/1.jpeg"
+import galler3 from "../../assets/images/gallery/6.jpeg"
+import galler4 from "../../assets/images/gallery/5.jpeg"
+import galler5 from "../../assets/images/gallery/4.jpg"
+import galler6 from "../../assets/images/gallery/3.jpeg"
+import galler7 from "../../assets/images/gallery/7.jpg"
+import galler8 from "../../assets/images/gallery/2.jpg"
+import galler9 from "../../assets/images/gallery/9.jpeg"
 
 import { Link } from 'react-router-dom';
 
@@ -57,7 +53,7 @@ const Appoinment = () => {
                                             <img className="img1 img-fluid img-thumbnail" src={chamberAddress} alt="" />
                                         </div>
                                     </div>
-                                  
+
                                 </div>
                             </div>
 
@@ -65,42 +61,34 @@ const Appoinment = () => {
                                 <div className="appointment-thumb">
                                     <h6 className="title-ext text-primary text-center mb-3" style={{ fontSize: "2rem" }}>Photo Gallery</h6>
                                     <div className="row">
-                                        <div className="col-sm-4">
-                                            <img className="img1 img-fluid img-thumbnail" src={inHospital1} alt="" />
+                                        <div className="col-md-4 col-sm-4 mt-1">
+                                            <img className="img1 img-fluid img-thumbnail" src={galler1} alt="" style={{ height: "220px", width: "100%" }} />
                                         </div>
-                                        <div className="col-sm-4">
-                                            <img className="img1 img-fluid img-thumbnail" src={inHospital4} alt="" />
+                                        <div className="col-md-4 col-sm-4 mt-1">
+                                            <img className="img1 img-fluid img-thumbnail" src={galler2} alt="" style={{ height: "220px", width: "100%" }} />
                                         </div>
-                                        <div className="col-sm-4">
-                                            <img className="img1 img-fluid img-thumbnail" src={inHospital6} alt="" />
+                                        <div className="col-md-4 col-sm-4 mt-1">
+                                            <img className="img1 img-fluid img-thumbnail" src={galler3} alt="" style={{ height: "220px", width: "100%" }} />
                                         </div>
-                                        <div className="col-sm-4">
-                                            <img className="img1 img-fluid img-thumbnail" src={inHospital5} alt="" />
+                                        <div className="col-md-4 col-sm-4 mt-1">
+                                            <img className="img1 img-fluid img-thumbnail" src={galler4} alt="" style={{ height: "220px", width: "100%" }} />
                                         </div>
-                                        <div className="col-sm-4">
-                                            <img className="img1 img-fluid img-thumbnail" src={inHospital7} alt="" />
+                                        <div className="col-md-4 col-sm-4 mt-1">
+                                            <img className="img1 img-fluid img-thumbnail" src={galler5} alt="" style={{ height: "220px", width: "100%" }} />
                                         </div>
-                                        <div className="col-sm-4">
-                                            <img className="img1 img-fluid img-thumbnail" src={inHospital2} alt="" />
+                                        <div className="col-md-4 col-sm-4 mt-1">
+                                            <img className="img1 img-fluid img-thumbnail" src={galler6} alt="" style={{ height: "220px", width: "100%" }} />
                                         </div>
-                                        <div className="col-sm-4">
-                                            <img className="img1 img-fluid img-thumbnail" src={inHospital4} alt="" />
+
+                                        <div className="col-md-4 col-sm-4 mt-1">
+                                            <img className="img1 img-fluid img-thumbnail" src={galler7} alt="" style={{ height: "220px", width: "100%" }} />
                                         </div>
-                                        <div className="col-sm-4">
-                                            <img className="img1 img-fluid img-thumbnail" src={inHospital3} alt="" />
+                                        <div className="col-md-4 col-sm-4 mt-1">
+                                            <img className="img1 img-fluid img-thumbnail" src={galler8} alt="" style={{ height: "220px", width: "100%" }} />
                                         </div>
-                                        <div className="col-sm-4">
-                                            <img className="img1 img-fluid img-thumbnail" src={inHospital1} alt="" />
+                                        <div className="col-md-4 col-sm-4 mt-1">
+                                            <img className="img1 img-fluid img-thumbnail" src={galler9} alt="" style={{ height: "220px", width: "100%" }} />
                                         </div>
-                                        {/* <div className="col-sm-4">
-                                            <img className="img1 img-fluid img-thumbnail" src={inHospital8} alt="" />
-                                        </div>
-                                        <div className="col-sm-4">
-                                            <img className="img1 img-fluid img-thumbnail" src={inHospital2} alt="" />
-                                        </div>
-                                        <div className="col-sm-4">
-                                            <img className="img1 img-fluid img-thumbnail" src={inHospital3} alt="" />
-                                        </div> */}
                                     </div>
                                     <div className="text-end mt-3">
                                         <Link to="/photos-gallery" class="btn btn-primary shadow p-2"> More <i class="fa-solid fa-angles-right"></i> </Link>
