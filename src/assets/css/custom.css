@@ -70,6 +70,13 @@
 .contact_info span i {
   color: rgb(255, 255, 255) !important;
 }
+.dr-name-title {
+  font-size: 2rem;
+}
+
+.dr-details {
+  font-size: 1.2rem;
+}
 
 .main-banner h5 {
   font-size: 22px;
@@ -146,12 +153,18 @@
   .dr_department {
     position: absolute;
     left: 4%;
-    /* right: 46%; */
-    bottom: 58%;
+    font-size: 18px !important;
+    bottom: 63%;
     line-height: 1.5;
   }
-  .dr_more_department {
-    margin-top: 3rem;
+  .dr-name-title {
+    font-size: 1.2rem;
+  }
+  .dr-details {
+    font-size: 1rem;
+  }
+  .feature-bx1 .icon-content .ttr-title {
+    font-size: 1.2rem !important;
   }
 }
 

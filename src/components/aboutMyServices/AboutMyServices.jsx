@@ -27,14 +27,14 @@ const AboutMyServices = () => {
                         </div>
                     </div>
                     <div className="col-lg-6 mb-30">
-                        <h3 className="title" style={{marginTop: "-150px", fontSize: "2rem"}}>About Neurosurgeon Dr. Atiqul Islam </h3>
+                        <h3 className="title dr-name-title">About Neurosurgeon Dr. Atiqul Islam </h3>
 
                         <div className="heading-bx">
                             {/* <h6 className="title-ext text-secondary">About Me</h6> */}
-                            <p style={{fontSize: "1.2rem"}}>Dr. K. M. Atiqul Islam is a dynamic and reliable Neurosurgeon currently serving at National Institute of Neuroscience & Hospital (Agargaon) as well as Islami Bank Central Hospital (Kakrail). He has many successful operations under his belt.</p>
+                            <p className="dr-details">Dr. K. M. Atiqul Islam is a dynamic and reliable Neurosurgeon currently serving at National Institute of Neuroscience & Hospital (Agargaon) as well as Islami Bank Central Hospital (Kakrail). He has many successful operations under his belt.</p>
                         </div>
                         <div className="row">
-                          
+
                             <div className="col-lg-12 col-sm-12 mb-30 mb-sm-20">
                                 <div className="feature-container feature-bx1 feature2">
                                     <div className="icon-md">
@@ -47,8 +47,8 @@ const AboutMyServices = () => {
                                         </span>
                                     </div>
                                     <div className="icon-content">
-                                        <h5 className="ttr-title" style={{fontSize: "2rem"}}>Need an appointment ? <br />
-                                          Call 01961449755 </h5>
+                                        <h5 className="ttr-title">Need an appointment ? <br />
+                                            Call 01961449755 </h5>
                                     </div>
                                 </div>
                             </div>
