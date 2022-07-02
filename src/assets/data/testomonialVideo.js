@@ -20,13 +20,13 @@ export const testimonialVideo = [
     {
         id: "20004",
         title: "A patient after operation",
-        thumbnail: "https://i.ytimg.com/an_webp/QCUGcKhYImQ/mqdefault_6s.webp?du=3000&sqp=CPim8pUG&rs=AOn4CLDX9p37UfvTc_SoMvWWFgCkPon_CQ",
+        thumbnail: "https://i.ytimg.com/vi/QCUGcKhYImQ/hq720_2.jpg?sqp=-oaymwEdCJgDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLCPa1B82clIB8Sbx3R0KHVxVBRIiw",
         videoLink: "https://www.youtube.com/shorts/Ga7GfCTUBnM"
     },
     {
         id: "20005",
         title: "A patient after operation",
-        thumbnail: "https://i.ytimg.com/an_webp/Ga7GfCTUBnM/mqdefault_6s.webp?du=3000&sqp=CJmo8pUG&rs=AOn4CLA7ICeUSVEMx95Cn9_YqgegaqLbcw",
+        thumbnail: "https://i.ytimg.com/vi/Ga7GfCTUBnM/hq720_2.jpg?sqp=-oaymwEdCJgDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLAK5OeWenrozo-ic6EXUhsk_1nkIw",
         videoLink: "https://www.youtube.com/shorts/OOUMcbamJ3M"
     },
 ]
