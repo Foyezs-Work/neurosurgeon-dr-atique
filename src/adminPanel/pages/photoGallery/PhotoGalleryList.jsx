@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import PaginationComponent from '../../../components/_utilities/PaginationComponent';
 import SimpleTooltip from '../../../components/_utilities/SimpleTooltip';
 import DashboardLayout from '../../layout/DashboardLayout';
-import { deletePhoto, getPhotoGalleryList } from './_redux/Action/PhotoGalleryAction';
+import { deletePhoto, getPhotoGalleryList, updatePhotoGallerItem } from './_redux/Action/PhotoGalleryAction';
 import { confirmAlert } from 'react-confirm-alert';
 import LoadingSpinner from '../../../components/_utilities/LoadingSpinner';
 
@@ -14,10 +14,9 @@ const PhotoGalleryList = () => {
     const [totalItems, setTotalItems] = useState(0);
     const [currentPage, setCurrentPage] = useState(1);
     const ITEMS_PER_PAGE = 5;
-    let active = 2;
 
     const dispatch = useDispatch();
-    const { photoList, isLoading, isDeleting } = useSelector((state) => state.PhotoGalleryReducer);
+    const { photoList, isLoading, isDeleting, isUpdating } = useSelector((state) => state.PhotoGalleryReducer);
 
     useEffect(() => {
         dispatch(getPhotoGalleryList())
@@ -79,6 +78,7 @@ const PhotoGalleryList = () => {
                                 <th scope="col">SL</th>
                                 <th scope="col">Title</th>
                                 <th scope="col">Photo</th>
+                                <th scope="col">Wants to show UI?</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -92,6 +92,16 @@ const PhotoGalleryList = () => {
                                         <td>{item.title}</td>
                                         <td>
                                             <img src={item.photo} alt={item.title} style={{ width: "50px" }} />
+                                        </td>
+                                        <td>
+                                            {
+                                                isUpdating === true ? <LoadingSpinner title="Updating gallery photo..." /> :
+                                                    <select className="form-select" aria-label="Approve showing  UI" onChange={(e) => dispatch(updatePhotoGallerItem(item, e.target.value))}>
+                                                        <option value={true} selected={item.status === true && "selected"}>Approve</option>
+                                                        <option value={false} selected={item.status === false && "selected"}>Reject</option>
+                                                    </select>
+                                            }
+
                                         </td>
                                         <td>
                                             <div className="d-flex justify-content-center align-items-center">

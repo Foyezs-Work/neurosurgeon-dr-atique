@@ -41,12 +41,11 @@ const PhotoGalleryReducer = (state = initialState, action) => {
         //         isLoading     : action.payload.isLoading,
         //         guidelineInput: action.payload.guidelineData
         //     };
-        // case Types.UPDATE_SINGLE_GUIDELINE:
-        //     return {
-        //         ...state,
-        //         isSubmitting  : action.payload.isLoading,
-        //         guidelineInput: initialState.guidelineInput
-        //     };
+        case Types.UPDATE_SINGLE_PHOTO:
+            return {
+                ...state,
+                isUpdating  : action.payload.isUpdating,
+            };
         case Types.DELETE_PHOTO:
             return {
                 ...state,

@@ -119,79 +119,35 @@ export const getPhotoGalleryList = () => (dispatch) => {
 }
 
 
-/**
- * Get Single Guideline Data
- * @param {string} id Ex: Guideline ID
- * @returns responseData
- */
-// export const getSingleGuideline = (id) => (dispatch) => {
-//     const responseData = {
-//         isLoading      : true,
-//         status         : false,
-//         guidelineData  : {}
-//     }
-//     dispatch({ type: Types.GET_SINGLE_GUIDELINE, payload: responseData });
-//     Axios.get(`${baseURL}/guideline/${id}`)
-//         .then((res) => {
-//             if (res.status === 201) {
-//                 responseData.message       = res.data.message;
-//                 responseData.guidelineData = res.data.data;
-//                 responseData.isLoading     = false;
-//                 responseData.status        = true;
-//             }
-
-//             dispatch({ type: Types.GET_SINGLE_GUIDELINE, payload: responseData });
-//         }).catch((err) => {
-//             responseData.isLoading = false;
-//             responseData.status    = false;
-//             showToast("warning", "Something went wrong!")
-//             dispatch({ type: Types.GET_SINGLE_GUIDELINE, payload: responseData });
-//         })
-// }
 
 
-/**
-* Add New Guideline
-* @param {object} guidelineInput ex: Wallet Input Fields
-* @param {string} id Ex: Guideline ID
-* @param {function} navigate Ex: react router replace page 
-* @returns response
-*/
-// export const handleUpdateGuideline = (guidelineInput, id, navigate) => (dispatch) => {
-//     const response = {
-//         isLoading  : true,
-//         status     : false,
-//     }
-//     if (guidelineInput.title === "") {
-//         showToast("error", "Guideline title can't be blank!")
-//         return false;
-//     }
+export const updatePhotoGallerItem = (photo, status) => (dispatch) => {
+    const updateValue = {
+        _id: photo._id,
+        title: photo.title,
+        photo: photo.photo,
+        status: status
+    }
+    const response = {
+        isUpdating: true,
+        status: false,
+    }
 
-//     if (guidelineInput.description === "") {
-//         showToast("error", "Description can't be blank!");
-//         return false;
-//     }
-//     if (guidelineInput.imagePreview === "" || guidelineInput.imagePreview === null) {
-//         showToast("error", "Image Can't be blank!");
-//         return false;
-//     }
+    dispatch({ type: Types.UPDATE_SINGLE_PHOTO, payload: response });
 
-//     dispatch({ type: Types.UPDATE_SINGLE_GUIDELINE, payload: response });
-
-//     Axios.patch(`${baseURL}/guideline/update/${id}`, guidelineInput)
-//         .then((res) => {
-//             response.isLoading = false;
-//             showToast("success", res.data.message);
-//             dispatch({ type: Types.UPDATE_SINGLE_GUIDELINE, payload: response });
-//             navigate("/guideline-list");
-
-//         }).catch((err) => {
-//             response.isLoading = false;
-//             let responseLog = err.response;
-//             showToast("error", responseLog.data.message);
-//             dispatch({ type: Types.UPDATE_SINGLE_GUIDELINE, payload: response });
-//         })
-// }
+    Axios.put(`${baseURL}/photos/update-photo`, updateValue)
+        .then((res) => {
+            response.isUpdating = false;
+            showToast("success", res.data.message);
+            dispatch({ type: Types.UPDATE_SINGLE_PHOTO, payload: response });
+            dispatch(getPhotoGalleryList())
+        }).catch((err) => {
+            response.isUpdating = false;
+            let responseLog = err.response;
+            showToast("error", responseLog.data.message);
+            dispatch({ type: Types.UPDATE_SINGLE_PHOTO, payload: response });
+        })
+}
 
 
 /**
