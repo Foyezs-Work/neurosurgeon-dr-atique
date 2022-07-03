@@ -8,8 +8,6 @@ const Sidebar = () => {
 
     const { isToggle } = useSelector((state) => state.DashboardReducer);
 
-    console.log('isToggle form sidebar:>> ', isToggle);
-
     return (
         <div className="sidebar_nav">
             <div className="sidebar_logo">
@@ -24,21 +22,21 @@ const Sidebar = () => {
                 <ul>
                     <li>
                         {
-                            isToggle ? <NavLink to="/photo-gallery-list"> <i class="fa-solid fa-image"></i> Photos Gallery List  </NavLink> :
-                                <NavLink to="/photo-gallery-list" title="Photo Gallery List">  <i class="fa-solid fa-image"></i></NavLink>
+                            isToggle ? <NavLink to="/dashboard/photo-gallery-list"> <i class="fa-solid fa-image"></i> Photos Gallery List  </NavLink> :
+                                <NavLink to="/dashboard/photo-gallery-list" title="Photo Gallery List">  <i class="fa-solid fa-image"></i></NavLink>
                         }
 
                     </li>
                     <li>
                         {
-                            isToggle ? <NavLink to="/video-gallery-list"> <i class="fa-solid fa-video"></i> Videos Gallery List  </NavLink> :
-                                <NavLink to="/video-gallery-list" title="Videos Gallery List">  <i class="fa-solid fa-video"></i></NavLink>
+                            isToggle ? <NavLink to="/dashboard/video-gallery-list"> <i class="fa-solid fa-video"></i> Videos Gallery List  </NavLink> :
+                                <NavLink to="/dashboard/video-gallery-list" title="Videos Gallery List">  <i class="fa-solid fa-video"></i></NavLink>
                         }
                     </li>
                     <li>
                         {
-                            isToggle ? <NavLink to="/blog-list"> <i class="fa-solid fa-blog"></i> Blogs List  </NavLink> :
-                                <NavLink to="/blog-list" title="Blog List">  <i class="fa-solid fa-blog"></i></NavLink>
+                            isToggle ? <NavLink to="/dashboard/blog-list"> <i class="fa-solid fa-blog"></i> Blogs List  </NavLink> :
+                                <NavLink to="/dashboard/blog-list" title="Blog List">  <i class="fa-solid fa-blog"></i></NavLink>
                         }
                     </li>
                 </ul>

@@ -12,20 +12,20 @@ let baseURL = process.env.REACT_APP_API_URL;
  * @param {string} e ex: Input file type
  * @returns formData
  */
-export const handleChangePhotoInput = (name, value, e = null) => (dispatch) => {
+export const handleChangeVideoInput = (name, value, e = null) => (dispatch) => {
     let data = {
         name: name,
         value: value,
     }
-    dispatch({ type: Types.HANDLE_CHANGE_PHOTO_GALLERY_INPUT, payload: data });
+    dispatch({ type: Types.HANDLE_CHANGE_VIDEO_GALLERY_INPUT, payload: data });
 
-    if (name === 'photo') {
+    if (name === 'videoThumbnail') {
         let reader = new FileReader();
         const file = e.target.files[0];
         reader.onloadend = () => {
             data.name = 'photoPreview';
             data.value = reader.result;
-            dispatch({ type: Types.HANDLE_CHANGE_PHOTO_GALLERY_INPUT, payload: data });
+            dispatch({ type: Types.HANDLE_CHANGE_VIDEO_GALLERY_INPUT, payload: data });
         }
         reader.readAsDataURL(file)
     }
@@ -36,53 +36,58 @@ export const deletePreviewImage = (name) => (dispatch) => {
         name: name,
         value: null,
     }
-    dispatch({ type: Types.HANDLE_CHANGE_PHOTO_GALLERY_INPUT, payload: data });
+    dispatch({ type: Types.HANDLE_CHANGE_VIDEO_GALLERY_INPUT, payload: data });
 
-    if (name === "photo") {
+    if (name === "videoThumbnail") {
         data.name = 'photoPreview';
     }
-    dispatch({ type: Types.HANDLE_CHANGE_PHOTO_GALLERY_INPUT, payload: data });
+    dispatch({ type: Types.HANDLE_CHANGE_VIDEO_GALLERY_INPUT, payload: data });
 };
 
 
 /**
 * Add New Guideline
-* @param {object} photoInput ex: Wallet Input Fields
+* @param {object} videoInput ex: Wallet Input Fields
 * @returns handleStorePhotoGallery
 */
-export const handleStorePhotoGallery = (photoInput, navigate) => (dispatch) => {
+export const handleStoreVideoGallery = (videoInput, navigate) => (dispatch) => {
     const response = {
         isLoading: true,
         status: false,
     }
-    if (photoInput.title === "") {
-        showToast("error", "Photo title can't be blank!")
+    if (videoInput.videoTitle === "") {
+        showToast("error", "Video title can't be blank!")
+        return false;
+    }
+    if (videoInput.videoLink === "") {
+        showToast("error", "Video link can't be blank!")
         return false;
     }
 
-    if (photoInput.photoPreview === "" || photoInput.photoPreview === null) {
-        showToast("error", "Image Can't be blank!");
+    if (videoInput.videoThumbnail === "" || videoInput.videoThumbnail === null) {
+        showToast("error", "Video thumbnail Can't be blank!");
         return false;
     }
 
-    dispatch({ type: Types.HANDLE_SUBMIT_PHOTO_GALLERY_DATA, payload: response });
+    dispatch({ type: Types.HANDLE_SUBMIT_VIDEO_GALLERY_DATA, payload: response });
 
-    const addedPhoto = {
-        title: photoInput.title,
-        photo: photoInput.photoPreview
+    const addedVideo = {
+        videoTitle: videoInput.videoTitle,
+        videoLink: videoInput.videoLink,
+        videoThumbnail: videoInput.photoPreview
     }
-    Axios.post(`${baseURL}/photos/add-photo`, addedPhoto)
+    Axios.post(`${baseURL}/videos/add-video`, addedVideo)
         .then((res) => {
             response.isLoading = false;
             showToast("success", res.data.message);
-            dispatch({ type: Types.HANDLE_SUBMIT_PHOTO_GALLERY_DATA, payload: response });
-            navigate("/photo-gallery-list");
+            dispatch({ type: Types.HANDLE_SUBMIT_VIDEO_GALLERY_DATA, payload: response });
+            navigate("/dashboard/video-gallery-list");
 
         }).catch((err) => {
             response.isLoading = false;
             let responseLog = err.response;
             showToast("error", responseLog.data.message);
-            dispatch({ type: Types.HANDLE_SUBMIT_PHOTO_GALLERY_DATA, payload: response });
+            dispatch({ type: Types.HANDLE_SUBMIT_VIDEO_GALLERY_DATA, payload: response });
         })
 }
 
@@ -97,7 +102,7 @@ export const getPhotoGalleryList = () => (dispatch) => {
         message: "",
         data: [],
     }
-    dispatch({ type: Types.GET_PHOTO_GALLERY_LIST, payload: responseData });
+    dispatch({ type: Types.GET_VIDEO_GALLERY_LIST, payload: responseData });
 
     Axios.get(`${baseURL}/photos/photos-list`)
         .then((res) => {
@@ -107,14 +112,14 @@ export const getPhotoGalleryList = () => (dispatch) => {
                 responseData.isLoading = false;
                 responseData.status = true;
             }
-            dispatch({ type: Types.GET_PHOTO_GALLERY_LIST, payload: responseData });
+            dispatch({ type: Types.GET_VIDEO_GALLERY_LIST, payload: responseData });
             // showToast("success", res.data.message)
 
         }).catch((err) => {
             responseData.isLoading = false;
             responseData.status = false;
             showToast("warning", "Something went wrong!")
-            dispatch({ type: Types.GET_PHOTO_GALLERY_LIST, payload: responseData });
+            dispatch({ type: Types.GET_VIDEO_GALLERY_LIST, payload: responseData });
         })
 }
 
@@ -133,19 +138,19 @@ export const updatePhotoGallerItem = (photo, status) => (dispatch) => {
         status: false,
     }
 
-    dispatch({ type: Types.UPDATE_SINGLE_PHOTO, payload: response });
+    dispatch({ type: Types.UPDATE_SINGLE_VIDEO, payload: response });
 
     Axios.put(`${baseURL}/photos/update-photo`, updateValue)
         .then((res) => {
             response.isUpdating = false;
             showToast("success", res.data.message);
-            dispatch({ type: Types.UPDATE_SINGLE_PHOTO, payload: response });
+            dispatch({ type: Types.UPDATE_SINGLE_VIDEO, payload: response });
             dispatch(getPhotoGalleryList())
         }).catch((err) => {
             response.isUpdating = false;
             let responseLog = err.response;
             showToast("error", responseLog.data.message);
-            dispatch({ type: Types.UPDATE_SINGLE_PHOTO, payload: response });
+            dispatch({ type: Types.UPDATE_SINGLE_VIDEO, payload: response });
         })
 }
 
@@ -161,7 +166,7 @@ export const deletePhoto = (id) => (dispatch) => {
         status: false,
         message: ""
     }
-    dispatch({ type: Types.DELETE_PHOTO, payload: responseData });
+    dispatch({ type: Types.DELETE_VIDEO, payload: responseData });
     Axios.delete(`${baseURL}/photos/delete-photo/${id}`)
         .then((res) => {
             if (res.status === 201) {
@@ -172,11 +177,11 @@ export const deletePhoto = (id) => (dispatch) => {
                 dispatch(getPhotoGalleryList())
             }
 
-            dispatch({ type: Types.DELETE_PHOTO, payload: responseData });
+            dispatch({ type: Types.DELETE_VIDEO, payload: responseData });
         }).catch((err) => {
             responseData.isDeleting = false;
             responseData.status = false;
             showToast("warning", "Something went wrong!")
-            dispatch({ type: Types.DELETE_PHOTO, payload: responseData });
+            dispatch({ type: Types.DELETE_VIDEO, payload: responseData });
         })
 }
