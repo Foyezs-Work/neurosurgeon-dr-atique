@@ -48,10 +48,10 @@ const Header = () => {
 
                         <div className={toggleMenu === true ? "menu-links navbar-collapse justify-content-end collapse show" : "menu-links navbar-collapse justify-content-end collapse"} id="menuDropdown">
                             <div className="menu-logo">
-                                <a href="index"><img src={logo} alt="Dr. Atiqul Islam" /></a>
+                                <Link to="/"><img src={logo} alt="Dr. Atiqul Islam" /></Link>
                             </div>
                             <ul className="nav navbar-nav">
-                                <li className="active"><a href="index">Home</a></li>
+                                <li className="active"><Link to="/">Home</Link></li>
 
                                 <li className={toggleSubmenu ? "open" : ""}>
                                     <Link to="/">Treatments & Surgery <i class="fa-solid fa-angle-down" onClick={() => setToggelSubmenu(!toggleSubmenu)}></i> </Link>

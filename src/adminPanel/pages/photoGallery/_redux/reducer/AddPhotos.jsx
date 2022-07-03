@@ -29,7 +29,7 @@ const AddPhotos = () => {
             <div className="dashboard_card_content">
                 <div className="dashboard_card_header">
                     <h6>Add New Photos</h6>
-                    <Link to="/photo-gallery-list" class="btn btn-sm btn-primary shadow p-2">  <i class="me-2 fa-solid fa-arrow-left-long"></i> Back To List </Link>
+                    <Link to="/photo-gallery" class="btn btn-sm btn-primary shadow p-2">  <i class="me-2 fa-solid fa-arrow-left-long"></i> Back To List </Link>
 
                 </div>
                 <div className=" border-rounded mt-3">
