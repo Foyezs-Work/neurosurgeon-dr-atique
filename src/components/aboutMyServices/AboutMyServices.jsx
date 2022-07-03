@@ -48,7 +48,8 @@ const AboutMyServices = () => {
                                     </div>
                                     <div className="icon-content">
                                         <h5 className="ttr-title">Need an appointment ? <br />
-                                            Call 01961449755 </h5>
+                                            {/* Call 01961449755 */}
+                                        </h5>
                                     </div>
                                 </div>
                             </div>

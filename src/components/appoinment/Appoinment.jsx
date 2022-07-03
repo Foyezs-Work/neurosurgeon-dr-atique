@@ -35,16 +35,12 @@ const Appoinment = () => {
                                         <h6> To Book a Visit, please call chamber </h6>
                                         <h6 className='bangla-title'> (ডক্টর দেখাতে চেম্বারের নাম্বারে কল করুন) </h6>
                                         <div className="text-start appoinment_content_inner mt-5">
-                                            <p className='appointment-telephone'>
+                                            {/* <p className='appointment-telephone'>
                                                 <i class="fa-solid fa-phone"></i> <span>
                                                     01961449755
                                                 </span>
-                                                <span>
-
-                                                    {/* <a href="tel:(+880)1915449083">  01915449083 </a> */}
-                                                    {/* <a href="tel:(+880)1915449083">  01915449083 </a> */}
-                                                </span>
-                                            </p>
+                                               
+                                            </p> */}
                                             <p className='location'>
                                                 <i class="fa-solid fa-location-pin-lock"></i> Chamber Address : <br />
                                                 <span > 30 Anjuman-e-Mofidul Islam Road, </span> <br />

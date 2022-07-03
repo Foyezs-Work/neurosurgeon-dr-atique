@@ -25,12 +25,12 @@ const Footer = () => {
                                     <div className="ft-contact">
 
 
-                                        <div className="contact-bx">
+                                        {/* <div className="contact-bx">
                                             <div className="icon"><i class="fa-solid fa-phone"></i></div>
                                             <div className="contact-number">
                                                 <h4 className="number">  <a href="tel:(+880)1961449755">01961449755</a></h4>
                                             </div>
-                                        </div>
+                                        </div> */}
                                         <div className="contact-bx email mt-2">
                                             <div className="icon"><i class="fa-solid fa-paper-plane"></i></div>
                                             <div className="contact-number">
