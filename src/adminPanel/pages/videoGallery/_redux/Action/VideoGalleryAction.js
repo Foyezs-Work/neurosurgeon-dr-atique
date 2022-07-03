@@ -95,7 +95,7 @@ export const handleStoreVideoGallery = (videoInput, navigate) => (dispatch) => {
  * Get All Guideline List
  * @returns getGuidelineList
  */
-export const getPhotoGalleryList = () => (dispatch) => {
+export const getVideoGalleryList = () => (dispatch) => {
     const responseData = {
         isLoading: true,
         status: false,
@@ -104,11 +104,11 @@ export const getPhotoGalleryList = () => (dispatch) => {
     }
     dispatch({ type: Types.GET_VIDEO_GALLERY_LIST, payload: responseData });
 
-    Axios.get(`${baseURL}/photos/photos-list`)
+    Axios.get(`${baseURL}/videos/video-list`)
         .then((res) => {
             if (res.status === 201) {
                 responseData.message = res.data.message;
-                responseData.data = res.data.getPhotosList;
+                responseData.data = res.data.getVideoList;
                 responseData.isLoading = false;
                 responseData.status = true;
             }
@@ -126,12 +126,13 @@ export const getPhotoGalleryList = () => (dispatch) => {
 
 
 
-export const updatePhotoGallerItem = (photo, status) => (dispatch) => {
+export const updateVideoGallerItem = (video, videoStatus) => (dispatch) => {
     const updateValue = {
-        _id: photo._id,
-        title: photo.title,
-        photo: photo.photo,
-        status: status
+        _id: video._id,
+        videoTitle: video.videoTitle,
+        videoLink: video.videoLink,
+        videoThumbnail: video.videoThumbnail,
+        videoStatus: videoStatus
     }
     const response = {
         isUpdating: true,
@@ -140,12 +141,12 @@ export const updatePhotoGallerItem = (photo, status) => (dispatch) => {
 
     dispatch({ type: Types.UPDATE_SINGLE_VIDEO, payload: response });
 
-    Axios.put(`${baseURL}/photos/update-photo`, updateValue)
+    Axios.put(`${baseURL}/videos/update-video`, updateValue)
         .then((res) => {
             response.isUpdating = false;
             showToast("success", res.data.message);
             dispatch({ type: Types.UPDATE_SINGLE_VIDEO, payload: response });
-            dispatch(getPhotoGalleryList())
+            dispatch(getVideoGalleryList())
         }).catch((err) => {
             response.isUpdating = false;
             let responseLog = err.response;
@@ -160,21 +161,21 @@ export const updatePhotoGallerItem = (photo, status) => (dispatch) => {
  * @param {string} id Ex: photo ID || it's must be unique
  * @returns responseData
  */
-export const deletePhoto = (id) => (dispatch) => {
+export const deleteVideo = (id) => (dispatch) => {
     const responseData = {
         isDeleting: true,
         status: false,
         message: ""
     }
     dispatch({ type: Types.DELETE_VIDEO, payload: responseData });
-    Axios.delete(`${baseURL}/photos/delete-photo/${id}`)
+    Axios.delete(`${baseURL}/videos/delete-video/${id}`)
         .then((res) => {
             if (res.status === 201) {
                 responseData.message = res.data.message;
                 responseData.isDeleting = false;
                 responseData.status = true;
                 showToast("success", res.data.message);
-                dispatch(getPhotoGalleryList())
+                dispatch(getVideoGalleryList())
             }
 
             dispatch({ type: Types.DELETE_VIDEO, payload: responseData });

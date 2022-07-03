@@ -2,7 +2,7 @@ import * as Types from "../types/Types";
 
 const initialState = {
     isLoading: false,
-    photoList: [],
+    videoList: [],
     message: "",
     videoInput: {
         videoTitle: "",
@@ -33,7 +33,7 @@ const VideoGalleryReducer = (state = initialState, action) => {
             return {
                 ...state,
                 isLoading: action.payload.isLoading,
-                photoList: action.payload.data,
+                videoList: action.payload.data,
                 message: action.payload.message
             };
         // case Types.GET_SINGLE_GUIDELINE:

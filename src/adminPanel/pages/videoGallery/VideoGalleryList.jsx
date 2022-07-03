@@ -1,11 +1,10 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Pagination } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PaginationComponent from '../../../components/_utilities/PaginationComponent';
 import SimpleTooltip from '../../../components/_utilities/SimpleTooltip';
 import DashboardLayout from '../../layout/DashboardLayout';
-import { deletePhoto, getPhotoGalleryList, updatePhotoGallerItem } from './_redux/Action/VideoGalleryAction';
+import { deleteVideo, getVideoGalleryList, updateVideoGallerItem } from './_redux/Action/VideoGalleryAction';
 import { confirmAlert } from 'react-confirm-alert';
 import LoadingSpinner from '../../../components/_utilities/LoadingSpinner';
 
@@ -16,15 +15,15 @@ const VideoGalleryList = () => {
     const ITEMS_PER_PAGE = 5;
 
     const dispatch = useDispatch();
-    const { photoList, isLoading, isDeleting, isUpdating } = useSelector((state) => state.PhotoGalleryReducer);
+    const { videoList, isLoading, isDeleting, isUpdating } = useSelector((state) => state.VideoGalleryReducer);
 
-    // useEffect(() => {
-    //     dispatch(getPhotoGalleryList())
-    // }, [dispatch])
+    useEffect(() => {
+        dispatch(getVideoGalleryList())
+    }, [dispatch])
 
 
     const postsData = useMemo(() => {
-        let computedPosts = photoList;
+        let computedPosts = videoList;
 
         setTotalItems(computedPosts.length);
 
@@ -33,18 +32,18 @@ const VideoGalleryList = () => {
             (currentPage - 1) * ITEMS_PER_PAGE,
             (currentPage - 1) * ITEMS_PER_PAGE + ITEMS_PER_PAGE
         );
-    }, [photoList, currentPage]);
+    }, [videoList, currentPage]);
 
 
 
-    // delete photos from list 
+    // delete video from list 
     const confirmDelete = (id) => {
-        dispatch(deletePhoto(id));
+        dispatch(deleteVideo(id));
     }
     const deletePost = (data) => {
         confirmAlert({
             title: "Confirm To Delete",
-            message: `Are you sure to delete ${data.title}?`,
+            message: `Are you sure to delete ${data.videoTitle}?`,
             buttons: [
                 {
                     label: "Yes",
@@ -68,7 +67,7 @@ const VideoGalleryList = () => {
                 <div className="table-responsive mt-3">
                     {
                         isDeleting && <div className="row justify-content-center m-5">
-                            <LoadingSpinner title="Deleting Photo From Gallery..." />
+                            <LoadingSpinner title="Deleting Video..." />
                         </div>
                     }
                     <table class="table table table-bordered border-rounded text-center">
@@ -84,40 +83,33 @@ const VideoGalleryList = () => {
                         </thead>
                         <tbody>
                             {
-                                photoList && postsData.length > 0 && postsData.map((item, index) => (
+                                videoList && videoList.length > 0 && postsData.map((item, index) => (
 
                                     <tr key={item._id} className="text-center">
-                                        {/* <td>{((currentPage * ITEMS_PER_PAGE) + index + 1) - postsData.length}</td> */}
                                         <td>{(currentPage * ITEMS_PER_PAGE) - 5 + index + 1}</td>
-                                        <td>{item.title}</td>
+                                        <td>{item.videoTitle}</td>
                                         <td>
-                                            <img src={item.photo} alt={item.title} style={{ width: "50px" }} />
+                                            <a href={item.videoLink} target="_blank" rel="noopener noreferrer">
+                                                View Video
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <img src={item.videoThumbnail} alt={item.videoTitle} style={{ width: "50px" }} />
                                         </td>
                                         <td>
                                             {
-                                                isUpdating === true ? <LoadingSpinner title="Updating gallery photo..." /> :
-                                                    <select className="form-select" aria-label="Approve showing  UI" onChange={(e) => dispatch(updatePhotoGallerItem(item, e.target.value))}>
-                                                        <option value={true} selected={item.status === true && "selected"}>Approve</option>
-                                                        <option value={false} selected={item.status === false && "selected"}>Reject</option>
+                                                isUpdating === true ? <LoadingSpinner title="Updating video status..." /> :
+                                                    <select className="form-select" aria-label="Approve showing  UI" onChange={(e) => dispatch(updateVideoGallerItem(item, e.target.value))}>
+                                                        <option value={true} selected={item.videoStatus === true && "selected"}>Approve</option>
+                                                        <option value={false} selected={item.videoStatus === false && "selected"}>Reject</option>
                                                     </select>
                                             }
 
                                         </td>
                                         <td>
                                             <div className="d-flex justify-content-center align-items-center">
-                                                {/* <SimpleTooltip title={`View - ${item.title}`}>
-                                                    <button className="btn btn-info btn-sm py-2 px-3 mx-2">
-                                                        <i className="fa fa-eye"></i>
-                                                    </button>
-                                                </SimpleTooltip>
-                                                <SimpleTooltip title={`Edit - ${item.title}`}>
-                                                    <button className="btn btn-primary btn-sm me-2 py-2 px-3"
-                                                    // onClick={() => handleUpdateModalShow(item)}
-                                                    >
-                                                        <i className="fas fa-edit"></i>
-                                                    </button>
-                                                </SimpleTooltip> */}
-                                                <SimpleTooltip title={`Delete - ${item.title}`}>
+                                               
+                                                <SimpleTooltip title={`Delete - ${item.videoTitle}`}>
                                                     <button className="btn btn-danger text-white btn-sm py-2 px-3"
                                                         onClick={() => deletePost(item)}
                                                     > Delete
@@ -133,7 +125,7 @@ const VideoGalleryList = () => {
                     </table>
                     {
                         isLoading && <div className="row justify-content-center m-5">
-                            <LoadingSpinner title="Loading Photo Gallery List..." />
+                            <LoadingSpinner title="Loading Video List..." />
                         </div>
                     }
 
