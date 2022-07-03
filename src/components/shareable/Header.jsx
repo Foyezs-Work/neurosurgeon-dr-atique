@@ -84,9 +84,9 @@ const Header = () => {
                                 <li><Link to="/blog"><span>Blog</span></Link></li>
 
 
-                                <li className="num-bx contact_info">
+                                {/* <li className="num-bx contact_info">
                                     <a href="/#"> <span><i class="fa-solid fa-phone"></i> </span> 01961449755 </a>
-                                </li>
+                                </li> */}
                                 <li className="num-bx contact_info">
                                     <a href="/#"> <span><i class="fa-solid fa-envelope-circle-check"></i></span> kazidmc@gmail.com </a>
                                 </li>
