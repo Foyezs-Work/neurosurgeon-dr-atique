@@ -67,7 +67,7 @@ const BlogList = () => {
                 <div className="table-responsive mt-3">
                     {
                         isDeleting && <div className="row justify-content-center m-5">
-                            <LoadingSpinner title="Deleting Video..." />
+                            <LoadingSpinner title="Deleting Blog..." />
                         </div>
                     }
                     <table class="table table table-bordered border-rounded text-center">
@@ -76,7 +76,7 @@ const BlogList = () => {
                                 <th scope="col">SL</th>
                                 <th scope="col">Title</th>
                                 <th scope="col">Banner</th>
-                                <th scope="col">Description</th>
+                                {/* <th scope="col">Description</th> */}
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -90,7 +90,7 @@ const BlogList = () => {
                                         <td>
                                             <img src={item.blogBanner} alt={item.blogTitle} style={{ width: "50px" }} />
                                         </td>
-                                        <td>{item.blogDetails}</td>
+                                        {/* <td>{item.blogDetails}</td> */}
 
 
                                         <td>
@@ -112,7 +112,7 @@ const BlogList = () => {
                     </table>
                     {
                         isLoading && <div className="row justify-content-center m-5">
-                            <LoadingSpinner title="Loading Video List..." />
+                            <LoadingSpinner title="Loading Blog List..." />
                         </div>
                     }
 
