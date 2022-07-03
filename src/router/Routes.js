@@ -1,4 +1,3 @@
- import BlogList from "../adminPanel/pages/BlogList";
 import Dashboard from "../adminPanel/pages/Dashboard";
 import BlogPage from "../pages/BlogPage";
 import HomePage from "../pages/HomePage";
@@ -10,6 +9,8 @@ import PhotoGalleryList from "../adminPanel/pages/photoGallery/PhotoGalleryList"
 import AddPhotos from "../adminPanel/pages/photoGallery/_redux/reducer/AddPhotos";
 import VideoGalleryList from "../adminPanel/pages/videoGallery/VideoGalleryList";
 import AddVideo from "../adminPanel/pages/videoGallery/AddVideo";
+import BlogList from "../adminPanel/pages/blog/BlogList";
+import AddBlog from "../adminPanel/pages/blog/AddBlog";
 
 
 
@@ -25,8 +26,9 @@ const routes = [
   { path: "/add-photos", name: "add-photos", element: AddPhotos },
   { path: "/dashboard/video-gallery-list", name: "Video Gallery Page", element: VideoGalleryList },
   { path: "/dashboard/add-video", name: "Video Gallery Page", element: AddVideo },
+  { path: "/dashboard/blog-list", name: "Blog Page", element: BlogList },
+  { path: "/dashboard/add-blog", name: "Blog Page", element: AddBlog },
 
-  { path: "/blog-list", name: "Blog List Page", element: BlogList },
   { path: "*", name: "404", element: PageNotFound },
  
 ];
