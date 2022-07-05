@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../components/shareable/Footer';
 import Header from '../components/shareable/Header';
+import LoadingOverlay from 'react-loading-overlay';
 
 /**
  * Page Layout
@@ -9,18 +10,25 @@ import Header from '../components/shareable/Header';
  * @returns MainLayout
  */
 
-const MainLayout = ({ children, title = null }) => {
+const MainLayout = ({ children, title = null, isLoading = false, loadingMessage = "content" }) => {
 
   document.title = (title !== null && title !== undefined) ? `${title} || Neurosurgeon Dr. Atique` : `Neurosurgeon Dr. Atique`;
 
   return (
     <React.Fragment>
-      <Header />
-      {
-        children
-      }
-      {/* <ScrollToTop smooth /> */}
-      <Footer />
+      <LoadingOverlay
+        active={isLoading}
+        spinner
+        text={`Loading ${loadingMessage}`}
+      >
+        <Header />
+        {
+          children
+        }
+        {/* <ScrollToTop smooth /> */}
+        <Footer />
+      </LoadingOverlay>
+
     </React.Fragment>
   );
 };

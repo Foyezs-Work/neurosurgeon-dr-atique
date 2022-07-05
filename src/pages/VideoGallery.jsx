@@ -29,7 +29,7 @@ const VideoGallery = () => {
                 style={{ backgroundImage: `url(${mainBanner})` }}
             >
                 <div className="container inner-content">
-                    <h2 className="title text-center">Videos Gallery</h2>
+                    <h2 className="title text-center">Video Gallery</h2>
                     <div className="row align-items-center justify-content-center">
                         {
                             videoData.length > 0 && videoData.map((item, index) => (

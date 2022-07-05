@@ -3,6 +3,7 @@ import * as Types from "../types/Types";
 const initialState = {
     isLoading: false,
     photoList: [],
+    photoGallery: [],
     message: "",
     photoInput: {
         title: "",
@@ -33,6 +34,7 @@ const PhotoGalleryReducer = (state = initialState, action) => {
                 ...state,
                 isLoading: action.payload.isLoading,
                 photoList: action.payload.data,
+                photoGallery: getGalleryPhotos(action.payload.data),
                 message: action.payload.message
             };
         // case Types.GET_SINGLE_GUIDELINE:
@@ -44,7 +46,7 @@ const PhotoGalleryReducer = (state = initialState, action) => {
         case Types.UPDATE_SINGLE_PHOTO:
             return {
                 ...state,
-                isUpdating  : action.payload.isUpdating,
+                isUpdating: action.payload.isUpdating,
             };
         case Types.DELETE_PHOTO:
             return {
@@ -57,6 +59,22 @@ const PhotoGalleryReducer = (state = initialState, action) => {
             };
             break;
     }
+};
+
+
+const getGalleryPhotos = (data) => {
+    let options = [];
+    if (data) {
+        data.forEach((item) => {
+            let itemData = {
+                title: item.title,
+                url: item.photo,
+                thumbUrl: item.photo,
+            };
+            options.push(itemData);
+        });
+    }
+    return options;
 };
 
 export default PhotoGalleryReducer;
