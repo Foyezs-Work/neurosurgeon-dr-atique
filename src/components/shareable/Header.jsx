@@ -76,7 +76,7 @@ const Header = () => {
                                 <li className={toggelGallery === true ? "open" : ""}>
                                     <Link to="/">Gallery <i class="fa-solid fa-angle-down" onClick={() => setToggelGallery(!toggelGallery)}></i></Link>
                                     <ul className="sub-menu left">
-                                        <li><Link to="/photos-gallery"><span>Photo Gallery</span></Link></li>
+                                        {/* <li><Link to="/photos-gallery"><span>Photo Gallery</span></Link></li> */}
                                         <li><Link to="/videos-gallery"><span>Video Gallery</span></Link></li>
                                     </ul>
                                 </li>

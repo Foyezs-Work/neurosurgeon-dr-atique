@@ -15818,13 +15818,13 @@ label.error {
   border-radius: 0 60px 60px;
   margin-top: auto;
   margin-left: auto;
+  width: 95%;
 }
 .about-thumb-area .about-thumb2 {
   border-radius: 60px 0 60px 60px;
   margin-top: auto;
   margin-right: auto;
-  width: 100%;
-  height: 87%;
+  width: 85%;
 }
 .about-thumb-area .about-thumb3 {
   border-radius: 60px 60px 60px 0;

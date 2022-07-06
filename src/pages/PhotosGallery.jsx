@@ -13,6 +13,7 @@ import plusOrange from "./../assets/images/shap/plus-orange.png"
 import waveOrange from "./../assets/images/shap/wave-orange.png"
 import doctorImage from "./../assets/images/main-banner/doctor.png"
 import { getPhotoGalleryList } from '../adminPanel/pages/photoGallery/_redux/Action/PhotoGalleryAction';
+import { galleryPageData } from '../assets/data/galleryData';
 
 const PhotosGallery = () => {
 
@@ -36,7 +37,7 @@ const PhotosGallery = () => {
 
                         <div className="col-lg-12 col-md-12 col-sm-12 py-5">
                             <h2 className="title text-center">Photo Gallery</h2>
-                            <DztImageGalleryComponent images={photoGallery} />
+                            <DztImageGalleryComponent images={galleryPageData} />
 
                         </div>
                     </div>
