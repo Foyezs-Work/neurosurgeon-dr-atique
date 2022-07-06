@@ -172,6 +172,12 @@
 .location span {
   margin-left: 3rem;
 }
+
+.appointment_gallery_img_card {
+  height: 230px;
+  margin-top: 10px!important;
+}
+
 /************************
       Responsive CSS
 *************************/
