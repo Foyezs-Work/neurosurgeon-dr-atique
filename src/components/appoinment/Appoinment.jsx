@@ -1,23 +1,11 @@
 import React from 'react';
-
 import trangleOrange from "../../assets/images/shap/trangle-orange.png"
 import waveOrange from "../../assets/images/shap/wave-orange.png"
 import waveBlue from "../../assets/images/shap/wave-blue.png"
 import circleOrange from "../../assets/images/shap/circle-orange.png"
 import chamberAddress from "../../assets/images/appoinment-info/Business-Card.png"
-
-
-import galler1 from "../../assets/images/gallery/3.jpeg"
-import galler2 from "../../assets/images/gallery/1.jpeg"
-import galler3 from "../../assets/images/gallery/6.jpeg"
-import galler4 from "../../assets/images/gallery/5.jpeg"
-import galler5 from "../../assets/images/gallery/4.jpg"
-import galler6 from "../../assets/images/gallery/3.jpeg"
-import galler7 from "../../assets/images/gallery/7.jpg"
-import galler8 from "../../assets/images/gallery/2.jpg"
-import galler9 from "../../assets/images/gallery/9.jpeg"
-
 import { Link } from 'react-router-dom';
+import { galleryData } from '../../assets/data/galleryData';
 
 const Appoinment = () => {
 
@@ -57,34 +45,14 @@ const Appoinment = () => {
                                 <div className="appointment-thumb">
                                     <h6 className="title-ext text-primary text-center mb-3" style={{ fontSize: "2rem" }}>Photo Gallery</h6>
                                     <div className="row">
-                                        <div className="col-md-4 col-sm-6 mt-1">
-                                            <img className="img1 img-fluid img-thumbnail" src={galler1} alt="" style={{ height: "220px", width: "100%" }} />
-                                        </div>
-                                        <div className="col-md-4 col-sm-6 mt-1">
-                                            <img className="img1 img-fluid img-thumbnail" src={galler2} alt="" style={{ height: "220px", width: "100%" }} />
-                                        </div>
-                                        <div className="col-md-4 col-sm-6 mt-1">
-                                            <img className="img1 img-fluid img-thumbnail" src={galler3} alt="" style={{ height: "220px", width: "100%" }} />
-                                        </div>
-                                        <div className="col-md-4 col-sm-6 mt-1">
-                                            <img className="img1 img-fluid img-thumbnail" src={galler4} alt="" style={{ height: "220px", width: "100%" }} />
-                                        </div>
-                                        <div className="col-md-4 col-sm-6 mt-1">
-                                            <img className="img1 img-fluid img-thumbnail" src={galler5} alt="" style={{ height: "220px", width: "100%" }} />
-                                        </div>
-                                        <div className="col-md-4 col-sm-6 mt-1">
-                                            <img className="img1 img-fluid img-thumbnail" src={galler6} alt="" style={{ height: "220px", width: "100%" }} />
-                                        </div>
+                                        {
+                                            galleryData && galleryData.length > 0 && galleryData.map((item, index) => (
+                                                <div className="col-md-4 col-sm-6 mt-1">
+                                                    <img className="img1 img-fluid img-thumbnail" src={item.image} alt="" style={{ height: "220px", width: "100%" }} />
+                                                </div>
+                                            ))
+                                        }
 
-                                        <div className="col-md-4 col-sm-6 mt-1">
-                                            <img className="img1 img-fluid img-thumbnail" src={galler7} alt="" style={{ height: "220px", width: "100%" }} />
-                                        </div>
-                                        <div className="col-md-4 col-sm-6 mt-1">
-                                            <img className="img1 img-fluid img-thumbnail" src={galler8} alt="" style={{ height: "220px", width: "100%" }} />
-                                        </div>
-                                        <div className="col-md-4 col-sm-6 mt-1">
-                                            <img className="img1 img-fluid img-thumbnail" src={galler9} alt="" style={{ height: "220px", width: "100%" }} />
-                                        </div>
                                     </div>
                                     <div className="text-end mt-3">
                                         <Link to="/photos-gallery" class="btn btn-primary shadow p-2"> More <i class="fa-solid fa-angles-right"></i> </Link>
