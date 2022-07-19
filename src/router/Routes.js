@@ -17,8 +17,8 @@ import AddBlog from "../adminPanel/pages/blog/AddBlog";
 const routes = [
   { path: "/", name: "Home", element: HomePage },
   { path: "/home", name: "home", element: HomePage },
-  { path: "/photos-gallery", name: "Photo Gallery", element: PhotosGallery },
-  { path: "/videos-gallery", name: "Videos Gallery", element: VideoGallery },
+  { path: "/photo-gallery", name: "Photo Gallery", element: PhotosGallery },
+  { path: "/video-gallery", name: "Videos Gallery", element: VideoGallery },
   { path: "/blog", name: "Blog Page", element: BlogPage },
   { path: "/author-login", name: "Login Page", element: LoginPage },
   // { path: "/dashboard", name: "Login Page", element: Dashboard },

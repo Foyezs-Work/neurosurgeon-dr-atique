@@ -60,7 +60,7 @@ const Header = () => {
                                             <ul>
                                                 <li><Link to="#"><span>Brain Tumour Operation</span></Link></li>
                                                 <li><Link to="#"><span>Endoscopic Brain Surgery (pituitory, etv and others)</span></Link></li>
-                                                <li><Link to="#"><span>Scalbase Neuro Surgery</span></Link></li>
+                                                <li><Link to="#"><span>Skull Base Surgery</span></Link></li>
                                                 <li><Link to="#"><span>Vascular Neuro Surgery</span></Link></li>
                                                 <li><Link to="#"><span>Pediatric Neuro Surgery</span></Link></li>
                                                 <li><Link to="#"><span>Spinal Surgery</span></Link></li>
@@ -76,8 +76,8 @@ const Header = () => {
                                 <li className={toggelGallery === true ? "open" : ""}>
                                     <Link to="/">Gallery <i class="fa-solid fa-angle-down" onClick={() => setToggelGallery(!toggelGallery)}></i></Link>
                                     <ul className="sub-menu left">
-                                        {/* <li><Link to="/photos-gallery"><span>Photo Gallery</span></Link></li> */}
-                                        <li><Link to="/videos-gallery"><span>Video Gallery</span></Link></li>
+                                        <li><Link to="/photo-gallery"><span>Photo Gallery</span></Link></li>
+                                        <li><Link to="/video-gallery"><span>Video Gallery</span></Link></li>
                                     </ul>
                                 </li>
 
