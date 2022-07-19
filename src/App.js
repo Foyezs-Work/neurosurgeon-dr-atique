@@ -1,4 +1,3 @@
-import './App.css';
 import {
   BrowserRouter,
   Routes,
@@ -8,6 +7,8 @@ import {
 import routes from './router/Routes';
 
 function App() {
+
+
   return (
     <BrowserRouter>
       <Routes>

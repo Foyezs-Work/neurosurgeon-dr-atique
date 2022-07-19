@@ -47,7 +47,7 @@ const VideoSection = () => {
                                 }
                             </div>
                             <div className="text-end mt-3">
-                                <Link class="btn btn-primary shadow p-2" to="/videos-gallery"> More <i class="fa-solid fa-angles-right"></i> </Link>
+                                <Link class="btn btn-primary shadow p-2" to="/video-gallery"> More <i class="fa-solid fa-angles-right"></i> </Link>
                             </div>
                         </div>
                     </div>
@@ -89,7 +89,7 @@ const VideoSection = () => {
                                 }
                             </div>
                             <div className="text-end mt-3">
-                                <Link class="btn btn-primary shadow p-2" to="/videos-gallery"> More <i class="fa-solid fa-angles-right"></i> </Link>
+                                <Link class="btn btn-primary shadow p-2" to="/video-gallery"> More <i class="fa-solid fa-angles-right"></i> </Link>
                             </div>
                         </div>
                     </div>

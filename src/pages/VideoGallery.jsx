@@ -23,6 +23,11 @@ const VideoGallery = () => {
         setShow(true);
     };
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+    
+
     return (
         <MainLayout title="Videos Gallery">
             <div className="main-banner"

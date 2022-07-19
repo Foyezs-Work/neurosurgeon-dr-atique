@@ -17,6 +17,11 @@ import { galleryPageData } from '../assets/data/galleryData';
 
 const PhotosGallery = () => {
 
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const dispatch = useDispatch();
     const { photoList, photoGallery, isLoading } = useSelector((state) => state.PhotoGalleryReducer);
 

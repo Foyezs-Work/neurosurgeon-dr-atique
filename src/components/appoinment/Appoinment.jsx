@@ -55,7 +55,7 @@ const Appoinment = () => {
 
                                     </div>
                                     <div className="text-end mt-3">
-                                        <Link to="/photos-gallery" class="btn btn-primary shadow p-2"> More <i class="fa-solid fa-angles-right"></i> </Link>
+                                        <Link to="/photo-gallery" class="btn btn-primary shadow p-2"> More <i class="fa-solid fa-angles-right"></i> </Link>
                                     </div>
 
                                 </div>
