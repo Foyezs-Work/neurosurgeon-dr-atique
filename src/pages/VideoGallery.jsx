@@ -1,6 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
-import { Player } from 'video-react';
-
+import React, { useState, useEffect } from 'react';
 import MainLayout from '../layout/MainLayout';
 import mainBanner from "./../assets/images/main-banner/bg1.jpg"
 import trangleOrange from "./../assets/images/shap/trangle-orange.png"
@@ -26,7 +24,7 @@ const VideoGallery = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-    
+
 
     return (
         <MainLayout title="Videos Gallery">
@@ -38,7 +36,7 @@ const VideoGallery = () => {
                     <div className="row align-items-center justify-content-center">
                         {
                             videoData.length > 0 && videoData.map((item, index) => (
-                                <div className="col-lg-3 col-md-4 col-sm-12">
+                                <div className="col-lg-3 col-md-4 col-sm-12" key={index + 1}>
                                     <div className="video_thumbnail mt-2">
                                         <div className="play_btn" onClick={() => handleShow(item.id)}><i class="fa-solid fa-play"></i></div>
                                         <img src={item.thumbnail} alt={item.title} className="img-fluid" />

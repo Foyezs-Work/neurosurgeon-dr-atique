@@ -1,19 +1,15 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import MainLayout from '../layout/MainLayout';
 import mainBanner from "./../assets/images/main-banner/bg1.jpg"
-import FsLightbox from 'fslightbox-react';
 import { useDispatch, useSelector } from 'react-redux';
 import { handleNavbarPosition } from '../_globalRedux/Action/GlobalAction';
-
-import DztImageGalleryComponent from "reactjs-image-gallery";
 import trangleOrange from "./../assets/images/shap/trangle-orange.png"
 import squareBlue from "./../assets/images/shap/square-blue.png"
 import circleBlue from "./../assets/images/shap/chicle-blue-2.png"
-import plusOrange from "./../assets/images/shap/plus-orange.png"
 import waveOrange from "./../assets/images/shap/wave-orange.png"
-import doctorImage from "./../assets/images/main-banner/doctor.png"
 import { getPhotoGalleryList } from '../adminPanel/pages/photoGallery/_redux/Action/PhotoGalleryAction';
 import { galleryPageData } from '../assets/data/galleryData';
+import { ImageViewer } from "react-image-viewer-dv"
 
 const PhotosGallery = () => {
 
@@ -38,11 +34,22 @@ const PhotosGallery = () => {
             >
                 <div className="container inner-content">
                     <div className="row align-items-center">
-
-
                         <div className="col-lg-12 col-md-12 col-sm-12 py-5">
                             <h2 className="title text-center">Photo Gallery</h2>
-                            <DztImageGalleryComponent images={galleryPageData} />
+                            <div className="row custom_section_padding">
+
+                                {
+                                    galleryPageData.length > 0 && galleryPageData.map((item, index) => (
+                                        <div className='col-md-3 p-3'>
+                                            <div className="img_card">
+                                                <ImageViewer key={index + 1}>
+                                                    <img src={item.url} alt={item.title} className="img-fluid" />
+                                                </ImageViewer>
+                                            </div>
+                                        </div>
+                                    ))
+                                }
+                            </div>
 
                         </div>
                     </div>
@@ -52,7 +59,6 @@ const PhotosGallery = () => {
                 <img className="pt-img1 animate1" src={trangleOrange} alt="" />
                 <img className="pt-img2 animate2" src={squareBlue} alt="" />
                 <img className="pt-img3 animate3" src={circleBlue} alt="" />
-                {/* <img className="pt-img4 animate4" src={plusOrange} alt="" /> */}
                 <img className="pt-img5 animate-wave" src={waveOrange} alt="" />
             </div>
         </MainLayout >

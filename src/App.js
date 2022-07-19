@@ -8,7 +8,6 @@ import routes from './router/Routes';
 
 function App() {
 
-
   return (
     <BrowserRouter>
       <Routes>
