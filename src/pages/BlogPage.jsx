@@ -58,7 +58,7 @@ const BlogPage = () => {
                             }
                         </div>
 
-                        <div class="row">
+                        {/* <div class="row">
                             <div class="col-lg-12">
                                 <div class="pagination-bx text-center mb-30 clearfix">
                                     <ul class="pagination">
@@ -80,7 +80,7 @@ const BlogPage = () => {
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
                     </div>
                 </div>

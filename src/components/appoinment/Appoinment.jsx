@@ -48,7 +48,7 @@ const Appoinment = () => {
                                         {
                                             galleryData && galleryData.length > 0 && galleryData.map((item, index) => (
                                                 <div className="col-md-4 col-sm-6 mt-1 p-1 appointment_gallery_img_card mt-2">
-                                                    <img className="img1 img-fluid img-thumbnail" src={item.image} alt="" />
+                                                    <img className=" img-fluid img-thumbnail" src={item.image} alt="" />
                                                 </div>
                                             ))
                                         }

@@ -20236,6 +20236,7 @@ footer .subscribe-form .form-control {
   width: 100%;
   height: 200px;
   backface-visibility: hidden;
+  object-fit: cover;
 }
 
 .video_thumbnail:hover {

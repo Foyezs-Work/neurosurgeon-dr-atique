@@ -27,34 +27,53 @@ const VideoGallery = () => {
 
 
     return (
-        <MainLayout title="Videos Gallery">
-            <div className="main-banner"
-                style={{ backgroundImage: `url(${mainBanner})` }}
-            >
-                <div className="container inner-content">
-                    <h2 className="title text-center">Video Gallery</h2>
-                    <div className="row align-items-center justify-content-center">
-                        {
-                            videoData.length > 0 && videoData.map((item, index) => (
-                                <div className="col-lg-3 col-md-4 col-sm-12" key={index + 1}>
-                                    <div className="video_thumbnail mt-2">
-                                        <div className="play_btn" onClick={() => handleShow(item.id)}><i class="fa-solid fa-play"></i></div>
-                                        <img src={item.thumbnail} alt={item.title} className="img-fluid" />
-                                        <h5 className="video_title text-center">{item.title} </h5>
-                                    </div>
-                                </div>
-                            ))
-                        }
+        <MainLayout title="Video Gallery" isLoading={false} loadingMessage="Gallery">
+            <div className="page-content bg-white">
+                <div class="banner-wraper">
+                    <div class="page-banner"
+                        style={{ backgroundImage: `url(${mainBanner})` }}
+                    >
+                        <div class="container">
+                            <div class="page-banner-entry text-center">
+                                <h1>Video Gallery</h1>
+                            </div>
+                        </div>
 
+
+                        <img class="pt-img1 animate-wave" src={trangleOrange} alt="" />
+                        <img class="pt-img2 animate2" src={circleBlue} alt="" />
+                        <img class="pt-img3 animate-rotate" src={waveOrange} alt="" />
                     </div>
                 </div>
+
+
+                <div className="section-area section-sp4">
+                    <div className="container">
+                        <div class="row align-items-center justify-content-center">
+                            {
+                                videoData.length > 0 && videoData.map((item, index) => (
+                                    <div className="col-lg-3 col-md-4 col-sm-12" key={index + 1}>
+                                        <div className="video_thumbnail mt-2">
+                                            <div className="play_btn" onClick={() => handleShow(item.id)}><i class="fa-solid fa-play"></i></div>
+                                            <img src={item.thumbnail} alt={item.title} className="img-fluid" />
+                                            <h5 className="video_title text-center">{item.title} </h5>
+                                        </div>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
+                </div>
+
 
                 <img className="pt-img3 animate3" src={circleBlue} alt="" />
                 <img className="pt-img1 animate1" src={trangleOrange} alt="" />
                 <img className="pt-img2 animate2" src={squareBlue} alt="" />
                 <img className="pt-img3 animate3" src={circleBlue} alt="" />
                 <img className="pt-img5 animate-wave" src={waveOrange} alt="" />
+
             </div>
+
             <SimpleModal
                 size="xl"
                 show={show}
@@ -78,7 +97,7 @@ const VideoGallery = () => {
 
                 </div>
             </SimpleModal>
-        </MainLayout >
+        </MainLayout>
     );
 };
 

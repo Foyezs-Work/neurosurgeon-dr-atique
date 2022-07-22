@@ -109,7 +109,20 @@
 .title-ext.text-primary {
   background-image: url(../images/shap/ext-blue.png);
 }
+.home_video_gallery{
+  width: 100%;
+  height: 220px!important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
 
+.home_video_gallery img{
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
 .home_video_gallery h6 {
   text-align: center;
   margin-top: 5px;
@@ -178,6 +191,11 @@
   margin-top: 10px !important;
 }
 
+.appointment_gallery_img_card img{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
 /************************
       Responsive CSS
 *************************/
