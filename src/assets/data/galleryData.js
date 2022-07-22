@@ -94,7 +94,7 @@ export const galleryPageData = [
         id: "200008",
         title: "",
         thumbUrl: "https://res.cloudinary.com/neurosurgeon-dr-atiqul/image/upload/v1657132110/Dr%20Atiqul/gallery/2_blhuyt.jpg",
-        imagurle: "https://res.cloudinary.com/neurosurgeon-dr-atiqul/image/upload/v1657132110/Dr%20Atiqul/gallery/2_blhuyt.jpg"
+        url: "https://res.cloudinary.com/neurosurgeon-dr-atiqul/image/upload/v1657132110/Dr%20Atiqul/gallery/2_blhuyt.jpg"
     },
     {
         id: "200009",

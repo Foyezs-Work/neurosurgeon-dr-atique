@@ -49,11 +49,11 @@ const PhotosGallery = () => {
 
                 <div className="section-area section-sp4">
                     <div className="container">
-                        <div class="row">
+                        <div class="row justify-content-center">
                             {
                                 galleryPageData.length > 0 && galleryPageData.map((item, index) => (
-                                    <div className='col-md-3 p-3'>
-                                        <div className="img_card">
+                                    <div className='col-md-3 col-sm-6 p-3'>
+                                        <div className="img_card" key={index}>
                                             {/* <ImageViewer key={index + 1}>
                                                     <img src={item.url} alt={item.title} className="" />
                                                 </ImageViewer> */}

@@ -66,7 +66,7 @@ const Header = () => {
                                                 <li><Link to="#"><span>Spinal Surgery</span></Link></li>
                                                 <li><Link to="#"><span>Traumatic Brain & Spine Surgery</span></Link></li>
                                                 <li><Link to="#"><span>Epilepsy Surgery</span></Link></li>
-                                                <li><Link to="#"><span>Spainal Tumour</span></Link></li>
+                                                <li><Link to="#"><span>Spinal Tumour</span></Link></li>
                                                 <li><Link to="#"><span> Microdiscectomy</span></Link></li>
                                                 <li><Link to="#"><span> Stroke Surgery (Urgent Surgery of stroke patients)</span></Link></li>
                                             </ul>
