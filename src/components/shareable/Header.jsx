@@ -54,7 +54,7 @@ const Header = () => {
                                 <li className="active"><Link to="/">Home</Link></li>
 
                                 <li className={toggleSubmenu ? "open" : ""}>
-                                    <Link to="/">Treatments & Surgery <i class="fa-solid fa-angle-down" onClick={() => setToggelSubmenu(!toggleSubmenu)}></i> </Link>
+                                    <Link to="/#" onClick={() => setToggelSubmenu(!toggleSubmenu)}>Treatments & Surgery <i class="fa-solid fa-angle-down"></i> </Link>
                                     <ul className="sub-menu">
                                         <li className="add-menu-left">
                                             <ul>
@@ -74,7 +74,7 @@ const Header = () => {
                                     </ul>
                                 </li>
                                 <li className={toggelGallery === true ? "open" : ""}>
-                                    <Link to="/">Gallery <i class="fa-solid fa-angle-down" onClick={() => setToggelGallery(!toggelGallery)}></i></Link>
+                                    <Link to="/#" onClick={() => setToggelGallery(!toggelGallery)}>Gallery <i class="fa-solid fa-angle-down"></i></Link>
                                     <ul className="sub-menu left">
                                         <li><Link to="/photo-gallery"><span>Photo Gallery</span></Link></li>
                                         <li><Link to="/video-gallery"><span>Video Gallery</span></Link></li>
