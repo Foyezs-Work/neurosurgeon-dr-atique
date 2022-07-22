@@ -12626,7 +12626,8 @@ section {
   background-size: cover;
   position: relative;
   overflow: hidden;
-  height: 420px;
+  /* height: 420px; */
+  height: 300px;
   width: 100%;
   z-index: 1;
 }
@@ -12648,7 +12649,7 @@ section {
   height: 420px;
   vertical-align: middle;
   display: table-cell;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
 }
 @media only screen and (max-width: 991px) {
   .page-banner .page-banner-entry {
